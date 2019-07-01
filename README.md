@@ -2,7 +2,7 @@
 
 ## White Paper
 
-1. Hashrate Derivative [en](whitepaper/hashrate-derivative-en.md) [cn](whitepaper/hashrate-derivative-en.md)
+1. Hashrate Derivative [en](whitepaper/hashrate-derivative-en.md) [cn](whitepaper/hashrate-derivative-cn.md)
 
 ## Meeting notes
 
