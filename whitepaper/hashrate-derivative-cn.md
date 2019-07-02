@@ -109,7 +109,7 @@ _选择以上参数是为了让指数的整数部分具有3-4个有效数字，�
 
 #### 保证金 (Margin)
 
-合约发行人向Market智能合约抵押（ _Cap_ - _Floor_ ) 个WBTC以铸造合约头寸代币。所以, 合约的头寸是完全抵押的。
+合约发行人向Market智能合约抵押（ _Cap_ - _Floor_ ) 个WBTC以铸造合约头寸代币。合约的头寸是完全抵押的，合约在交割前不需要补充保证金。
 
 #### 头寸代币命名 （Naming Convention for Contract Position Tokens）
 
