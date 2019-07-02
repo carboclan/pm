@@ -27,17 +27,17 @@ The following contract is issued through [Market Protocol](https://marketprotoco
 
 #### Index
 
-ETH Mining Index ( _EMI_ ) represents _N_ blocks prior to block height _H_, expected return in ETH given _Hashrate_ (Unit: Hash/s) in ethereum mining. _Difficulty<sub>i</sub>_ represents mining difficulty at block height _i_, _Coinbase<sub>i</sub>_ represents mining reward at block height _i_, and _TargetBlockTime_ represents expected block time of the ethereum network. _EMI_ is calculated as following:
+ETH Mining Index ( _EMI_ ) represents given _N_ blocks prior to block height _H_, expected return in ETH given _Hashrate_ (Unit: Hash/s) in ethereum mining. _Difficulty<sub>i</sub>_ represents mining difficulty at block height _i_, _Coinbase<sub>i</sub>_ represents mining reward at block height _i_, and _TargetBlockTime_ represents expected block time of the ethereum network. _EMI_ is calculated as following:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{EMI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{EMI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{EHRI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
 
-Given block height _H_, _Difficulty<sub>i</sub>_ and _Coinbase<sub>i</sub>_ are the only variables in the formula dependent on block height, all other terms are constants. In other words, _EMI_ only depends on mining difficulty and per block reward. _EMI_ parameters are defined as following:
+Given block height _H_, _Difficulty<sub>i</sub>_ and _Coinbase<sub>i</sub>_ are the only variables in the formula dependent on block height, all other terms are constants. Since _Coinbase<sub>i</sub>_ rarely changes, _EMI_ mostly depends on mining difficulty. _EMI_ parameters are defined as following:
 
 Parameter | Value | Note
 ------| -----|-------
 _Hashrate_  | 1,000,000,000,000 Hash/s  | |
 _N_  | 80640  | 14-day window
-_Coinbase<sub>i</sub>_  | 2 ETH | Block reward is 2ETH starting from block height 7,080,000
+_Coinbase<sub>i</sub>_  | 2 ETH per Block | Block reward is 2ETH starting from block height 7,080,000
 _TargetBlockTime_ | 15 s | Target block time for ethereum is fixed at 15s
 
 _Parameters are defined as so to maintain at least 3 significant digits to the left of the decimal, which caters to traders' heuristics in order to faciliate trading decisoins._
@@ -60,11 +60,11 @@ Each Syntheic ETH Mining Contract will specify an expiration time, defined as et
 
 #### Settlement
 
-At settlement, Market Protocol smart contract will send ETH to addresses that hold contract position tokens. Long token holder will receive ( _EMI_ - _Floor_ ) in ETH per Contract, short token holder will receive ( _Cap_ - _EMI_ ) in ETH per Contract.
+At settlement, Market Protocol smart contract will send WETH to addresses that hold contract position tokens. Long token holder will receive ( _EMI_ - _Floor_ ) in WETH per Contract, short token holder will receive ( _Cap_ - _EMI_ ) in WETH per Contract.
 
 #### Margin
 
-Issuer of the Tokenized Synthetic Ethereum Mining Contract needs to send ( _Cap_ - _Floor_ ) amount in ETH to the Market Protocol smart contract as collateral in order to mint contract position tokens. Contract positions are fully collateralized with no need to top up margins prior to settlement.
+Issuer of the Tokenized Synthetic Ethereum Mining Contract needs to send ( _Cap_ - _Floor_ ) amount in WETH to the Market Protocol smart contract as collateral in order to mint contract position tokens. Contract positions are fully collateralized with no need to top up margins prior to settlement.
 
 #### Naming Convention for Contract Position Tokens
 
@@ -76,12 +76,61 @@ EMI-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
 - L: long position
 - S: short position
 
-Example: EMI-100-200-80000-L token corresponds to a long position on a ethereum minning contract with Index valid range of [100,200], to be settled at block height 80,000.
+Example: EMI-100-200-80000-L token corresponds to a long position on a Synthetic Ethereum Mining Contract with Index valid range of [100,200], to be settled at block height 80,000.
 
 
 ###  2.2 Synthetic BTC Mining Contract
 #### Index
 
+BTC Mining Index ( _BMI_ ) represents given _2016_ blocks after block height _H_, expected return in BTC given _Hashrate_ (Unit: Hash/s) in bitcoin mining. _Difficulty<sub>i</sub>_ represents mining difficulty at block height _i_, _Coinbase<sub>i</sub>_ represents mining reward at block height _i_, and _TargetBlockTime_ represents expected block time of the bitcoin network. _BMI_ is calculated as following:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BMI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BMI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{BMI}=\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot 2016}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
+
+Given block height _H_, _Difficulty<sub>i</sub>_ is a variables dependent on _H_, and re-adjusts every 2,016 blocks. _Coinbase<sub>i</sub>_ is a variable dependent on _H_, which halves every 21,000 blocks. All other terms in the equation are constants. In other words, _BMI_ only depends on mining difficulty within every 2,016 blocks. Since bitcoin network adjusts difficulty every 2,016 blocks, _BMI_ remains constant until the next difficulty adjustment. _BMI_ parameters are defined as following:
+
+Parameter | Value | Note
+------| -----|-------
+_Hashrate_  | 10 <sup>18</sup> Hash/s  | |
+_Coinbase<sub>i</sub>_  | 12.5 BTC per Block | Block reward halves every 21,000 blocks
+_TargetBlockTime_ | 600 s | Target block time for bitcoin is fixed at 10 minutes
+
+_Parameters are defined as so to maintain at least 3 significant digits to the left of the decimal, which caters to traders' heuristics in order to faciliate trading decisoins._
+
+#### Index Cap & Floor
+
+Each Synthetic BTC Mining Contract will specify its valid range, _Cap_ represents the upper bound, and _Floor_ represents the lower bound. When Index reaches the upper or lower bounds will trigger contract settlement.
+
+#### Index Currency
+
+1BTC per Index Point
+
+#### Contract Size
+
+1WBTC per Index Point
+
+#### Expiration
+
+Each Syntheic BTC Mining Contract will specify an expiration time, defined as bitcoin block height _H_. The contract will settle when block confirmation at block height _H_ reaches _NConfirm_. For security considerations, _NComfirm_ = 24 (approximately 4 hours).
+
+#### Settlement
+
+At settlement, Market Protocol smart contract will send WBTC to addresses that hold contract position tokens. Long token holder will receive ( _BMI_ - _Floor_ ) in WBTC per Contract, short token holder will receive ( _Cap_ - _BMI_ ) in WBTC per Contract.
+
+#### Margin
+
+Issuer of the Tokenized Synthetic Ethereum Mining Contract needs to send ( _Cap_ - _Floor_ ) amount in WBTC to the Market Protocol smart contract as collateral in order to mint contract position tokens. Contract positions are fully collateralized with no need to top up margins prior to settlement.
+
+#### Naming Convention for Contract Position Tokens
+
+BMI-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
+
+- Floor: Index lower bound
+- Cap: Index upper bound
+- Height: block height for settlement
+- L: long position
+- S: short position
+
+Example: BMI-100-200-80000-S token corresponds to a short position on a Synthetic BTC Mining Contract with Index valid range of [100,200], to be settled at block height 80,000.
 
 
 
