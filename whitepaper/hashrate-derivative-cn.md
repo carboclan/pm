@@ -105,7 +105,7 @@ _选择以上参数是为了让指数的整数部分具有3-4个有效数字，�
 
 #### 交割 (Settlement)
 
-合约发生交割时，Market智能合约将会向合约头寸持有人发送WETH。每份合约多头将收到 ( _BHRI_ - _Floor_ ) 个WBTC，每份合约空头将收到 ( _Cap_ - _BHRI_ ) 个 WBTC。
+合约发生交割时，Market智能合约将会向合约头寸持有人发送WBTC。每份合约多头将收到 ( _BMI_ - _Floor_ ) 个WBTC，每份合约空头将收到 ( _Cap_ - _BMI_ ) 个 WBTC。
 
 #### 保证金 (Margin)
 
@@ -113,7 +113,7 @@ _选择以上参数是为了让指数的整数部分具有3-4个有效数字，�
 
 #### 头寸代币命名 （Naming Convention for Contract Position Tokens）
 
-BHR-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
+BMI-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
 
 - Floor: 指数下限
 - Cap: 指数上限
@@ -121,7 +121,7 @@ BHR-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
 - L: 多头头寸
 - S: 空头头寸
 
-例：BHR-100-200-80000-S，指数范围在[100,200]，于区块高度80000交割，合约空头
+例：BMI-100-200-80000-S，指数范围在[100,200]，于区块高度80000交割，合约空头
 
 ## 3. 智能合约栈 (Smart Contract Stack)
 
