@@ -77,7 +77,7 @@ EHR-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BHRI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BHRI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{BHRI}=\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot 2016}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
 
-当给定区块高度 _H_ 后，公式中 _Difficulty<sub>i</sub>_  是随区块高度变化的未知量，且每2016个区块调整一次。公式中 _Coinbase<sub>i</sub>_ 是随区块高度变化的未知量，每21000个区块减半。公式中其他的参数都是常量。也就是说 _BMI_ 指数变化很慢，且在2016个区块内只与区块的挖矿难度相关。 _EMI_ 设定的参数如下：
+当给定区块高度 _H_ 后，公式中 _Difficulty<sub>i</sub>_  是随区块高度变化的未知量，且每2016个区块调整一次。公式中 _Coinbase<sub>i</sub>_ 是随区块高度变化的未知量，每21000个区块减半。公式中其他的参数都是常量。由于比特币每2016个区块才调整一次难度，所以 _BMI_ 在2016个区块的难度周期内保持不变，且在2016个区块内只与区块的挖矿难度相关。 _BMI_ 设定的参数如下：
 
 参数 | 取值 | 备注
 ------| -----|-------
