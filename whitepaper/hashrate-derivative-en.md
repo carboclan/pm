@@ -132,7 +132,34 @@ BMI-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
 
 Example: BMI-100-200-80000-S token corresponds to a short position on a Synthetic BTC Mining Contract with Index valid range of [100,200], to be settled at block height 80,000.
 
+## 3. Smart Contract Stack
 
+Synthetic Mining Contract token issuance, trading, on-chain collateralization, and settlement are executed via smart contracts enforced by ethereum blockchain consensus. Trust is minimized in the process, which lowers the entry barrier for trading and improves liquidity.
+
+### 3.1 Tokenization Layer
+
+Issuers can easily issue Synthetic PoW Mining Contract by minting position tokens via [Market Protocol](https://marketprotocol.io) and traders can easily build up long or short positions by buying these position tokens, which are standard ERC20s that can be stored off-exchange in user wallets and are tradeable on both centralized and decentralized exchanges.
+
+市场上流通的合约头寸代币需要由发行人铸造（mint）。合约发行人通过向Market Protocol智能合约抵押资产铸造头寸代币。发行人在完成代币铸造后，将同时持有合约的多头代币和空头代币，其净头寸为0。因为铸造的多头代币总是等于空头代币，所以称为代币对。此后，如果发行人希望进入合约多头，则可以在市场上将空头代币卖出，以达到持有多头的目标；反之，如果发行人希望进入合约空头，则可以卖出多头代币。
+
+交易员也可以在市场上直接购买合约代币实现持有合约头寸的目的，而不必在Market Protocol智能合约中铸造头寸代币。任何时候，头寸代币持有人只需要在市场上卖出持有的头寸代币就可以实现平仓，从而不必等待合约交割就可以实现头寸盈亏。
+
+由于算力合约的指数具有上下的范围限制，且发行人已经在创建头寸时为指数范围内的合约价值支付了完全的保证金，所以合约头寸是完全抵押的，在指数范围内没有爆仓的风险。由于算力合约会被用于对冲挖矿风险，而挖矿是一个长期的过程，所以必须尽量避免因为指数到达上下限而造成的合约提前交割的情况。为此，设置指数上下限时需要根据历史数据，设置相对宽松的指数范围，以求覆盖指数波动。
+
+虽然合约头寸是完全抵押的，但指数的范围设置，依旧提供了对指数的杠杆作用。即当指数波动时，合约头寸价值的变化率通常会大于指数的变化率。
+
+例1，Carboclan社区在区块链高度568512（2019-03-21）时设置了一个新的比特币挖矿算力合约。此时指数为552。设置算力收益合约的参数如下：
+  - 指数上限：600
+  - 指数下限：450
+  - 到期时间： 区块高度574560 （约2019-05-04）
+
+Alice希望创建0.01个合约代币对，为此她向Market智能合约质押了(600-450)*0.01=1.5WBTC，从而铸造了0.01个合约多头头寸币和0.01个合约空头头寸币。此时，按指数计算的每个合约多头代币价值为552-450=102 WBTC，每个合约空头代币价值为600-552=48 WBTC。
+
+之后，指数下降到550，此时，按指数计算的每个合约多头代币价值为550-450=100 WBTC，每个合约空头代币价值为600-550=50 WBTC。Alice希望进入合约空头，于是她在交易所中挂单出售0.01个合约多头代币。Bob恰好希望进入合约多头，最终Bob向Alice购买了合约多头币，成交价98WBTC。Bob向Alice支付0.98WBTC，Alice向Bob支付0.01个合约多头币。
+
+这里在市场上头寸代币成交价（98WBTC）低于了按指数计算的价格（100WBTC），这是由于人们对到期日指数会进一步下降的预期造成的。另一方面，我们可以看到，指数下降了(552-550)/552=0.36%，但多头头寸按指数计算的价格却下降了(102-100)/102=1.9%，这就是指数下限造成的5.28倍杠杆作用。
+
+当区块高度为574570时，合约到期。又过了12个区块高度，合约进行交割。此时合约指数为525。Market智能合约向多头持有方Bob支付（525-450)*0.01=0.75WBTC, 向空头只有方Alice支付(600-525)*0.01=0.75WBTC。最终Alice的盈亏为：-1.5+0.98+0.75 = 0.23WBTC，Bob的盈亏为: -0.98+0.75=-0.23WBTC。
 
 
 
