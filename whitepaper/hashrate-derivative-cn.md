@@ -1,7 +1,3 @@
-**在[Issue](https://github.com/carboclan/pm/issues/4)关闭前，以Issue中为准，这里只是占位用!**
-
-# 挖矿算力衍生品
-
 ## 1. 动机 (Motivation)
 
 数字货币挖矿行业创建了一个巨大的市场。投资挖矿需要投入一笔资金用于购买矿机，并在未来一段时间持续获得挖出的数字币作为投资收益。然而，投资挖矿的风险很大。除去矿场基建、电力资源建设等固定因素及来自政策、天气等等的不可抗因素外，挖矿产业的核心风险来自于数字货币币价的波动和挖矿难度的波动。
@@ -18,22 +14,22 @@
 
 以下合约基于[Market Protocol智能合约](https://marketprotocol.io)发行。
 
-###  2.1 以太坊算力收益合约 (Ethereum Hashrate Revenue Swap)
+###  2.1 以太坊算力收益合约 (Ethereum Hashrate Derivative)
 
 #### 指数 (Index）
 
-以太坊算力收益指数（ _EHRI_ ，Ethereum Hashrate Revenue Index ）表示从区块高度 _H_ 前 _N_ 个区块内，_Hashrate_（单位Hash/s） 算力挖矿获得ETH的数学期望。_Difficulty<sub>i</sub>_ 表示区块高度 _i_ 的挖矿难度, _Reward<sub>i</sub>_ 表示区块高度 _i_ 的挖矿奖励,  _BlockTime_ 表示以太坊预期出块时间。 _EHRI_ 由以下公式计算：
+以太坊算力收益指数（ _EHRI_ ，Ethereum Hashrate Revenue Index ）表示从区块高度 _H_ 前 _N_ 个区块内，_Hashrate_（单位Hash/s） 算力挖矿获得ETH的数学期望。_Difficulty<sub>i</sub>_ 表示区块高度 _i_ 的挖矿难度, _Coinbase<sub>i</sub>_ 表示区块高度 _i_ 的挖矿奖励,  _TargetBlockTime_ 表示以太坊预期出块时间。 _EHRI_ 由以下公式计算：
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{EHRI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{BlockTime}&space;\cdot&space;Reward_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{EHRI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{BlockTime}&space;\cdot&space;Reward_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{EHRI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate} \cdot \mathit{BlockTime} \cdot Reward_i}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{EHRI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{EHRI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{EHRI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
 
-当给定区块高度 _H_ 后，公式中只有 _Difficulty<sub>i</sub>_  是随区块变化的未知量，其他公式中的参数都是常量。也就是说 _EHRI_ 指数只与区块的挖矿难度相关。 _EHRI_ 设定的参数如下：
+当给定区块高度 _H_ 后，公式中只有 _Difficulty<sub>i</sub>_ 和 _Coinbase<sub>i</sub>_  是随区块高度变化的未知量，其他公式中的参数都是常量。又由于 _Coinbase<sub>i</sub>_ 几乎不变化， 所以 _EHRI_ 指数通常只与区块的挖矿难度相关。 _EHRI_ 设定的参数如下：
 
 参数 | 取值 | 备注
 ------| -----|-------
 _Hashrate_  | 1,000,000,000,000 Hash/s  | |
 _N_  | 80640  | 以14天为指数窗口
-_Reward<sub>i</sub>_  | 2 ETH | 从区块高度7,080,000起，挖矿收益固定为2ETH
-_BlockTime_ | 15 s | 以太坊使用固定的预期出块时间
+_Coinbase<sub>i</sub>_  | 2 ETH | 从区块高度7,080,000起，挖矿收益为2ETH
+_TargetBlockTime_ | 15 s |  以太坊的预期出块时间
 
 _选择以上参数是为了让指数的整数部分具有3-4个有效数字，从而便于交易员认知市场，加速交易决策_
 
@@ -41,13 +37,13 @@ _选择以上参数是为了让指数的整数部分具有3-4个有效数字，�
 
 每个以太坊算力收益合约都会设置指数的有效范围，用 _Cap_ 表示指数上限，用 _Floor_ 表示指数下限。当指数达到上下限的时候会触发合约交割。
 
-#### 合约 (Contract)
+#### 指数货币单位 (Index currency)
 
-每指数对应1ETH
+每指数点对应1ETH
 
 #### 合约大小 (Contract Size)
 
-每份合约1ETH
+每份合约1WETH
 
 #### 到期区块高度 (Expiration of Block Height)
 
@@ -55,11 +51,11 @@ _选择以上参数是为了让指数的整数部分具有3-4个有效数字，�
 
 #### 交割 (Settlement)
 
-合约发生交割时，Maket智能合约将会向合约头寸持有人发送ETH。每份合约多头将收到 ( _EHRI_ - _Floor_ ) 个ETH，每份合约空头将收到 ( _Cap_ - _EHRI_ ) 个 ETH。
+合约发生交割时，Maket智能合约将会向合约头寸持有人发送WETH。每份合约多头将收到 ( _EHRI_ - _Floor_ ) 个WETH，每份合约空头将收到 ( _Cap_ - _EHRI_ ) 个 WETH。
 
 #### 保证金 (Margin)
 
-合约在创立时，合约创造者向Maket智能合约抵押（ _Cap_ - _Floor_ ) 个ETH以创建合约。合约的头寸是完全抵押的，合约在交割前不需要补充保证金。
+合约发行人向Market Protocol智能合约抵押（ _Cap_ - _Floor_ ) 个WETH以铸造合约头寸代币。合约的头寸是完全抵押的，合约在交割前不需要补充保证金。
 
 #### 头寸代币命名 （Position Token Name）
 
@@ -68,26 +64,26 @@ EHR-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
 - Floor: 指数下限
 - Cap: 指数上限
 - Height: 交割区块高度
-- L：多头头寸
-- S: 多头头寸
+- L: 多头头寸
+- S: 空头头寸
 
-例：EHR-100-200-80000-L，指数范围在[100,200]，于80000高度交割，合约多头
+例：EHR-100-200-80000-L，指数范围在[100,200]，于区块高度80000交割，合约多头
 
 
-###  2.2 比特币算力收益合约 (BTC Hashrate Revenue Swap)
+###  2.2 比特币算力收益合约 (BTC Hashrate Derivative)
 #### 指数 (Index）
 
-比特币算力收益指数（ _BHRI_ ，Ethereum Hashrate Revenue Index ）表示以区块高度 _H_的挖矿难度，在 _Hashrate_（单位Hash/s） 算力挖矿2016个块获得的BTC数学期望。_Difficulty<sub>i</sub>_ 表示区块高度 _i_ 的挖矿难度, _Reward<sub>i</sub>_ 表示区块高度 _i_ 的挖矿奖励,  _BlockTime_ 表示比特币预期出块时间。 _BHRI_ 由以下公式计算：
+比特币算力收益指数（ _BHRI_ ，Bitcoin Hashrate Revenue Index ）表示以区块高度 _H_的挖矿难度，在 _Hashrate_（单位Hash/s） 算力挖矿2016个块获得的BTC数学期望。_Difficulty<sub>i</sub>_ 表示区块高度 _i_ 的挖矿难度, _Coinbase<sub>i</sub>_ 表示区块高度 _i_ 的挖矿奖励,  _TargetBlockTime_ 表示比特币预期出块时间。 _BHRI_ 由以下公式计算：
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BHRI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{BlockTime}&space;\cdot&space;Reward_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BHRI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{BlockTime}&space;\cdot&space;Reward_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{BHRI}=\frac{\mathit{Hashrate} \cdot \mathit{BlockTime} \cdot Reward_i \cdot 2016}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BHRI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BHRI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{BHRI}=\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot 2016}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
 
-当给定区块高度 _H_ 后，公式 _Difficulty<sub>i</sub>_  是随区块变化的未知量，且每2016个区块调整一次。公式中 _Reward<sub>i</sub>_ 是随区块变化的未知量，每21000个区块减半。公式中其他的参数都是常量。也就是说 _BHRI_ 指数变化很慢，在2016个区块内只与区块的挖矿难度相关。 _EHRI_ 设定的参数如下：
+当给定区块高度 _H_ 后，公式中 _Difficulty<sub>i</sub>_  是随区块高度变化的未知量，且每2016个区块调整一次。公式中 _Coinbase<sub>i</sub>_ 是随区块高度变化的未知量，每21000个区块减半。公式中其他的参数都是常量。也就是说 _BHRI_ 指数变化很慢，且在2016个区块内只与区块的挖矿难度相关。 _EHRI_ 设定的参数如下：
 
 参数 | 取值 | 备注
 ------| -----|-------
 _Hashrate_  | 10 <sup>18</sup> Hash/s  | |
-_Reward<sub>i</sub>_  | 目前为12.5 BTC | 每21000个区块减半
-_BlockTime_ | 600 s | 比特币使用固定的预期出块时间
+_Coinbase<sub>i</sub>_  | 目前为12.5 BTC | 每21000个区块减半
+_TargetBlockTime_ | 600 s | 比特币的预期出块时间
 
 _选择以上参数是为了让指数的整数部分具有3-4个有效数字，从而便于交易员认知市场，加速交易决策_
 
@@ -95,9 +91,9 @@ _选择以上参数是为了让指数的整数部分具有3-4个有效数字，�
 
 每个以太坊算力收益合约都会设置指数的有效范围，用 _Cap_ 表示指数上限，用 _Floor_ 表示指数下限。当指数达到上下限的时候会触发合约交割。
 
-#### 合约 (Contract)
+#### 指数货币单位 (Index currency)
 
-每指数对应1BTC
+每指数点对应1BTC
 
 #### 合约大小 (Contract Size)
 
@@ -109,11 +105,11 @@ _选择以上参数是为了让指数的整数部分具有3-4个有效数字，�
 
 #### 交割 (Settlement)
 
-合约发生交割时，Maket智能合约将会向合约头寸持有人发送ETH。每份合约多头将收到 ( _BHRI_ - _Floor_ ) 个WBTC，每份合约空头将收到 ( _Cap_ - _BHRI_ ) 个 WBTC。
+合约发生交割时，Maket智能合约将会向合约头寸持有人发送WETH。每份合约多头将收到 ( _BHRI_ - _Floor_ ) 个WBTC，每份合约空头将收到 ( _Cap_ - _BHRI_ ) 个 WBTC。
 
 #### 保证金 (Margin)
 
-合约在创立时，合约创造者向Maket智能合约抵押（ _Cap_ - _Floor_ ) 个WBTC以创建合约。所以, 合约的头寸是完全抵押的。
+合约发行人向Market智能合约抵押（ _Cap_ - _Floor_ ) 个WBTC以铸造合约头寸代币。所以, 合约的头寸是完全抵押的。
 
 #### 头寸代币命名 （Position Token Name）
 
@@ -122,10 +118,10 @@ BHR-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
 - Floor: 指数下限
 - Cap: 指数上限
 - Height: 交割区块高度
-- L：多头头寸
-- S: 多头头寸
+- L: 多头头寸
+- S: 空头头寸
 
-例：BHR-100-200-80000-S，指数范围在[100,200]，于80000高度交割，合约空头
+例：BHR-100-200-80000-S，指数范围在[100,200]，于区块高度80000交割，合约空头
 
 ## 3. 智能合约栈 (Smart Contract Stack)
 
@@ -135,11 +131,11 @@ BHR-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
 
 基于[Market Protocol智能合约](https://marketprotocol.io) 可以方便实现建立算力收益合约的头寸。同时，Market Protocol的合约头寸都是标准的ERC20代币，从而很容易的可以通过链下交易所或链上去中化协议交易这些头寸。
 
-市场上流通的合约头寸需要由合约头寸创立者创立（mint）。合约头寸创立者通过向Market智能合约抵押资产创建算力收益合约的头寸代币。合约头寸创立者在完成代币创立后，将同时持有算力收益合约的多头代币和空头代币，其净头寸为0。因为创立的多头代币总是等于空头代币，所以称为代币对 。此后，如果合约头寸创立者希望进入合约多头，则可以在市场上将空头代币卖出，以达到持有多头的目标；反之，如果合约头寸创立者希望进入合约空头，则可以卖出多头代币。
+市场上流通的合约头寸代币需要由发行人铸造（mint）。合约发行人通过向Market Protocol智能合约抵押资产铸造头寸代币。发行人在完成代币铸造后，将同时持有合约的多头代币和空头代币，其净头寸为0。因为铸造的多头代币总是等于空头代币，所以称为代币对。此后，如果发行人希望进入合约多头，则可以在市场上将空头代币卖出，以达到持有多头的目标；反之，如果发行人希望进入合约空头，则可以卖出多头代币。
 
-交易员也可以在市场上直接购买合约代币实现持有合约头寸的目的，而不必在Market Protocol智能合约中创立合约头寸。任何时候，头寸代币持有人只需要在市场上卖出持有的头寸代币就可以实现平仓，从而不必等待合约交割就可以实现头寸盈亏。
+交易员也可以在市场上直接购买合约代币实现持有合约头寸的目的，而不必在Market Protocol智能合约中铸造头寸代币。任何时候，头寸代币持有人只需要在市场上卖出持有的头寸代币就可以实现平仓，从而不必等待合约交割就可以实现头寸盈亏。
 
-由于算力合约的指数具有上下的范围限制，且头寸创立者已经在创建头寸时为指数范围内的合约价值支付了完全的保证金，所以合约头寸是完全抵押的，在指数范围内没有爆仓的风险。由于算力合约会被用于对冲挖矿风险，而挖矿是一个长期的过程，所以必须尽量避免因为指数到达上下限而造成的合约提前交割的情况。为此，设置指数上下限时需要根据历史数据，设置相对宽松的指数范围，以求覆盖指数波动。
+由于算力合约的指数具有上下的范围限制，且发行人已经在创建头寸时为指数范围内的合约价值支付了完全的保证金，所以合约头寸是完全抵押的，在指数范围内没有爆仓的风险。由于算力合约会被用于对冲挖矿风险，而挖矿是一个长期的过程，所以必须尽量避免因为指数到达上下限而造成的合约提前交割的情况。为此，设置指数上下限时需要根据历史数据，设置相对宽松的指数范围，以求覆盖指数波动。
 
 虽然合约头寸是完全抵押的，但指数的范围设置，依旧提供了对指数的杠杆作用。即当指数波动时，合约头寸价值的变化率通常会大于指数的变化率。
 
@@ -148,7 +144,7 @@ BHR-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
   - 指数下限：450
   - 到期时间： 区块高度574560 （约2019-05-04）
 
-Alice希望创建0.01个合约代币对，为此她向Market智能合约质押了(600-450)*0.01=1.5WBTC，从而获得了0.01个合约多头头寸币和0.01个合约空头头寸币。此时，按指数计算的每个合约多头代币价值为552-450=102 WBTC，每个合约空头代币价值为600-552=48 WBTC。
+Alice希望创建0.01个合约代币对，为此她向Market智能合约质押了(600-450)*0.01=1.5WBTC，从而铸造了0.01个合约多头头寸币和0.01个合约空头头寸币。此时，按指数计算的每个合约多头代币价值为552-450=102 WBTC，每个合约空头代币价值为600-552=48 WBTC。
 
 之后，指数下降到550，此时，按指数计算的每个合约多头代币价值为550-450=100 WBTC，每个合约空头代币价值为600-550=50 WBTC。Alice希望进入合约空头，于是她在交易所中挂单出售0.01个合约多头代币。Bob恰好希望进入合约多头，最终Bob向Alice购买了合约多头币，成交价98WBTC。Bob向Alice支付0.98WBTC，Alice向Bob支付0.01个合约多头币。
 
@@ -244,12 +240,4 @@ BHR-450-600-580608-S | 06-14 | 115 | 471.1 | 1.39   | 47.11 | 48.50
 ## 5. 社区介绍 (Introducation to Carboclan)
 
 ## 6. 致谢 (Acknowledgement)
-
-
-
-
-
-
-
-
 
