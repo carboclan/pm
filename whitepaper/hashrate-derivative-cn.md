@@ -14,15 +14,15 @@
 
 以下合约基于[Market Protocol智能合约](https://marketprotocol.io)发行。
 
-###  2.1 以太坊算力收益合约 (Ethereum Hashrate Derivative)
+###  2.1 以太坊算力收益合约 (Synthetic ETH Mining Contract)
 
 #### 指数 (Index）
 
-以太坊算力收益指数（ _EHRI_ ，Ethereum Hashrate Revenue Index ）表示从区块高度 _H_ 前 _N_ 个区块内，_Hashrate_（单位Hash/s） 算力挖矿获得ETH的数学期望。_Difficulty<sub>i</sub>_ 表示区块高度 _i_ 的挖矿难度, _Coinbase<sub>i</sub>_ 表示区块高度 _i_ 的挖矿奖励,  _TargetBlockTime_ 表示以太坊预期出块时间。 _EHRI_ 由以下公式计算：
+以太坊算力收益指数（ _EMI_ ，Ethereum Mining Index ）表示从区块高度 _H_ 前 _N_ 个区块内，_Hashrate_（单位Hash/s） 算力挖矿获得ETH的数学期望。_Difficulty<sub>i</sub>_ 表示区块高度 _i_ 的挖矿难度, _Coinbase<sub>i</sub>_ 表示区块高度 _i_ 的挖矿奖励,  _TargetBlockTime_ 表示以太坊预期出块时间。 _EMI_ 由以下公式计算：
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{EHRI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{EHRI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{EHRI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{EMI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{EHRI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{EMI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
 
-当给定区块高度 _H_ 后，公式中只有 _Difficulty<sub>i</sub>_ 和 _Coinbase<sub>i</sub>_  是随区块高度变化的未知量，其他公式中的参数都是常量。又由于 _Coinbase<sub>i</sub>_ 几乎不变化， 所以 _EHRI_ 指数通常只与区块的挖矿难度相关。 _EHRI_ 设定的参数如下：
+当给定区块高度 _H_ 后，公式中只有 _Difficulty<sub>i</sub>_ 和 _Coinbase<sub>i</sub>_  是随区块高度变化的未知量，其他公式中的参数都是常量。又由于 _Coinbase<sub>i</sub>_ 几乎不变化， 所以 _EMI_ 指数通常只与区块的挖矿难度相关。 _EMI_ 设定的参数如下：
 
 参数 | 取值 | 备注
 ------| -----|-------
@@ -45,19 +45,19 @@ _选择以上参数是为了让指数的整数部分具有3-4个有效数字，�
 
 每份合约1WETH
 
-#### 到期区块高度 (Expiration of Block Height)
+#### 到期区块高度 (Expiration)
 
 每个以太坊算力收益合约都会设置一个到期时间，到期时间以以太坊区块高度 _H_ 表示，当高度 _H_ 的区块的确认区块数达到 _NComfirm_ 后合约将被交割。为了安全起见，设置 _NComfirm_ = 960，约4小时。
 
 #### 交割 (Settlement)
 
-合约发生交割时，Maket智能合约将会向合约头寸持有人发送WETH。每份合约多头将收到 ( _EHRI_ - _Floor_ ) 个WETH，每份合约空头将收到 ( _Cap_ - _EHRI_ ) 个 WETH。
+合约发生交割时，Maket智能合约将会向合约头寸持有人发送WETH。每份合约多头将收到 ( _EMI_ - _Floor_ ) 个WETH，每份合约空头将收到 ( _Cap_ - _EMI_ ) 个 WETH。
 
 #### 保证金 (Margin)
 
 合约发行人向Market Protocol智能合约抵押（ _Cap_ - _Floor_ ) 个WETH以铸造合约头寸代币。合约的头寸是完全抵押的，合约在交割前不需要补充保证金。
 
-#### 头寸代币命名 （Position Token Name）
+#### 头寸代币命名 （Naming Convention for Contract Position Tokens）
 
 EHR-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
 
@@ -70,10 +70,10 @@ EHR-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
 例：EHR-100-200-80000-L，指数范围在[100,200]，于区块高度80000交割，合约多头
 
 
-###  2.2 比特币算力收益合约 (BTC Hashrate Derivative)
+###  2.2 比特币算力收益合约 (Synthetic BTC Mining Contract)
 #### 指数 (Index）
 
-比特币算力收益指数（ _BHRI_ ，Bitcoin Hashrate Revenue Index ）表示以区块高度 _H_的挖矿难度，在 _Hashrate_（单位Hash/s） 算力挖矿2016个块获得的BTC数学期望。_Difficulty<sub>i</sub>_ 表示区块高度 _i_ 的挖矿难度, _Coinbase<sub>i</sub>_ 表示区块高度 _i_ 的挖矿奖励,  _TargetBlockTime_ 表示比特币预期出块时间。 _BHRI_ 由以下公式计算：
+比特币算力收益指数（ _BMI_ ，Bitcoin Hashrate Revenue Index ）表示以区块高度 _H_的挖矿难度，在 _Hashrate_（单位Hash/s） 算力挖矿2016个块获得的BTC数学期望。_Difficulty<sub>i</sub>_ 表示区块高度 _i_ 的挖矿难度, _Coinbase<sub>i</sub>_ 表示区块高度 _i_ 的挖矿奖励,  _TargetBlockTime_ 表示比特币预期出块时间。 _BMI_ 由以下公式计算：
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BHRI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BHRI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{BHRI}=\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot 2016}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
 
@@ -91,7 +91,7 @@ _选择以上参数是为了让指数的整数部分具有3-4个有效数字，�
 
 每个以太坊算力收益合约都会设置指数的有效范围，用 _Cap_ 表示指数上限，用 _Floor_ 表示指数下限。当指数达到上下限的时候会触发合约交割。
 
-#### 指数货币单位 (Index currency)
+#### 指数货币单位 (Index Currency)
 
 每指数点对应1BTC
 
@@ -99,7 +99,7 @@ _选择以上参数是为了让指数的整数部分具有3-4个有效数字，�
 
 每份合约1WBTC
 
-#### 到期区块高度 (Expiration of Block Height)
+#### 到期区块高度 (Expiration)
 
 每个比特币算力收益合约都会设置一个到期时间，到期时间以比特币区块高度 _H_ 表示，当高度 _H_ 的区块的确认区块数达到 _NComfirm_ 后合约将被交割。为了安全起见，设置 _NComfirm_ = 24，约4小时。
 
@@ -111,7 +111,7 @@ _选择以上参数是为了让指数的整数部分具有3-4个有效数字，�
 
 合约发行人向Market智能合约抵押（ _Cap_ - _Floor_ ) 个WBTC以铸造合约头寸代币。所以, 合约的头寸是完全抵押的。
 
-#### 头寸代币命名 （Position Token Name）
+#### 头寸代币命名 （Naming Convention for Contract Position Tokens）
 
 BHR-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
 
