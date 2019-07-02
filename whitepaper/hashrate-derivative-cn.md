@@ -20,7 +20,7 @@
 
 以太坊算力收益指数（ _EMI_ ，Ethereum Mining Index ）表示从区块高度 _H_ 前 _N_ 个区块内，_Hashrate_（单位Hash/s） 算力挖矿获得ETH的数学期望。_Difficulty<sub>i</sub>_ 表示区块高度 _i_ 的挖矿难度, _Coinbase<sub>i</sub>_ 表示区块高度 _i_ 的挖矿奖励,  _TargetBlockTime_ 表示以太坊预期出块时间。 _EMI_ 由以下公式计算：
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{EMI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{EHRI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{EMI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{EMI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{EMI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{EMI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
 
 当给定区块高度 _H_ 后，公式中只有 _Difficulty<sub>i</sub>_ 和 _Coinbase<sub>i</sub>_  是随区块高度变化的未知量，其他公式中的参数都是常量。又由于 _Coinbase<sub>i</sub>_ 几乎不变化， 所以 _EMI_ 指数通常只与区块的挖矿难度相关。 _EMI_ 设定的参数如下：
 
