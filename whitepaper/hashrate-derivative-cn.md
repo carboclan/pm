@@ -35,7 +35,7 @@ _选择以上参数是为了让指数的整数部分具有3-4个有效数字，�
 
 #### 指数的范围 (Index Cap & Floor)
 
-每个以太坊算力收益合约都会设置指数的有效范围，用 _Cap_ 表示指数上限，用 _Floor_ 表示指数下限。当指数达到上下限的时候会触发合约交割。
+每份以太坊算力收益合约都会设置指数的有效范围，用 _Cap_ 表示指数上限，用 _Floor_ 表示指数下限。当指数达到上下限的时候会触发合约交割。
 
 #### 指数货币单位 (Index currency)
 
@@ -47,7 +47,7 @@ _选择以上参数是为了让指数的整数部分具有3-4个有效数字，�
 
 #### 到期区块高度 (Expiration)
 
-每个以太坊算力收益合约都会设置一个到期时间，到期时间以以太坊区块高度 _H_ 表示，当高度 _H_ 的区块的确认区块数达到 _NComfirm_ 后合约将被交割。为了安全起见，设置 _NComfirm_ = 960，约4小时。
+每份以太坊算力收益合约都会设置一个到期时间，到期时间以以太坊区块高度 _H_ 表示，当高度 _H_ 的区块的确认区块数达到 _NComfirm_ 后合约将被交割。为了安全起见，设置 _NComfirm_ = 960，约4小时。
 
 #### 交割 (Settlement)
 
@@ -77,7 +77,7 @@ EHR-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BHRI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BHRI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{BHRI}=\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot 2016}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
 
-当给定区块高度 _H_ 后，公式中 _Difficulty<sub>i</sub>_  是随区块高度变化的未知量，且每2016个区块调整一次。公式中 _Coinbase<sub>i</sub>_ 是随区块高度变化的未知量，每21000个区块减半。公式中其他的参数都是常量。也就是说 _BHRI_ 指数变化很慢，且在2016个区块内只与区块的挖矿难度相关。 _EHRI_ 设定的参数如下：
+当给定区块高度 _H_ 后，公式中 _Difficulty<sub>i</sub>_  是随区块高度变化的未知量，且每2016个区块调整一次。公式中 _Coinbase<sub>i</sub>_ 是随区块高度变化的未知量，每21000个区块减半。公式中其他的参数都是常量。也就是说 _BMI_ 指数变化很慢，且在2016个区块内只与区块的挖矿难度相关。 _EMI_ 设定的参数如下：
 
 参数 | 取值 | 备注
 ------| -----|-------
@@ -89,7 +89,7 @@ _选择以上参数是为了让指数的整数部分具有3-4个有效数字，�
 
 #### 指数的范围 (Index Cap & Floor)
 
-每个以太坊算力收益合约都会设置指数的有效范围，用 _Cap_ 表示指数上限，用 _Floor_ 表示指数下限。当指数达到上下限的时候会触发合约交割。
+每份比特币算力收益合约都会设置指数的有效范围，用 _Cap_ 表示指数上限，用 _Floor_ 表示指数下限。当指数达到上下限的时候会触发合约交割。
 
 #### 指数货币单位 (Index Currency)
 
@@ -101,11 +101,11 @@ _选择以上参数是为了让指数的整数部分具有3-4个有效数字，�
 
 #### 到期区块高度 (Expiration)
 
-每个比特币算力收益合约都会设置一个到期时间，到期时间以比特币区块高度 _H_ 表示，当高度 _H_ 的区块的确认区块数达到 _NComfirm_ 后合约将被交割。为了安全起见，设置 _NComfirm_ = 24，约4小时。
+每份比特币算力收益合约都会设置一个到期时间，到期时间以比特币区块高度 _H_ 表示，当高度 _H_ 的区块的确认区块数达到 _NComfirm_ 后合约将被交割。为了安全起见，设置 _NComfirm_ = 24，约4小时。
 
 #### 交割 (Settlement)
 
-合约发生交割时，Maket智能合约将会向合约头寸持有人发送WETH。每份合约多头将收到 ( _BHRI_ - _Floor_ ) 个WBTC，每份合约空头将收到 ( _Cap_ - _BHRI_ ) 个 WBTC。
+合约发生交割时，Market智能合约将会向合约头寸持有人发送WETH。每份合约多头将收到 ( _BHRI_ - _Floor_ ) 个WBTC，每份合约空头将收到 ( _Cap_ - _BHRI_ ) 个 WBTC。
 
 #### 保证金 (Margin)
 
