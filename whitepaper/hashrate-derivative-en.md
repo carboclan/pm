@@ -140,13 +140,13 @@ Synthetic Mining Contract token issuance, trading, on-chain collateralization, a
 
 Issuers can easily issue Synthetic PoW Mining Contract by minting position tokens via [Market Protocol](https://marketprotocol.io) and traders can easily build up long or short positions by buying these position tokens, which are standard ERC20s that can be stored off-exchange in user wallets and are tradeable on both centralized and decentralized exchanges.
 
-市场上流通的合约头寸代币需要由发行人铸造（mint）。合约发行人通过向Market Protocol智能合约抵押资产铸造头寸代币。发行人在完成代币铸造后，将同时持有合约的多头代币和空头代币，其净头寸为0。因为铸造的多头代币总是等于空头代币，所以称为代币对。此后，如果发行人希望进入合约多头，则可以在市场上将空头代币卖出，以达到持有多头的目标；反之，如果发行人希望进入合约空头，则可以卖出多头代币。
+Contract issuers mint sets of long and short position tokens through sending collateral to Market Protocol smart contracts according to contract specifications. Once minted, contract issuers is market neutral by holding both long and short position tokens. For each contract, the outstanding long position tokens will be equal to short position tokens, as in pairs. Issuer wishing to enter into long position can sell its short position tokens, and vice versa.
 
-交易员也可以在市场上直接购买合约代币实现持有合约头寸的目的，而不必在Market Protocol智能合约中铸造头寸代币。任何时候，头寸代币持有人只需要在市场上卖出持有的头寸代币就可以实现平仓，从而不必等待合约交割就可以实现头寸盈亏。
+Traders can buy position tokens to gain long or short exposure without becoming an issuer. Holders of position tokens can close the position and take profit any time by selling the tokens in the market without having to wait till settlement at contract expiration.
 
-由于算力合约的指数具有上下的范围限制，且发行人已经在创建头寸时为指数范围内的合约价值支付了完全的保证金，所以合约头寸是完全抵押的，在指数范围内没有爆仓的风险。由于算力合约会被用于对冲挖矿风险，而挖矿是一个长期的过程，所以必须尽量避免因为指数到达上下限而造成的合约提前交割的情况。为此，设置指数上下限时需要根据历史数据，设置相对宽松的指数范围，以求覆盖指数波动。
+The contract specifications pre-define the cap and floor of the Index, and issuer pays full collateral according to the position ranges, there will be no liquidation prior to expiration as long as the Index falls within the ranges. However, since the Synthetic PoW Mining Contract is used to hedge against mining risk, and mining has long duration, historical volatility of difficulty must be taken into account in defining position ranges for contract specifications. 
 
-虽然合约头寸是完全抵押的，但指数的范围设置，依旧提供了对指数的杠杆作用。即当指数波动时，合约头寸价值的变化率通常会大于指数的变化率。
+Although contracts are fully collateralized upon issuance, the position range specification provides implicit leverage. When Index fluctuates, the rate of change in contract positions often will exceed that of the Index. The amount of leverage depends on the width of the position ranges relative to the Index, and the price of the position relative to the price range.
 
 例1，Carboclan社区在区块链高度568512（2019-03-21）时设置了一个新的比特币挖矿算力合约。此时指数为552。设置算力收益合约的参数如下：
   - 指数上限：600
