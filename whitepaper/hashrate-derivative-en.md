@@ -148,14 +148,14 @@ The contract specifications pre-define the cap and floor of the Index, and issue
 
 Although contracts are fully collateralized upon issuance, the position range specification provides implicit leverage. When Index fluctuates, the rate of change in contract positions often will exceed that of the Index. The amount of leverage depends on the width of the position ranges relative to the Index, and the price of the position relative to the price range.
 
-例1，Carboclan社区在区块链高度568512（2019-03-21）时设置了一个新的比特币挖矿算力合约。此时指数为552。设置算力收益合约的参数如下：
-  - 指数上限：600
-  - 指数下限：450
-  - 到期时间： 区块高度574560 （约2019-05-04）
+Example 1. The Index is at 552 now, Carboclan Community specifies a new Synthetic BTC Mining Contract at block height 568512 (2019-03-21). The contract specifications are as follow: 
+  - Cap: 600
+  - Floor: 450
+  - Expiration: block height 574560 (expected date 2019-05-04)
 
-Alice希望创建0.01个合约代币对，为此她向Market智能合约质押了(600-450)*0.01=1.5WBTC，从而铸造了0.01个合约多头头寸币和0.01个合约空头头寸币。此时，按指数计算的每个合约多头代币价值为552-450=102 WBTC，每个合约空头代币价值为600-552=48 WBTC。
+Alice would like to mint 0.01 units of contract position token pair. She sends (600-450) * 0.01=1.5WBTC to the Market smart contract as collateral, and minted 0.01 long position token and 0.01 short position token. A long token is worth 552-450=102 WBTC, a short token is worth 600-552=48 WBTC.
 
-之后，指数下降到550，此时，按指数计算的每个合约多头代币价值为550-450=100 WBTC，每个合约空头代币价值为600-550=50 WBTC。Alice希望进入合约空头，于是她在交易所中挂单出售0.01个合约多头代币。Bob恰好希望进入合约多头，最终Bob向Alice购买了合约多头币，成交价98WBTC。Bob向Alice支付0.98WBTC，Alice向Bob支付0.01个合约多头币。
+Later on, the Index falls to 550, a long token is worth 550-450=100 WBTC, a short token is worth 600 - 550 = 50 WBTC. Alice would like to enter into a short position, so she lists her 0.01 long position in the market. Bob would like to enter into a long position, so he bought the 0.01 long position token, at a price of 0.98WBTC. Bob paid to Alice 0.98WBTC and received 0.01 long token.
 
 这里在市场上头寸代币成交价（98WBTC）低于了按指数计算的价格（100WBTC），这是由于人们对到期日指数会进一步下降的预期造成的。另一方面，我们可以看到，指数下降了(552-550)/552=0.36%，但多头头寸按指数计算的价格却下降了(102-100)/102=1.9%，这就是指数下限造成的5.28倍杠杆作用。
 
