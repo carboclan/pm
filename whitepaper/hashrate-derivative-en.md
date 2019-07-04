@@ -157,9 +157,9 @@ Alice would like to mint 0.01 units of contract position token pair. She sends (
 
 Later on, the Index falls to 550, a long token is worth 550-450=100 WBTC, a short token is worth 600 - 550 = 50 WBTC. Alice would like to enter into a short position, so she lists her 0.01 long position in the market. Bob would like to enter into a long position, so he bought the 0.01 long position token, at a price of 0.98WBTC. Bob paid to Alice 0.98WBTC and received 0.01 long token.
 
-这里在市场上头寸代币成交价（98WBTC）低于了按指数计算的价格（100WBTC），这是由于人们对到期日指数会进一步下降的预期造成的。另一方面，我们可以看到，指数下降了(552-550)/552=0.36%，但多头头寸按指数计算的价格却下降了(102-100)/102=1.9%，这就是指数下限造成的5.28倍杠杆作用。
+While the actual price of the position token (98WBTC) may be above or below the Index (100 BTC), in this example actual price of the long position token (98WBTC) may be priced below the theoretical price (100WBTC) calculated from the current Index, which may be caused by market expectation that the Index may drop further by expiration. On the other hand, while Index drops (552-550)/552=0.36%, but theoretical price for the long position token calculated from the Index dropped (102-100)/102=1.9%, which reflects 5.28 implicit leverage from the Index floor.
 
-当区块高度为574570时，合约到期。又过了12个区块高度，合约进行交割。此时合约指数为525。Market智能合约向多头持有方Bob支付（525-450)*0.01=0.75WBTC, 向空头只有方Alice支付(600-525)*0.01=0.75WBTC。最终Alice的盈亏为：-1.5+0.98+0.75 = 0.23WBTC，Bob的盈亏为: -0.98+0.75=-0.23WBTC。
+The contract expires at block height 574570, and settles after 12 blocks. The Index is at 525. Market Protocol smart contract pays Bob (525-450) * 0.01=0.75WBTC, and (600-525) * 0.01=0.75WBTC to short position token owner Alice. Alice's return: -1.5+0.98+0.75 = 0.23WBTC，Bob's return: -0.98+0.75=-0.23WBTC。
 
 
 ## 4. Use cases
