@@ -161,6 +161,25 @@ While the actual price of the position token (98WBTC) may be above or below the 
 
 The contract expires at block height 574570, and settles after 12 blocks. The Index is at 525. Market Protocol smart contract pays Bob (525-450) * 0.01=0.75WBTC, and (600-525) * 0.01=0.75WBTC to short position token owner Alice. Alice's return: -1.5+0.98+0.75 = 0.23WBTC，Bob's return: -0.98+0.75=-0.23WBTC。
 
+### 3.2 Oracle
+Market protocol rely on oracle to provide index. Oracle is the relatively centralized part of the entire system.
+Obtaining data for Ethereum mining contract does not rely on off chain data. Difficulty data can be obtained directly from smart contract. The major challenge is that a single call cannot access the difficulty data for the entire 80640 blocks. Difficulty data needs to be stored on the smart contract continuously.
+Bitcoin mining contract require off ethereum-chain data. Bitcoin mining difficulty data needs to be obtained from third party provider. The difficulty data is then processed by the oracle smart contract. The good news is that bitcoin mining difficulty only change every 14 days on average. Since the difficulty data is recorded on the bitcoin chain, all people can validate the authenticity of the data.
+
+### 3.3 Trading Layer
+
+Since the position tokens issued by market protocol are fully collateralized and fit erc-20 standard, the position tokens can be traded on any centralized exchange like (Binance and Bitstamp), and decentralized exchanges (like 0x and uniswap). This property makes mining contract readily tradeable without developing new infrastructure or technology.
+
+### 3.4 Variable Margin Layer
+
+In 3.1 we’ve already analyzed the leverage effect of the market protocol. However, when the index flucturate significantly, in order for the index not to touch the boundary, the index range need to be set wider, which leads to a higher collateral ratio and lower leverage.
+Short term mining contracts (i.e 30 days)have relatively less fluctuation. Therefore, the index range is narrow and market protocol itself provides enough leverage. However, long-term mining contracts (i.e 180 days) could fluctuate more than 100%, the fully collateralized method  by market protocol will be too capital inefficient.
+
+Therefore, a variable margin layer could be introduced on top of the position token. The variable margin layer has such characteristic that a certain margin ratio is set according to the market price of the position. Margins only need to cover fluctuation in the short run and cannot cover the entire position. When the margin ratio drop due to market price change, margin calls can be issued to the party lacking margin so as to cover the fluctuation. On the other hand, if the margin ratio increase to more than necessary, the excessive part can be withdrew from the margin account to pocket the profit. Such a variable margin system lower the margin requirement and increase capital efficiency.
+
+A few defi protocols like dydx, have already built variable margin function. insert a paragraph of how dydx works
+
+At the moment, dydx does not fully support trading position token from market protocol, a few adaption work still needs to be done, but wont be a major obstacle.
 
 ## 4. Use cases
 Tokenized Synthetic PoW Mining Contract has multiple use cases
