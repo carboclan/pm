@@ -186,11 +186,11 @@ Dydx supports a maximum leverage of 4x. When the price of the mortgaged token dr
 
 At the moment, dydx does not fully support position tokens from market protocol, more integration work still needs to be done.
 
-## 4. Use cases
+## 4. Use Cases
 
 Tokenized Synthetic PoW Mining Contract has multiple use cases.
 
-### 4.1 Risk exposure
+### 4.1 Risk Exposure
 
 Before purchasing mining rigs and start mining, investors need to estimate ROI. Purchasing mining rigs is a onetime investment. Electricity cost for mining is fixed as well. Therefore, investment for mining is fixed. The only factors affecting mining output is price movement and mining difficulty. Various financial product (futures, perpetual swaps and options) can hedge against price fluctuation. Synthetic POW Mining Contract fills the market void by revealing risks associated with difficulty fluctuation. Investors could observe the market price for mining contract of various durations, which reflects market view on mining return.
 
@@ -205,7 +205,7 @@ BMI-450-600-580608-L | 19-06-14	| 35	| 485
 
 Long position token prices reflect market view on mining returns of respective difficulty cycles. The market believes that under same amount of hashrate, the mining return will gradually decrease. To be specific, the amount of bitcoin that could be mined with 10^18 hash/s of hashrate within next 2016 blocks (1 difficulty cycle). Investors could figure out that expected mining return gradually decreases, thereby estimating their own mining ROI more rationally.
 
-### 4.2 Hedge the risk
+### 4.2 Hedging
 The synthetic POW mining contract can hedge mining risks in addition to revealing them. Similarly, we set aside the cryptocurrency price movement here, since many derivatives can hedge that. Investors could enter a short position in said contract to hedge difficulty related risks when mining. When difficulty goes up, mining return goes down, the profit on the short position could negate the decrease in actual mining return. When difficulty goes down, mining return goes up, the loss on the short position could negate the increase in actual mining return. The hedging process thus locked in mining return. The return is (cap of the index - the price when entering the position)
 
 For example, on May 1st, 2019, Alice purchased a batch of mining rigs that clocks 10^17 hash/s. She wanted to lock in mining return for nearly the next two months from block height 574,560 (05-04) to block height 582,624 (06-28). Therefore, Alice purchased a series of short positions of the mining contracts in chronological order, 0.1 token each. The following table reflects her P&L.
@@ -217,12 +217,12 @@ BMI-450-600-576576-S	| 05-18	| 85	| 525.0	| -1.0		| 52.50	| 51.50
 BMI-450-600-578592-S	| 05-31	| 100	| 471.9	| 2.81		| 47.19	| 50.00
 BMI-450-600-580608-S	| 06-14	| 115	| 471.1	| 1.39		| 47.11	| 48.50
 
-### 4.3 Fixed-income investment
+### 4.3 Fixed-income Investment
 
 The Synthetic POW Mining Contract decouples risks from mining difficulty fluctuation and thereby enables new financial product such as fixed income investment structure. Investors can at the same time purchase or lease physical mining rigs and start mining, and entering short positions to hedge risks regarding difficulty. If the investor’s base currency is USD, then he could also enter a short position in futures to hedge away exchange rate risk. The above method could create a fixed income product, which will allow for major capital injection into the mining space. Fixed income investors are required to manage the mining farm and mining rigs so that the mining operation runs smoothly. Their role is pivotal in connecting the synthetic mining derivatives and physical mining operations.
 
 
-### 4.4 Financial leasing
+### 4.4 Finance Leasing
 
 The major pain point for miners has been lacking capital to expand. Since mining risks currently cannot be hedged, no one is willing to give loan to miners. Miners now can lease mining rigs to risk-free fixed income investors or mortgage the rigs to lenders. Capital provider could require the borrowers to enter short position in both mining contract and token exchange rate, thereby stabilize their wiliness and increase their ability to repay loans.
 
