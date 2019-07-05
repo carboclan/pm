@@ -39,7 +39,7 @@ _N_  | 80640  | 14-day window
 _Coinbase<sub>i</sub>_  | 2 ETH per Block | Block reward is 2ETH starting from block height 7,080,000
 _TargetBlockTime_ | 15 s | Target block time for ethereum is fixed at 15s
 
-_Parameters are defined as so to maintain at least 3 significant digits to the left of the decimal, which caters to traders' heuristics in order to faciliate trading decisoins._
+_Parameters are defined as so to maintain at least 3 significant digits to the left of the decimal, which caters to traders' heuristics in order to facilitate trading decisions._
 
 #### Index Cap & Floor
 
@@ -55,7 +55,7 @@ Each Synthetic ETH Mining Contract will specify its valid range, _Cap_ represent
 
 #### Expiration
 
-Each Syntheic ETH Mining Contract will specify an expiration time, defined as ethereum block height _H_. The contract will settle when block confirmation at block height _H_ reaches _NConfirm_. For security considerations, _NComfirm_ = 960 (approximately 4 hours).
+Each Synthetic ETH Mining Contract will specify an expiration time, defined as ethereum block height _H_. The contract will settle when block confirmation at block height _H_ reaches _NConfirm_. For security considerations, _NComfirm_ = 960 (approximately 4 hours).
 
 #### Settlement
 
@@ -85,7 +85,7 @@ BTC Mining Index ( _BMI_ ) represents expected return (BTC) per unit _Hashrate_ 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BMI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BMI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{BMI}=\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot 2016}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
 
-Given block height _H_, _Difficulty<sub>i</sub>_ is a variable dependent on _H_, and re-adjusts every 2,016 blocks. _Coinbase<sub>i</sub>_ is a variable dependent on _H_, which halves every 21,000 blocks. All other terms in the equation are constants. In other words, _BMI_ only depends on mining difficulty within every 2,016 blocks. Since bitcoin network adjusts difficulty every 2,016 blocks, _BMI_ remains constant until the next difficulty adjustment. _BMI_ parameters are defined as following:
+Given block height _H_, _Difficulty<sub>i</sub>_ is a variable dependent on _H_, and re-adjusts every 2,016 blocks. _Coinbase<sub>i</sub>_ is a variable dependent on _H_, which halves every 21,000 blocks. All other terms in the equation are constants. In other words, _BMI_ only depends on mining difficulty within every 2,016 blocks. Since bitcoin network adjusts difficulty every 2,016 blocks, _BMI_  remains constant until the next difficulty adjustment. _BMI_ parameters are defined as following:
 
 Parameter | Value | Note
 ------| -----|-------
@@ -93,7 +93,7 @@ _Hashrate_  | 10 <sup>18</sup> Hash/s  | |
 _Coinbase<sub>i</sub>_  | 12.5 BTC per Block | Block reward halves every 21,000 blocks
 _TargetBlockTime_ | 600 s | Target block time for bitcoin is fixed at 10 minutes
 
-_Parameters are defined as so to maintain at least 3 significant digits to the left of the decimal, which caters to traders' heuristics in order to faciliate trading decisoins._
+_Parameters are defined as so to maintain at least 3 significant digits to the left of the decimal, which caters to traders' heuristics in order to facilitate trading decisions._
 
 #### Index Cap & Floor
 
@@ -109,7 +109,7 @@ Each Synthetic BTC Mining Contract will specify its valid range, _Cap_ represent
 
 #### Expiration
 
-Each Syntheic BTC Mining Contract will specify an expiration time, defined as bitcoin block height _H_. The contract will settle when block confirmation at block height _H_ reaches _NConfirm_. For security considerations, _NComfirm_ = 24 (approximately 4 hours).
+Each Synthetic BTC Mining Contract will specify an expiration time, defined as bitcoin block height _H_. The contract will settle when block confirmation at block height _H_ reaches _NConfirm_. For security considerations, _NComfirm_ = 24 (approximately 4 hours).
 
 #### Settlement
 
@@ -172,7 +172,7 @@ Since the position tokens issued by Market Protocol are fully collateralized and
 
 ### 3.4 Variable Margin Layer
 
-In 3.1 we’ve already analyzed the implicit leverage of the Market Protocol. However, when the Index fluctuate significantly, in order for the index not to touch the cap and floow, the index range need to be set wider, which leads to a higher collateral ratio and lower leverage.
+In 3.1 we’ve already analyzed the implicit leverage of the Market Protocol. However, when the Index fluctuate significantly, in order for the index not to touch the cap and floor, the Index range need to be set wider, which leads to a higher collateral ratio and lower leverage.
 
 Short-term mining contracts (i.e 30 days) have less fluctuation. Therefore, the Index range is narrow and Market Protocol itself enables enough implicit leverage. However, long-term mining contracts (i.e 180 days) could fluctuate more than 100%, the fully collateralized method of Market Protocol will be capital inefficient.
 
