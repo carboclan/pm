@@ -26,7 +26,7 @@ The following contract is issued through [Market Protocol](https://marketprotoco
 
 #### Index
 
-ETH Mining Index ( _EMI_ ) represents given _N_ blocks prior to block height _H_, expected return in ETH given _Hashrate_ (Unit: Hash/s) in ethereum mining. _Difficulty<sub>i</sub>_ represents mining difficulty at block height _i_, _Coinbase<sub>i</sub>_ represents mining reward at block height _i_, and _TargetBlockTime_ represents expected block time of the ethereum network. _EMI_ is calculated as following:
+ETH Mining Index ( _EMI_ ) represents at given _N_ blocks prior to block height _H_, expected return (ETH) per unit _Hashrate_ (Hash/s) in ethereum mining. _Difficulty<sub>i</sub>_ represents mining difficulty at block height _i_, _Coinbase<sub>i</sub>_ represents mining reward at block height _i_, and _TargetBlockTime_ represents expected block time of the ethereum network. _EMI_ is calculated as following:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{EMI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{EMI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{EHRI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
 
@@ -43,7 +43,7 @@ _Parameters are defined as so to maintain at least 3 significant digits to the l
 
 #### Index Cap & Floor
 
-Each Synthetic ETH Mining Contract will specify its valid range, _Cap_ represents the upper bound, and _Floor_ represents the lower bound. When Index reaches the upper or lower bounds will trigger contract settlement.
+Each Synthetic ETH Mining Contract will specify its valid range, _Cap_ represents the upper bound, and _Floor_ represents the lower bound. Index reaching the upper or lower bound prior to expiration will trigger contract settlement.
 
 #### Index Currency
 
@@ -80,8 +80,8 @@ Example: EMI-100-200-80000-L token corresponds to a long position on a Synthetic
 
 ###  2.2 Synthetic BTC Mining Contract
 #### Index
-
-BTC Mining Index ( _BMI_ ) represents given _2016_ blocks after block height _H_, expected return in BTC given _Hashrate_ (Unit: Hash/s) in bitcoin mining. _Difficulty<sub>i</sub>_ represents mining difficulty at block height _i_, _Coinbase<sub>i</sub>_ represents mining reward at block height _i_, and _TargetBlockTime_ represents expected block time of the bitcoin network. _BMI_ is calculated as following:
+ 
+BTC Mining Index ( _BMI_ ) represents at given _2016_ blocks after block height _H_, expected return (BTC) per unit _Hashrate_ (Hash/s) in bitcoin mining. _Difficulty<sub>i</sub>_ represents mining difficulty at block height _i_, _Coinbase<sub>i</sub>_ represents mining reward at block height _i_, and _TargetBlockTime_ represents expected block time of the bitcoin network. _BMI_ is calculated as following:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BMI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BMI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{BMI}=\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot 2016}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
 
@@ -97,7 +97,7 @@ _Parameters are defined as so to maintain at least 3 significant digits to the l
 
 #### Index Cap & Floor
 
-Each Synthetic BTC Mining Contract will specify its valid range, _Cap_ represents the upper bound, and _Floor_ represents the lower bound. When Index reaches the upper or lower bounds will trigger contract settlement.
+Each Synthetic BTC Mining Contract will specify its valid range, _Cap_ represents the upper bound, and _Floor_ represents the lower bound. Index reaching the upper or lower bound prior to expiration will trigger contract settlement.
 
 #### Index Currency
 
@@ -133,7 +133,7 @@ Example: BMI-100-200-80000-S token corresponds to a short position on a Syntheti
 
 ## 3. Smart Contract Stack
 
-Synthetic Mining Contract token issuance, trading, on-chain collateralization, and settlement are executed via smart contracts enforced by ethereum blockchain consensus. Trust is minimized in the process, which lowers the entry barrier for trading and improves liquidity.
+Synthetic PoW Mining Contract token issuance, trading, on-chain collateralization, and settlement are executed via smart contracts enforced by ethereum blockchain consensus. Trust is minimized in the process, which lowers the entry barrier for trading and improves liquidity.
 
 ### 3.1 Tokenization Layer
 
