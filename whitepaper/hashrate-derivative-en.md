@@ -4,19 +4,20 @@
 
 ## 1. Motivation
 
-Crypto mining is a sizable market. In 2018, a total of over US$ 9 billion worth of Proof-of-Work mining rewards were rewarded to miners as block rewards and transaction fees. Crypto mining often requires upfront capex investment to purchase hardware and receive certain amount of cryptocurrency as reward. There is significant risk involved in mining investment. Aside from operational risk in the construction and maintenance of mining and power facility, adverse weather condition and policy risks, there are two major risks associated with crypto mining: market price of cryptocurrencies and network mining difficulty.
+Crypto mining has become a sizable market. In 2018, a total of over US$ 9 billion worth of Proof-of-Work coins/tokens were distributed to miners as block rewards and transaction fees. Crypto mining often requires upfront capex investment to purchase hardware in order to receive certain amount of cryptocurrency as reward. There is significant risk involved in mining investment. Aside from operational risk in the construction and maintenance of mining and power facility, adverse weather condition and policy risks, there are two major risks associated with crypto mining: market price of cryptocurrencies and the fluctuation of network mining difficulties.
 
-There are financial instruments readily available to hedge against the market price movements of cryptocurrencies. Therefore, we will focus on risk associated with volatility in mining difficulty.
+There are financial instruments readily available to hedge against the market price movements of cryptocurrencies. Our goal is to provide miners and other market participants with instruments with exposure to the volatility of mining difficulties, enabling them to hedge against the underlying risk.
 
-In Proof-of-Work mining, block rewards are specified by the protocol, and can be considered as fixed over a period of time. More miners joining the network will drive up the network hashrate. Difficulty is determined by a moving average targeting an average number of blocks per hour. Increase in computing power would drive up mining difficulty, which would in turn reduce the economic return of mining. 
+In Proof-of-Work mining, block rewards are specified by the protocol, and can be considered as fixed over a period of time. More miners joining the network will drive up the network hashrate. Difficulty is determined by a moving average targeting an average number of blocks per hour. Increase in computing power would drive up mining difficulty, which would in turn reduce the economic return of mining.
 
-Current state of crypto mining market is inefficient. Absent of instruments to express forward-looking views without direct exposure, investors have only the choice of taking an illiquid long position via invest in mining hardware or mining operation, or choose to sit out by not investing. 
+Current state of crypto mining market is inefficient. Absent of instruments to express forward-looking views without direct exposure, investors have only the choice of taking an illiquid long position via invest in mining hardware or mining operation, or choose to sit out by not investing.
 
 Miners sometimes resort to selling "cloud mining" contracts as an imperfect hedge against both difficulty and price movements. Typical cloud mining contracts require investors to pay to the issuer (cloud mining platform or a miner) in full upfront and receive a stream of cashflow over an indefinite period of time. It is a proxy for non-miners to gain indirect exposure to mining cashflow, while miners can offload some of the systematic risks. However, this instrument subjects investors to significant counterparty risks, and has been hotbed for scams.
 
-Lack of effective instrument leave miners unhedged in the wild swings in mining return. Miners tend to rush to market as coin price rises, driving up network difficulty which in turn results in less coins mined; as cryptocurrency prices fall, declining mining revenue may not cover the operational costs denominated in fiat, and the already illiquid mining assets becomes even harder to liquidate, leaving miners with little downside protection. 
+Lack of effective instrument leave miners unhedged in the wild swings in mining return. Miners tend to rush to market as coin price rises, driving up network difficulty which in turn results in less coins mined; as cryptocurrency prices fall, declining mining revenue may not cover the operational costs denominated in fiat, and the already illiquid mining assets becomes even harder to liquidate, leaving miners with little downside protection.
 
 We hereby propose Tokenized Synthetic PoW Mining Contract, which offers token holders synthetic exposure to mining payoff. Through trading this instrument, miners can hedge against difficulty, investors can be rewarded for bearing the risk. By filling in a market void via decoupling risks associated with network difficulty from that of market price of cryptocurrency, POW Mining Contract Tokens enable a more efficient mining market, and unlock possibilities of creating more crypto-native financial products that service the blockchain infrastructure.
+
 
 ## 2. Contract Specification
 
@@ -55,7 +56,7 @@ Each Synthetic ETH Mining Contract will specify its valid range, _Cap_ represent
 
 #### Expiration
 
-Each Synthetic ETH Mining Contract will specify an expiration time, defined as ethereum block height _H_. The contract will settle when block confirmation at block height _H_ reaches _NConfirm_. For security considerations, _NComfirm_ = 960 (approximately 4 hours).
+Each Synthetic ETH Mining Contract will specify an expiration height (as in Ethereum block height), as opposed to a traditional derivative contract’s expiration time. The contract will settle when block confirmation at block height H reaches N Confirmations. For security considerations, N= 960 (approximately 4 hours).
 
 #### Settlement
 
@@ -75,7 +76,7 @@ EMI-\<Floor\>-\<Cap\>-\<Height\>-[L|S]
 - L: long position
 - S: short position
 
-Example: EMI-100-200-80000-L token corresponds to a long position on a Synthetic Ethereum Mining Contract with Index valid range of [100,200], to be settled at block height 80,000.
+Example: EMI-100-200-80000-L token represents to a long position on a Synthetic Ethereum Mining Contract with Index valid range of [100,200], to be settled at block height 80,000.
 
 
 ###  2.2 Synthetic BTC Mining Contract
@@ -172,19 +173,20 @@ Since the position tokens issued by Market Protocol are fully collateralized and
 
 ### 3.4 Variable Margin Layer
 
-In 3.1 we’ve already analyzed the implicit leverage of the Market Protocol. However, when the Index fluctuate significantly, in order for the index not to touch the cap and floor, the Index range need to be set wider, which leads to a higher collateral ratio and lower leverage.
+In 3.1 we’ve already analyzed the implicit leverage of the Market Protocol. However, when the Index fluctuate significantly, in order for the index not to touch the cap or floor, the Index range need to be set wider, which leads to a higher collateral ratio and lower leverage (capital utilization rate).
 
 Short-term mining contracts (i.e 30 days) have less fluctuation. Therefore, the Index range is narrow and Market Protocol itself enables enough implicit leverage. However, long-term mining contracts (i.e 180 days) could fluctuate more than 100%, the fully collateralized method of Market Protocol will be capital inefficient.
 
-Therefore, a variable margin layer could be introduced on top of the position token. The variable margin layer has such characteristic that a certain margin ratio is set according to the market price of the position. Margins only need to cover fluctuation in the short run and cannot cover the entire position. When the margin ratio drops due to market price change, margin calls can be issued to the party lacking margin so as to cover the fluctuation. On the other hand, if the margin ratio increases to more than necessary, the excess margin can be withdrawn from the margin account to pocket the profit. Such a variable margin system lowers the margin requirement and increase capital efficiency.
+Therefore, a variable margin layer could be introduced on top of the position token. The variable margin layer has such characteristic that a certain margin ratio is set according to the market price of the position. Margins only need to cover fluctuation in the short run and cannot cover the entire position. When the margin ratio drops due to market price change, margin calls can be issued to the party lacking margin to cover further market movement. On the other hand, if the margin ratio increases to more than necessary, the excess margin can be withdrawn from the margin account to realize the profit. Such a variable margin system lowers the margin requirement and increase capital efficiency.
 
-A few DeFi protocols (i.e. dydx) can enable variable margin function. User can borrow token from dydx. Lender can deposit token A to the token pool of the smart contract. Borrower mortgages token B to create margin account and borrow token A from the token pool. The token A he borrowed is sold for token B. The token B he bought is again mortgaged into the margin account so that he can borrow more token A to be sold. The leveraged short on token A is now complete. 
+A few DeFi protocols (i.e. dydx) can enable variable margin function. User can borrow token from dydx. Lender can deposit token A to the token pool of the smart contract. Borrower mortgages token B to create margin account and borrow token A from the token pool. The token A he borrowed is sold for token B. The token B he bought is again mortgaged into the margin account so that he can borrow more token A to be sold. The leveraged short on token A is now complete.
 
-On the contrary, lender could deposit Token B to the token pool of the smart contract. Borrower mortgage Token A to create margin account and borrow Token B from the token pool. The Token B he borrowed is sold for Token A. Token A he bought is again mortgaged into the margin account so that he can borrow more Token B to be sold for Token A. The leveraged long on Token A is now complete.
+On the contrary, lender could deposit Token B to the token pool of the smart contract. Borrower mortgage Token A to create margin account and borrow Token B from the token pool. The Token B he borrowed is sold for Token A. Token A he bought is again mortgaged into the margin account so that he can borrow more Token B and exchange for Token A. A leveraged long postion on Token A is now complete.
 
-Dydx supports a maximum leverage of 4x. When the price of the mortgaged token drops relative to the borrowed token, margin could drop to an insufficient amount. If the borrower cannot add enough collateral in time, forced liquidation could occur. Variable margin is thus functional.
+Dydx supports a maximum leverage of 4x. When the price of the mortgaged token drops relative to the borrowed token, margin could drop to an insufficient amount. If the borrower cannot deposit enough collateral to meet the margin requirement in time, forced liquidation could occur. Variable margin is thus functional.
 
 At the moment, dydx does not fully support position tokens from market protocol, more integration work still needs to be done.
+
 
 ## 4. Use Cases
 
@@ -192,7 +194,7 @@ Tokenized Synthetic PoW Mining Contract has multiple use cases.
 
 ### 4.1 Risk Exposure
 
-Before purchasing mining rigs and start mining, investors need to estimate ROI. Purchasing mining rigs is a onetime investment. Electricity cost for mining is fixed as well. Therefore, investment for mining is fixed. The only factors affecting mining output is price movement and mining difficulty. Various financial product (futures, perpetual swaps and options) can hedge against price fluctuation. Synthetic POW Mining Contract fills the market void by revealing risks associated with difficulty fluctuation. Investors could observe the market price for mining contract of various durations, which reflects market view on mining return.
+Before purchasing mining rigs and start mining, investors need to estimate ROI. Purchasing mining rigs is a onetime investment. Electricity cost for mining is relatively stableas well. Therefore, investment for mining can be consideredfixed over some period of time. The only factors affecting mining return is the price movement of the underlying coin(s) mined and their mining difficulties. Various financial product (futures, perpetual swaps and options) can be utilized to hedge against price fluctuation. Synthetic POW Mining Contract fills the market void by providing a financial instrument with exposure to  risks associated with mining difficulty fluctuation. Investors could observe the market price for mining contract of various terms, reflecting market’s collective projection  on mining returns, similar to that of the term structure of interest rates or that of the volatility surface of options
 
 i.e On May 1st, 2019, BMI index is 526. The following table indicates the market price for Tokenized Synthetic PoW Mining Contracts in various terms.
 
@@ -219,24 +221,25 @@ BMI-450-600-580608-S	| 06-14	| 115	| 471.1	| 1.39		| 47.11	| 48.50
 
 ### 4.3 Fixed-income Investment
 
-The Synthetic POW Mining Contract decouples risks from mining difficulty fluctuation and thereby enables new financial product such as fixed income investment structure. Investors can at the same time purchase or lease physical mining rigs and start mining, and entering short positions to hedge risks regarding difficulty. If the investor’s base currency is USD, then he could also enter a short position in futures to hedge away exchange rate risk. The above method could create a fixed income product, which will allow for major capital injection into the mining space. Fixed income investors are required to manage the mining farm and mining rigs so that the mining operation runs smoothly. Their role is pivotal in connecting the synthetic mining derivatives and physical mining operations.
+The Synthetic POW Mining Contract decouples risks from mining difficulty fluctuation and risks from underlying price movements, thereby enabling new financial instruments such as fixed income products. Investors can at the same time purchase or lease physical mining rigs and start mining, and entering short positions to hedge risks regarding difficulty. If the investor’s base currency is USD, then he could also enter a short position in futures to hedge away exchange rate risk. The above-mentioned portfolio for example could be structured into a fixed income product with streams of cashflows, which would allow for major capital injection into the mining space. Fixed income investors are required to manage the mining farm and mining rigs so that the mining operation runs smoothly. Their role is pivotal in connecting the synthetic mining derivatives and physical mining operations.
 
 
 ### 4.4 Finance Leasing
 
-The major pain point for miners has been lacking capital to expand. Since mining risks currently cannot be hedged, no one is willing to give loan to miners. Miners now can lease mining rigs to risk-free fixed income investors or mortgage the rigs to lenders. Capital provider could require the borrowers to enter short position in both mining contract and token exchange rate, thereby stabilize their wiliness and increase their ability to repay loans.
+The major pain point for miners has been the lack of capital for expansion. Due to the difficulty of hedging mining risk, there is little incentive for lenders to provide capital to miners. Miners now can lease mining capacity to risk-free fixed income investors on demand, or mortgage the rigs to lenders so that they can receive cashflow and expand. Capital provider could require the borrowers to enter short position in both mining contract and token exchange rate, thereby stabilize their projected cashflows and increase their ability to repay loans.
 
 ### 4.5 Cloud Mining
 
 A synthetic cloud mining service can be easily built upon the mining contract. The synthetic cloud mining service targets users who already understand how cloud mining work.
 
-Traditionally, investing in cloud mining has such an economic model: user invests some amount of money to purchase cloud mining capacity and receives some mining returns daily in the period following the investment. User hopes that the total return would be greater than the initial investment. Disregarding token exchange rate fluctuation (or fully hedging exchange rate), cloud mining return only depends on mining difficulty.
+Traditionally, investing in cloud mining has the following economic model: user invests a certain amount of money to purchase cloud mining capacity and receives mining returns daily in the period following the investment. The investor hopes that the total return would be greater than the initial investment. Disregarding token exchange rate fluctuation (or fully hedging exchange rate), cloud mining return only depends on mining difficulty.
 
 Mining contract can easily simulate the above process: User purchases an array of same sized long positions of mining contract that settle in chronological order, with the lower bound of the contract index being 0. This process is very similar to cloud mining. The user will receive settlement amount from the mining contract in chronological order. The process of receiving the return mimics mining return. The amount of hashrate user purchased corresponds to the long position of the contract index. For example, the bitcoin mining contract use 10^18 hash/s as the basic unit. Therefore, purchasing one long position token is equivalent to purchasing 10^18 hash/s of cloud mining capacity. Since the lower bound of the index is 0, long position will never be liquidated, which is similar to mining.
 
+
 ### 4.6 Speculation
 
-Synthetic PoW Mining Contract forms a two-sided market. In this market, unit hashrate output can be either longed or shorted. Investor could enter a long position to speculate, and become the counterparty of the hedging miner. As long as the speculator can precisely predict the difficulty fluctuation, he could be rewarded for bearing mining difficulty risks.
+Synthetic PoW Mining Contract forms a two-sided market. In this market, an investor could be long or short the unit hashrate output index. If the investor choose to be long a position effectively becoming the counterparty of the hedging miner. he/she could be rewarded for bearing mining difficulty risks.
 
 ### 4.7  Margin Funding
 
@@ -245,4 +248,4 @@ Under variable margin, a new business model arises. Lender can fund margin trade
 
 ### 4.8 Market Maker
 
-Market maker exists in all two-sided markets. Market maker makes profit by providing liquidity and bear market making risks. Since position tokens are all standard ERC-20 tokens. All market making mechanisms in the crypto world can be introduced here. Market maker can follow the traditional buy low sell high strategy by observing the orderbook. They can also profit from creating position token pairs and lend it to automatic liquidity pool like Uniswap.
+Market maker exists in all two-sided markets. Market maker makes profit by providing liquidity and bear market making risks. Since position tokens are all standard ERC-20 tokens. All market making mechanisms in the crypto world could be recalibrated to be utilized in this market. Market makers can follow the traditional buy low sell high strategy by observing the orderbook. They can also profit from creating position token pairs and lend it to automatic liquidity pool like Uniswap.
