@@ -27,16 +27,16 @@ The following contract is issued through [Market Protocol](https://marketprotoco
 
 #### Index
 
-ETH Mining Index ( _EMI_ ) represents expected return (ETH) per unit _Hashrate_ (Hash/s) at given _N_ blocks prior to block height _H_ in ethereum mining. _Difficulty<sub>i</sub>_ represents mining difficulty at block height _i_, _Coinbase<sub>i</sub>_ represents mining reward at block height _i_, and _TargetBlockTime_ represents expected block time of the ethereum network. _EMI_ is calculated as following:
+ETH Mining Index ( _EMI_ ) represents expected return (ETH) per _HashrateUnit_ (1 tera Hash/s) for _N_ blocks (80,640 blocks, 14-day window) prior to block height _H_ in ethereum mining. _Difficulty<sub>i</sub>_ represents mining difficulty at block height _i_, _Coinbase<sub>i</sub>_ represents mining reward at block height _i_, _TargetBlockTime_ represents expected block time of the ethereum network. _EMI_ is calculated as following:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{EMI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{EMI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{EHRI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{EMI}=\sum_{i=H-N}^{N-1}\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{EMI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{EHRI}=\sum_{i=H-N}^{N-1}\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" /></a>
 
 Block height _H_, _Difficulty<sub>i</sub>_ and _Coinbase<sub>i</sub>_ are the only variables in the formula dependent on block height. All other terms are constants. Since _Coinbase<sub>i</sub>_ rarely changes, _EMI_ mostly depends on mining difficulty. _EMI_ parameters are defined as following:
 
 Parameter | Value | Note
 ------| -----|-------
-_Hashrate_  | 1,000,000,000,000 Hash/s  | |
-_N_  | 80640  | 14-day window
+_Hashrate_  | 1,000,000,000,000 Hash/s  | 1 tera hash/s |
+_N_  | 80,640  | 14-day window
 _Coinbase<sub>i</sub>_  | 2 ETH per Block | Block reward is 2ETH starting from block height 7,080,000
 _TargetBlockTime_ | 15 s | Target block time for ethereum is fixed at 15s
 
@@ -82,15 +82,16 @@ Example: EMI-100-200-80000-L token represents to a long position on a Synthetic 
 ###  2.2 Synthetic BTC Mining Contract
 #### Index
  
-BTC Mining Index ( _BMI_ ) represents expected return (BTC) per unit _Hashrate_ (Hash/s) at given _2016_ blocks after block height _H_ in bitcoin mining. _Difficulty<sub>i</sub>_ represents mining difficulty at block height _i_, _Coinbase<sub>i</sub>_ represents mining reward at block height _i_, and _TargetBlockTime_ represents expected block time of the bitcoin network. _BMI_ is calculated as following:
+BTC Mining Index ( _BMI_ ) represents expected return (BTC) per _HashrateUnit_ (1 exa hash/s) for _N_ blocks (one difficulty cycle 2,016 blocks, approximately 14-day window) after block height _H_ in bitcoin mining. _Difficulty<sub>i</sub>_ represents mining difficulty at block height _i_, _Coinbase<sub>i</sub>_ represents mining reward at block height _i_, _TargetBlockTime_ represents expected block time of the bitcoin network. _BMI_ is calculated as following:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BMI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BMI}=\frac{\mathit{Hashrate}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;2016}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{BMI}=\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot 2016}{\mathit{Difficulty_i}\cdot 2^{^{32}}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BMI}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;N}{\mathit{Difficulty_i}\cdot&space;\2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BMI}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;N}{\mathit{Difficulty_i}\cdot&space;2^{^{32}}}" title="\small \mathit{BMI}=\frac{\mathit{Hashrate} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot N}{\mathit{Difficulty_i}\cdot&space;\2^{^{32}}}" /></a>
 
 Given block height _H_, _Difficulty<sub>i</sub>_ is a variable dependent on _H_, and re-adjusts every 2,016 blocks. _Coinbase<sub>i</sub>_ is a variable dependent on _H_, which halves every 21,000 blocks. All other terms in the equation are constants. In other words, _BMI_ only depends on mining difficulty within every 2,016 blocks. Since bitcoin network adjusts difficulty every 2,016 blocks, _BMI_  remains constant until the next difficulty adjustment. _BMI_ parameters are defined as following:
 
 Parameter | Value | Note
 ------| -----|-------
-_Hashrate_  | 10 <sup>18</sup> Hash/s  | |
+_HashrateUnit_  | 10 <sup>18</sup> Hash/s  | 1 exa hash, equivalent to 1 million tera hashes |
+_N_ | 2,016 | Number of blocks per difficulty cycle
 _Coinbase<sub>i</sub>_  | 12.5 BTC per Block | Block reward halves every 21,000 blocks
 _TargetBlockTime_ | 600 s | Target block time for bitcoin is fixed at 10 minutes
 
@@ -151,7 +152,7 @@ Although contracts are fully collateralized upon issuance, the position range sp
 Example 1. The Index is at 552 now, Carboclan Community specifies a new Synthetic BTC Mining Contract at block height 568512 (2019-03-21). The contract specifications are as follow: 
   - Cap: 600
   - Floor: 450
-  - Expiration: block height 574560 (expected date 2019-05-04)
+  - Expiration: block height 574,560 (expected date 2019-05-04)
 
 Alice would like to mint 0.01 units of contract position token pair. She sends (600-450) * 0.01=1.5WBTC to the Market smart contract as collateral, and minted 0.01 long position token and 0.01 short position token. A long token is worth 552-450=102 WBTC, a short token is worth 600-552=48 WBTC.
 
