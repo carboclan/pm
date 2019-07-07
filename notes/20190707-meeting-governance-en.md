@@ -3,8 +3,8 @@
 The community governance meeting took place on 10 am July 7th 2019
 
 ## attendees：
-Tianran
-Tina
+@tzhan28 
+@carboclanc
 Liu Jie
 Tal
 Mike
@@ -13,25 +13,26 @@ Peter
 Smile face
 
 
-## 1.1 Index Design & Contract Specs
+## 1.1-1.3 Index Design & Contract Specs (issue #9)
 
-trading mining index could be similar to trading options, where Implied volatility is put on the side. Here the implied difficulty could be put next to the index.
+Trading Mining Index could be similar to trading options, where Implied volatility is put on the side. Here the implied difficulty could be put next to the index.
 
-这个指数本质是难度分之一，其他都是常数。
+算力收益指数本质是难度分之一，其他都是常数。
 
-The nature of the mining index is the inverse of the difficulty. All else is constant
+The nature of the Mining Index is the inverse of the difficulty. All else is constant.
 
-每个随机量一个标的，不要混起来。所以不想带入挖矿手续费，block time等其他变量。
+每个随机量一个标的，不要混起来。所以不应该带入挖矿手续费，block time等其他变量。
 
-each variables should be separated. So the mining index doesnt include variables like transcation fees and block times.
+Variables (risks) should be decoupled. So the Mining Index doesnt include variables like transcation fees and block times.
 
 有实际意义的指数在挖矿世界可能会在小数点后面五六个零很不雅观。
+
+Mining Index with real world meanings could have many decimals which looks messy. i.e 0.00000325btc for 1 Th/s per day.
+
 常数两个层面，一是赋予实际意义，比如1t挖一天的产出。二是也看起来舒服，是一个小数点之前有三四位的正常数字。
-
-An index with real life reference could have 5 decimals. i.e 0.00000325btc for 1 th  per day
-the constant have two level of implications, one is to give the index a real life meaning. two to make the number a nice 3-4 digits number so that people can look at it with ease.
-
 另一个选项是直接用科学记数法来表示，这样把小数点后面的零都放入了科学记数法里面。
+
+the constant have two levels of implications: first, is to give the Index a real world meaning (i.e. output per unit input), second, is to make the number a nice 3-4 digits number in the integer so that traders can easily refer to it.
 
 The other option is to use scientific notation so that all the zeros go into the later part (10^x)
 
@@ -41,7 +42,7 @@ The other option is to use scientific notation so that all the zeros go into the
 ![阿帕奇的思维导图](https://github.com/carboclan/pm/blob/master/微信图片_20190708021115.png)
 
 对于参与者来说：自下而上，没有空降兵，被推选成为领导是一种个人荣誉，能力至上
-It's an honor to be selected as a team leader in apache foundation. Meritocracy based, bottom up, no mercenaries
+It's an honor to be selected as a team leader in apache foundation. Meritocracy based, bottom up
 
 刘杰：做的doris捐给apache了。开源组织一个问题还是外部参与者太少，公司主导的项目很难社区化。如何承接是个问题。代码方面这么多年发展下来还比较方便，营销方面等就比较难
 
