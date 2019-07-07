@@ -91,7 +91,7 @@ Yellow hat 之于carboclan有点像共产国际&中国共产党。我们是在�
 Tina had lunch with Illia and James Prestwich who shared similar belief. Illia is the foudner of near protocol. He proposed cross chain pos delegation using smart contract. James prestwich designed hashrate derivatives a year and half ago. He is the cofounder of Storj.
 On the otherhand, lots of pow chains are nicehashable. To sum up, blockchain infrastucture are not safe, an efficient market need to be built.
 
-Yellow hat to carboclan is like Communist International to Chinese communism party.
+Yellow hat vs carbonclan : international & loosely organized vs a relatively close core group
 
 Jie：名字有点怪，白帽黑帽只是tag不是名字，不会这么自称。
 
