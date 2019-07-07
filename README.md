@@ -1,8 +1,12 @@
 # Project management resources and docs
 
-## White Paper
+## Research
 
 1. Hashrate Derivative (Tokenized Synthetic PoW Mining Contract) [en](whitepaper/hashrate-derivative-en.md) [cn](whitepaper/hashrate-derivative-cn.md)
+
+2. Staking Derivative
+
+3. PoW vs. PoS Network Cartel Formation Analysis
 
 ## Meeting notes
 
