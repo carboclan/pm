@@ -29,7 +29,7 @@ xinhao
 
 ## 2.1 GNU/linux以及阿帕奇的组织架构 by Mike
 
-![阿帕奇的思维导图](https://github.com/carboclan/pm/blob/master/notes/pics/apache-arch.png)
+![阿帕奇的思维导图](https://github.com/carboclan/pm/blob/master/notes/images/apache-arch.png)
 
 对于参与者来说：自下而上，没有空降兵，被推选成为领导是一种个人荣誉，能力至上
 
