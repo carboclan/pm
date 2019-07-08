@@ -42,8 +42,7 @@ The other option is to use scientific notation so that all the zeros go into the
 
 ## 2.1 GNU/linux and Apache Software Foundation
 
-![阿帕奇的思维导图](https://github.com/carboclan/pm/blob/master/微信图片_20190708021115.png)
-Overview of Apache Software Foundation organization
+![阿帕奇的思维导图](https://github.com/carboclan/pm/blob/master/notes/images/apache-arch.png)
 
 对于参与者来说：自下而上，没有空降兵，被推选成为领导是一种个人荣誉，能力至上
 Among contributors it is meritocracy based, voted up by members, and it is an honor to be selected as a leader in Apache.
