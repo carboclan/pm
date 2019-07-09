@@ -21,7 +21,7 @@ We hereby propose Tokenized Synthetic PoW Mining Contract, which offers token ho
 
 ## 2. Contract Specification
 
-The following contract is issued through [Market Protocol](https://marketprotocol.io).
+After analysis across DeFi stack, and considering the various stages of development of existing derivatives protocols, the following contract is designed based upon [Market Protocol](https://marketprotocol.io).
 
 ###  2.1 Synthetic ETH Mining Contract
 
@@ -180,13 +180,13 @@ Short-term mining contracts (i.e 30 days) have less fluctuation. Therefore, the 
 
 Therefore, a variable margin layer could be introduced on top of the position token. The variable margin layer has such characteristic that a certain margin ratio is set according to the market price of the position. Margins only need to cover fluctuation in the short run and cannot cover the entire position. When the margin ratio drops due to market price change, margin calls can be issued to the party lacking margin to cover further market movement. On the other hand, if the margin ratio increases to more than necessary, the excess margin can be withdrawn from the margin account to realize the profit. Such a variable margin system lowers the margin requirement and increase capital efficiency.
 
-A few DeFi protocols (i.e. dydx) can enable variable margin function. User can borrow token from dydx. Lender can deposit token A to the token pool of the smart contract. Borrower mortgages token B to create margin account and borrow token A from the token pool. The token A he borrowed is sold for token B. The token B he bought is again mortgaged into the margin account so that he can borrow more token A to be sold. The leveraged short on token A is now complete.
+A few DeFi protocols (i.e. dydx, bzx) can enable variable margin function. User can borrow token from dydx. Lender can deposit token A to the token pool of the smart contract. Borrower mortgages token B to create margin account and borrow token A from the token pool. The token A he borrowed is sold for token B. The token B he bought is again mortgaged into the margin account so that he can borrow more token A to be sold. The leveraged short on token A is now complete.
 
 On the contrary, lender could deposit Token B to the token pool of the smart contract. Borrower mortgage Token A to create margin account and borrow Token B from the token pool. The Token B he borrowed is sold for Token A. Token A he bought is again mortgaged into the margin account so that he can borrow more Token B and exchange for Token A. A leveraged long postion on Token A is now complete.
 
 Dydx supports a maximum leverage of 4x. When the price of the mortgaged token drops relative to the borrowed token, margin could drop to an insufficient amount. If the borrower cannot deposit enough collateral to meet the margin requirement in time, forced liquidation could occur. Variable margin is thus functional.
 
-At the moment, dydx does not fully support position tokens from market protocol, more integration work still needs to be done.
+At the moment, dydx or bzx do not fully support position tokens from Market Protocol, more integration work still needs to be done.
 
 
 ## 4. Use Cases
