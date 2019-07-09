@@ -2,7 +2,7 @@
 
 ## Research
 
-1. Hashrate Derivative (Tokenized Synthetic PoW Mining Contract) [en](whitepaper/hashrate-derivative-en.md) [cn](whitepaper/hashrate-derivative-cn.md)
+1. Hashrate Derivative (Tokenized Synthetic PoW Mining Contract) [en](research/hashrate-derivative-en.md) [cn](research/hashrate-derivative-cn.md)
 
 2. Staking Derivative
 
