@@ -11,4 +11,4 @@ longyunlyd
 juqiangl
 
 ## Agenda Review
-The agenda ((https://github.com/carboclan/pm/issues/1)) has been approved
+The [agenda](https://github.com/carboclan/pm/issues/27) has been approved
