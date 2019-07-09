@@ -1,4 +1,4 @@
-**Before [Issue](https://github.com/carboclan/pm/issues/4) is closed, please refer to Issue for most updated discussion**
+**Before all issues are closed, please refer to [Issues](https://github.com/carboclan/pm/issues) for most updated discussion**
 
 # Tokenized Synthetic PoW Mining Contract
 
