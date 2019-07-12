@@ -89,7 +89,7 @@ Each Synthetic BTC Mining Contract will specify its valid range, _Cap_ represent
 
 #### 2.1.5 Expiration
 
-Each Synthetic BTC Mining Contract will specify an expiration date. The contracts expire on 02:00:00 (UTC) at the expiration date. In order to avoid the impact of block time volatility, the expiration time is usually choosen to be 7 days after the estimated time of a difficulty adjustment.
+Each Synthetic BTC Mining Contract will specify an expiration date. The contract expires on 02:00:00 (UTC) at the expiration date. In order to avoid the impact of block time volatility, the expiration time is usually choosen to be 7 days after the estimated time of a difficulty adjustment. According to the requirment of Market Protocol, the expired contract can be settled one day after expiration.
 
 #### 2.1.6 Settlement
 
