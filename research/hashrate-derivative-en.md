@@ -184,13 +184,14 @@ SBME28-300-500-190526 | 19-05-26 | 1.2E-5 WBTC | 3.8E-5 BTC / 1T\*24H
 LBME84-200-400-190716 | 19-07-16 | 1.2E-5	WBTC | 3.2E-5 BTC / 1T\*24H
 SBME84-200-400-190716 | 19-07-16 | 0.8E-5	WBTC | 3.2E-5 BTC / 1T\*24H
 
-Long position token prices reflect market view on average daily mining returns within 1T hash/s during N days before the contract expires. The market believes that under same amount of hashrate, the mining return will gradually decrease. Investors could figure out that expected mining return gradually decreases, thereby estimating their own mining ROI more rationally.
+Long position token prices reflect market view on expected average daily mining returns within 1T hash/s during N days before the contract expires. The implied mining returns = the market price of the long position token + the floor of the index.
+The market believes that under same amount of hashrate, the mining return will gradually decrease. Investors could figure out that expected mining return gradually decreases, thereby estimating their own mining ROI more rationally.
 
 ### 4.2 Hedging
 
 The synthetic POW mining contract can hedge mining risks in addition to revealing them. Similarly, we set aside the cryptocurrency price movement here, since there already exists derivatives for price hedges. Investors could enter a short position in said contract to hedge difficulty related risks when mining. When difficulty goes up, mining return goes down, the profit on the short position could negate the decrease in actual mining return. When difficulty goes down, mining return goes up, the loss on the short position could negate the increase in actual mining return. The hedging process thus locked in mining return. The return is (cap of the Index - the price when entering the position).
 
-For example, on May 1st, 2019, Alice purchased a batch of mining rigs that clocks 100T hash/s. She wanted to lock in mining return for  the next 6 mining difficulty adjustment cycles (about 84 days) from 2919-05-4 to 2019-07-27. Therefore, Alice purchased 100 * 84 = 8400 short position tokens of LBME84-200-400-190716. The following table reflects her P&L.
+For example, on May 1st, 2019, Alice purchased a batch of mining rigs that clocks 100T hash/s. She wanted to lock in mining return for  the next 6 mining difficulty adjustment cycles (about 84 days, from 2019-5-4 to 2019-7-27). Therefore, Alice purchased 100 * 84 = 8400 short position tokens of LBME84-200-400-190716. The following table reflects her P&L.
 
 Position Token	| Entry Price	| Index when settled	| P&L / Token  | Position P&L 	| Mining income	| Comprehensive income
 ----------------|:-----------:|:-------------------:|:------------:|:--------------:|:-------------:|:-------------------:
