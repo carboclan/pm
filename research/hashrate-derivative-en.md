@@ -179,10 +179,10 @@ i.e On May 1st, 2019, BME14 Index is 3.95E-5. The following table indicates the 
 
 Contract position token |	Expiration date |	Market price	| Implied mining returns
 ------------------------|-----------------|---------------|----- 
-LBME28-300-500-190526 | 19-05-26 | 0.8E-5 | 3.8E-5 BTC / 1T\*24H
-SBME28-300-500-190526 | 19-05-26 | 1.2E-5 | 3.8E-5 BTC / 1T\*24H
-LBME84-200-400-190716 | 19-07-16 | 1.2E-5	| 3.2E-5 BTC / 1T\*24H
-LBME84-200-400-190716 | 19-07-16 | 0.8E-5	| 3.2E-5 BTC / 1T\*24H
+LBME28-300-500-190526 | 19-05-26 | 0.8E-5 WBTC | 3.8E-5 BTC / 1T\*24H
+SBME28-300-500-190526 | 19-05-26 | 1.2E-5 WBTC | 3.8E-5 BTC / 1T\*24H
+LBME84-200-400-190716 | 19-07-16 | 1.2E-5	WBTC | 3.2E-5 BTC / 1T\*24H
+LBME84-200-400-190716 | 19-07-16 | 0.8E-5	WBTC | 3.2E-5 BTC / 1T\*24H
 
 Long position token prices reflect market view on average daily mining returns within 1T hash/s during N days before the contract expires. The market believes that under same amount of hashrate, the mining return will gradually decrease. Investors could figure out that expected mining return gradually decreases, thereby estimating their own mining ROI more rationally.
 
@@ -195,6 +195,8 @@ For example, on May 1st, 2019, Alice purchased a batch of mining rigs that clock
 Position Token	| Entry Price	| Index when settled	| P&L / Token  | Position P&L 	| Mining income	| Comprehensive income
 ----------------|:-----------:|:-------------------:|:------------:|:--------------:|:-------------:|:-------------------:
 LBME84-200-400-190716| 0.8E-5|            3.36E-5	|   -0.16E-5   |     -0.1344	  |        2.8224	| 2.6688
+
+_\* Currency in above table is WBTC_
 
 ### 4.3 Fixed-income Investment
 
