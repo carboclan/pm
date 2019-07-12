@@ -44,7 +44,8 @@ The BTC Mining Earnings Index (_BME_) represents **average daily bitcoins mined 
 _BME_ is calculated as following:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_i}}" title="\small \mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_i}}" /></a>
-where:
+
+Where:
 - **_T_** represents the number of difficulty adjustments during N days. **Let T=N/14**
 - **_Difficulty<sub>i</sub>_** represents the value of difficulty after the i-th last difficulty ajustement
 - **_K_** is a scaling factor calculated as blew:
