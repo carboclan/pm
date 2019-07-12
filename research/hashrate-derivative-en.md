@@ -182,7 +182,7 @@ Contract position token |	Expiration date |	Market price	| Implied mining return
 LBME28-300-500-190526 | 19-05-26 | 0.8E-5 WBTC | 3.8E-5 BTC / 1T\*24H
 SBME28-300-500-190526 | 19-05-26 | 1.2E-5 WBTC | 3.8E-5 BTC / 1T\*24H
 LBME84-200-400-190716 | 19-07-16 | 1.2E-5	WBTC | 3.2E-5 BTC / 1T\*24H
-LBME84-200-400-190716 | 19-07-16 | 0.8E-5	WBTC | 3.2E-5 BTC / 1T\*24H
+SBME84-200-400-190716 | 19-07-16 | 0.8E-5	WBTC | 3.2E-5 BTC / 1T\*24H
 
 Long position token prices reflect market view on average daily mining returns within 1T hash/s during N days before the contract expires. The market believes that under same amount of hashrate, the mining return will gradually decrease. Investors could figure out that expected mining return gradually decreases, thereby estimating their own mining ROI more rationally.
 
