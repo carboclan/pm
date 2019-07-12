@@ -110,7 +110,7 @@ Issuer of the Tokenized Synthetic Ethereum Mining Contract needs to send ( _Cap_
 - Cap: index upper bound, in the unit of 1E-7
 - YYMMDD: Date of exiration
 
-Example: SBME84-250-300-190718 token corresponds to a short position on a Synthetic BTC Mining Contract with BME84 Index valid range of [2.50E-5, 3.00E-5], to be settled on 02:00:00(UTC) at 2019/07/18.
+Example: SBME84-250-300-190718 token corresponds to a short position on a Synthetic BTC Mining Contract with BME84 Index valid range of [2.50E-5, 3.00E-5], expires on 02:00:00(UTC) at 2019/07/18.
 
 ## 3. Smart Contract Stack
 
