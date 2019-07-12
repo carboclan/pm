@@ -195,7 +195,7 @@ For example, on May 1st, 2019, Alice purchased a batch of mining rigs that clock
 
 Position Token	| Entry Price	| Index when settled	| P&L / Token  | Position P&L 	| Mining income	| Comprehensive income
 ----------------|:-----------:|:-------------------:|:------------:|:--------------:|:-------------:|:-------------------:
-LBME84-200-400-190716| 0.8E-5|            3.36E-5	|   -0.16E-5   |     -0.1344	  |        2.8224	| 2.6688
+SBME84-200-400-190716| 0.8E-5|            3.36E-5	|   -0.16E-5   |     -0.1344	  |        2.8224	| 2.6688
 
 _\* Currency in above table is WBTC_
 
