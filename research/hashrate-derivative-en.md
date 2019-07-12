@@ -65,9 +65,9 @@ _NBlock_ | 144 | Number of blocks per day
 - The index is comparable with the "mining earnings" of btc.com. Especially, BME14 should be the same with the "mining earnings" of btc.com
 
 ##### Examples
-Height| Time| Difficulty | BME14 | BME28 | BME84
--------| ------|-----------|----------|---------|--------
-572,544 | 2019-04-21 09:54:28 | 6,353,030,562,983 | 3.958E-05 |   |  
+Height  | Time                | Difficulty        | BME14     | BME28     | BME84
+--------| --------------------|-------------------|-----------|-----------|--------
+572,544 | 2019-04-21 09:54:28 | 6,353,030,562,983 | 3.958E-05 |           |  
 574,560 | 2019-05-04 16:32:13 | 6,702,169,884,349 | 3.752E-05 | 3.855E-05 |  
 576,576 | 2019-05-18 16:31:36 | 6,704,632,680,587 | 3.750E-05 | 3.751E-05 |  
 578,592 | 2019-05-31 06:43:04 | 7,459,680,720,542 | 3.371E-05 | 3.561E-05 |  
@@ -178,11 +178,11 @@ Before purchasing mining rigs and start mining, investors need to estimate ROI. 
 i.e On May 1st, 2019, BME14 Index is 3.95E-5. The following table indicates the market price for Tokenized Synthetic PoW Mining Contracts in various terms.
 
 Contract position token |	Expiration date |	Market price	| Implied mining returns
-------|-----|-------|----- 
-LBME28-300-500-190526 | 19-05-26 |	0.8E-5 | 3.8E-5 BTC / 1T\*24H
-SBME28-300-500-190526 | 19-05-26 |	1.2E-5 | 3.8E-5 BTC / 1T\*24H
-LBME84-200-400-190716 | 19-07-16	| 1.2E-5	| 3.2E-5 BTC / 1T\*24H
-LBME84-200-400-190716 | 19-07-16	| 0.8E-5	| 3.2E-5 BTC / 1T\*24H
+------------------------|-----------------|---------------|----- 
+LBME28-300-500-190526 | 19-05-26 | 0.8E-5 | 3.8E-5 BTC / 1T\*24H
+SBME28-300-500-190526 | 19-05-26 | 1.2E-5 | 3.8E-5 BTC / 1T\*24H
+LBME84-200-400-190716 | 19-07-16 | 1.2E-5	| 3.2E-5 BTC / 1T\*24H
+LBME84-200-400-190716 | 19-07-16 | 0.8E-5	| 3.2E-5 BTC / 1T\*24H
 
 Long position token prices reflect market view on average daily mining returns within 1T hash/s during N days before the contract expires. The market believes that under same amount of hashrate, the mining return will gradually decrease. Investors could figure out that expected mining return gradually decreases, thereby estimating their own mining ROI more rationally.
 
@@ -193,7 +193,7 @@ The synthetic POW mining contract can hedge mining risks in addition to revealin
 For example, on May 1st, 2019, Alice purchased a batch of mining rigs that clocks 100T hash/s. She wanted to lock in mining return for  the next 6 mining difficulty adjustment cycles (about 84 days) from 2919-05-4 to 2019-07-27. Therefore, Alice purchased 100 * 84 = 8400 short position tokens of LBME84-200-400-190716. The following table reflects her P&L.
 
 Position Token	| Entry Price	| Index when settled	| P&L / Token  | Position P&L 	| Mining income	| Comprehensive income
----------------|------------ | ------------------ |--------------|---------------|---------------|---------------------
+----------------|:-----------:|:-------------------:|:------------:|:--------------:|:-------------:|:-------------------:
 LBME84-200-400-190716| 0.8E-5|            3.36E-5	|   -0.16E-5   |     -0.1344	  |        2.8224	| 2.6688
 
 ### 4.3 Fixed-income Investment
