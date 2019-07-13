@@ -1,4 +1,4 @@
-# Yellow Hat Dao:
+# Yellow Hat DAO
 Keepers of free capital market for blockchain infrastructure.
 
 
