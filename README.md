@@ -1,4 +1,6 @@
-# Keepers of free capital market for blockchain infrastructure.
+# Yellow Hat Dao:
+Keepers of free capital market for blockchain infrastructure.
+
 
 ## Project Management Resources and Docs
 
