@@ -1,6 +1,8 @@
-# Project management resources and docs
+# Keepers of free capital market for blockchain infrastructure.
 
-## Research
+## Project Management Resources and Docs
+
+### Research
 
 1. Hashrate Derivative (Tokenized Synthetic PoW Mining Contract) [en](research/hashrate-derivative-en.md) [cn](research/hashrate-derivative-cn.md)
 
@@ -8,9 +10,9 @@
 
 3. PoW vs. PoS Network Cartel Formation Analysis
 
-## Meeting notes
+### Meeting Notes
 
-### 2019
+#### 2019
 
 Date | Topic | Agenda  | Notes | Summary |
 |:---|:---|---|---|:---|
