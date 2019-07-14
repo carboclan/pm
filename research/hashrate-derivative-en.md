@@ -57,7 +57,7 @@ Parameter | Value | Note
 _HashrateUnit_  | 10 <sup>12</sup> Hash/s  | 1T hash |
 _TargetBlockTime_ | 600 s | Target block time for bitcoin is fixed at 10 minutes
 _Coinbase<sub>i</sub>_  | 12.5 BTC per Block | The block reward at i-th last mining difficulty adjustment. <br/>Block reward halves every 21,000 blocks.
-_NBlock_ | 144 | Number of blocks per day
+_NBlock_ | Around 144 | Average number of blocks per day during this difficulty period
 **_K_**| **251457095** | havles as _Coinbase<sub>i</sub>_ halves
 
 ##### Notes
