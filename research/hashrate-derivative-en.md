@@ -36,7 +36,7 @@ After analysis across DeFi stack, and considering the various stages of developm
 The index names "BTC Mining Earnings N days Index", shorts for _BME{N}_, for example BME28, BME84 and so on.
 
 ##### Meaning
-The BTC Mining Earnings Index (_BME_) represents **average daily bitcoins mined within 1T/s hashrate over the last N days**.
+The BTC Mining Earnings Index (_BME_) represents **average daily bitcoins mined with 1T/s hashrate over the last N days**.
 
 1T = 10<sup>12</sup>
 
@@ -47,8 +47,8 @@ _BME_ is calculated as following:
 
 Where:
 - **_T_** represents the number of difficulty adjustments during N days. **Let T=N/14**
-- **_Difficulty<sub>i</sub>_** represents the value of difficulty after the i-th last difficulty ajustement
-- **_K_** is a scaling factor calculated as blew:
+- **_Difficulty<sub>i</sub>_** represents the value of difficulty after the i-th last difficulty adjustment
+- **_K_** is a scaling factor calculated as below:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{K}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;\mathit{NBlock}}{&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{K}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;\mathit{NBlock}}{&space;2^{^{32}}}" title="\small \mathit{K}=\frac{\mathit{HashrateUnit} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot \mathit{NBlock}}{ 2^{^{32}}}" /></a>
 
@@ -61,7 +61,7 @@ _NBlock_ | 144 | Number of blocks per day
 **_K_**| **251457095** | havles as _Coinbase<sub>i</sub>_ halves
 
 ##### Notes
-- As the difficulty ajust every 2016 blocks, which is roughly 14 days, the N of index is set to be a multiple of 14. 
+- As the difficulty ajust every 2016 blocks, which is roughly 14 days, the N of the index is set to be a multiple of 14. 
 - The index is changed whenever the difficulty adjusts before next block reward halves.
 - The index is comparable with the "mining earnings" of btc.com. Especially, BME14 should be the same with the "mining earnings" of btc.com
 
@@ -90,7 +90,7 @@ Each Synthetic BTC Mining Contract will specify its valid range, _Cap_ represent
 
 #### 2.1.5 Expiration
 
-Each Synthetic BTC Mining Contract will specify an expiration date. The contract expires on 02:00:00 (UTC) at the expiration date. In order to avoid the impact of block time volatility, the expiration time is usually choosen to be 7 days after the estimated time of a difficulty adjustment. According to the requirment of Market Protocol, the expired contract can be settled one day after expiration.
+Each Synthetic BTC Mining Contract will specify an expiration date. The contract expires on 02:00:00 (UTC) at the expiration date. In order to avoid the impact of block time volatility, the expiration time is usually choosen to be 7 days after the estimated time of a difficulty adjustment. According to the requirement of Market Protocol, the expired contract can be settled one day after expiration.
 
 #### 2.1.6 Settlement
 
