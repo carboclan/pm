@@ -176,18 +176,18 @@ Tokenized Synthetic PoW Mining Contract has multiple use cases.
 
 ### 4.1 Risk Exposure
 
-Before purchasing mining rigs and start mining, investors need to estimate ROI. Purchasing mining rigs is a onetime investment. Electricity cost for mining is relatively stable as well. Therefore, investment for mining can be considered fixed over some period of time. The only factors affecting mining return is the price movement of the underlying coin(s) mined and their mining difficulties. Various financial product (futures, perpetual swaps and options) can be utilized to hedge against price fluctuation. Synthetic POW Mining Contract fills the market void by providing a financial instrument with exposure to risks associated with mining difficulty fluctuation. Investors could observe the market price for mining contract of various terms, reflecting market’s collective projection  on mining returns, similar to that of the term structure of interest rates or that of the volatility surface of options.
+Before purchasing mining rigs and start mining, investors need to estimate ROI. Purchasing mining rigs is a onetime investment. Electricity cost for mining is relatively stable as well. Therefore, investment for mining can be considered fixed over some period of time. The only factors affecting mining return is the price movement of the underlying coin(s) mined and their mining difficulties. Various financial product (futures, perpetual swaps and options) can be utilized to hedge against price fluctuation. Synthetic POW Mining Contract fills the market void by providing a financial instrument with exposure to risks associated with mining difficulty fluctuation. Investors could observe the market price for mining contract of various terms, reflecting market’s collective projection  on mining earnings, similar to that of the term structure of interest rates or that of the volatility surface of options.
 
 i.e On May 1st, 2019, BME14 Index is 3.95E-5. The following table indicates the market price for Tokenized Synthetic PoW Mining Contracts in various terms.
 
-Contract position token |	Expiration date |	Market price	| Implied mining returns
+Contract position token |	Expiration date |	Market price	| Implied mining earnings
 ------------------------|-----------------|---------------|----- 
 LBME28-300-500-190526 | 19-05-26 | 0.8E-5 WBTC | 3.8E-5 BTC / 1T\*24H
 SBME28-300-500-190526 | 19-05-26 | 1.2E-5 WBTC | 3.8E-5 BTC / 1T\*24H
 LBME84-200-400-190716 | 19-07-16 | 1.2E-5	WBTC | 3.2E-5 BTC / 1T\*24H
 SBME84-200-400-190716 | 19-07-16 | 0.8E-5	WBTC | 3.2E-5 BTC / 1T\*24H
 
-Long position token prices reflect market view on expected average daily mining returns within 1T hash/s during N days before the contract expires. The implied mining returns = the market price of the long position token + the floor of the index.
+Long position token prices reflect market view on expected average daily mining earnings within 1T hash/s during N days before the contract expires. The implied mining earnings = the market price of the long position token + the floor of the index.
 The market believes that under same amount of hashrate, the mining return will gradually decrease. Investors could figure out that expected mining return gradually decreases, thereby estimating their own mining ROI more rationally.
 
 ### 4.2 Hedging
@@ -214,7 +214,7 @@ The major pain point for miners has been the lack of capital for expansion. Due 
 
 A synthetic cloud mining service can be easily built upon the mining contract. The synthetic cloud mining service targets users who already understand how cloud mining works.
 
-Traditionally, investing in cloud mining has the following economic model: user invests a certain amount of money to purchase cloud mining capacity and receives mining returns daily in the period following the investment. The investor hopes that the total return would be greater than the initial investment. Disregarding token exchange rate fluctuation (or fully hedging exchange rate), cloud mining return only depends on mining difficulty.
+Traditionally, investing in cloud mining has the following economic model: user invests a certain amount of money to purchase cloud mining capacity and receives mining earnings daily in the period following the investment. The investor hopes that the total return would be greater than the initial investment. Disregarding token exchange rate fluctuation (or fully hedging exchange rate), cloud mining return only depends on mining difficulty.
 
 Mining contract can easily simulate the above process: User purchases an array of same-sized long positions of mining contract that settle in chronological order, with the lower bound of the Index being 0. This process is very similar to cloud mining. The user will receive settlement amount from the mining contract in chronological order. The process of receiving the return mimics mining return. The amount of hashrate user purchased corresponds to the long position of the Index. For example, the bitcoin mining contract use 10^18 hash/s as the basic unit. Therefore, purchasing one long position token is equivalent to purchasing 10^18 hash/s of cloud mining capacity. Since the lower bound of the Index is 0, long position will never be liquidated, which is similar to mining.
 
@@ -227,8 +227,69 @@ Synthetic PoW Mining Contract forms a two-sided market. In this market, an inves
 
 For longer-term mining contracts, the Index could fluctuate in a wider range. In order for the Index not to touch the boundaries, the boundaries need to be set to a wider range. Thus, more collateral is needed in the Market Protocol smart contract for both long and short tokens, and drives up both tokens’ price, in turn reducing capital efficiency. The market for hedging could also go down if both fixed investment for mining rigs and hedging require large amount of capital commitment. Therefore, we introduce variable margin via margin protocols such as dydx's.
 
-Under variable margin, a new business model arises. Lender can fund margin traders and gain risk free returns. Investor or market maker create long/short token pairs via Market Protocol smart contract. They do not trade the tokens but maintain net position neutral. Margin funding lender can lend both long and short tokens to the liquidity pool of financing platform like dydx. When margin traders borrow long or short token from dydx, margin funding lender can gain risk-free interests.
+Under variable margin, a new business model arises. Lender can fund margin traders and gain risk free earnings. Investor or market maker create long/short token pairs via Market Protocol smart contract. They do not trade the tokens but maintain net position neutral. Margin funding lender can lend both long and short tokens to the liquidity pool of financing platform like dydx. When margin traders borrow long or short token from dydx, margin funding lender can gain risk-free interests.
 
 ### 4.8 Market Maker
 
 Market maker exists in all two-sided markets. Market maker makes profit by providing liquidity and bear market making risks. Since position tokens are all standard ERC-20 tokens. All market making mechanisms in the crypto world could be recalibrated to be utilized in this market. Market makers can follow the traditional buy-low, sell-high strategy by observing the orderbook. They can also profit from creating position token pairs and lend it to automatic liquidity pool like Uniswap.
+
+## 5. Pricing
+Synthetic PoW Mining Contract is a new hashrate derivative, and the way to price it remains to be explored. Here are a few simple technical indicators. It is hoped that these indicators will help the counterparty to price the contract.
+
+### 5.1 Implied Difficulty
+The price of each contract implies an expected daily average mining earnings within 1T/s hashrate. Implied Earnings can be calculated by the following two formulas:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}" title="\small \mathit{ImpliedEarnings}= \mathit{LongTokenPrice} + \mathit{IndexFloor}" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;-&space;\mathit{ShortTokenPrice}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;-&space;\mathit{ShortTokenPrice}" title="\small \mathit{ImpliedEarnings}= \math{IndexCap} - \mathit{ShortTokenPrice}" /></a>
+
+From the implied earnings, the corresponding implied difficulty can be calculated. The implied difficulty is calculated by the following formula:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings}}" title="\small \mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings}}" /></a>
+
+Where _K_ is the _K_ used by the formula in 2.1.1.
+
+Example: Referring to the example in 4.1, on May 1, 2019, the difficulty is 6.35T and the BMI14 index corresponding is 3.95E-5. The table below shows the implied difficulty and implied difficulty growth rate (IDGR, see 5.2). 
+
+Position Token        | Market Price| Implied Earnings     | Implied Difficulty |  IDGR
+----------------------|-------------|----------------------|--------------------|--------
+LBME28-300-500-190526 | 0.8E-5 WBTC | 3.8E-5 BTC / 1T\*24H | 6.62T              |  2.82%
+SBME28-300-500-190526 | 1.2E-5 WBTC | 3.8E-5 BTC / 1T\*24H | 6.62T              |  2.82%
+LBME84-200-400-190716 | 1.2E-5 WBTC | 3.2E-5 BTC / 1T\*24H | 7.86T              |  6.46%
+SBME84-200-400-190716 | 0.8E-5 WBTC | 3.2E-5 BTC / 1T\*24H | 7.86T              |  6.46%
+
+Traders can predict the change of difficulty over time and give an predicted value of the implied difficulty, thus launching their corresponding bid.
+
+### 5.2 Implied Difficulty Growth Rate
+The calculation of the BME index refers to a set of continuous difficulty data. The market price of the contract also reflects the prediction of the change of difficulty. Implied Difficulty Growth Rate (IDGR) is the average growth rate of difficulty after each difficulty adjustment implied from the contract price. The relationship between implied difficulty growth rate and implied mining earnings has the following relationship:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" title="\small \mathit{ImpliedEarnings}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot \left (1+\mathit{IDGR} \right )^{i}}" /></a>
+
+Where,
+  - _K_ and _T_ are the values used by the formula in 2.1.1
+  - _Difficulty<sub>0</sub>_ is the difficulty after the T+1th last difficulty adjustment before the contract expires
+ 
+Substituting the above formula into the implicit difficulty formula can give the relationship between the implied difficulty and the implied difficulty growth rate as:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\frac{\mathit{Difficulty_0}}{\mathit{ImpliedDifficulty}}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{1}}{&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\frac{\mathit{Difficulty_0}}{\mathit{ImpliedDifficulty}}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{1}}{&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" title="\small \frac{\mathit{Difficulty_0}}{\mathit{ImpliedDifficulty}}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{1}}{ \left (1+\mathit{IDGR} \right )^{i}}" /></a>
+ 
+When T is large, the analytical solution of the implied difficulty growth rate cannot be easily obtained from the implicit difficulty. At this time, the numerical solution can be obtained by Newton iteration method.
+
+See the example in 5.1 for an example.
+
+Traders can calculate the corresponding contract price by predicting a reasonable implied difficulty growth rate.
+
+### 5.3 Decomposition pricing
+Since the index of the contract is only related to the difficulty, by predicting the mining difficulties of the feture difficulty cycles one by one, the corresponding predicted settlement index can be derived to price the position token.
+
+An example is used to illustrate this method. On May 20, 2019, LBME84-200-400-190716 is priced using a decomposition pricing method. Note that there are 6 difficulty adjustments in the contract period at this time, and 2 difficulty adjustments have been made before May 20th. We will price the contract by separately predicting another 4 difficulty adjustments. The table below gives several different forecast data and corresponding token prices:
+
+
+Difficulty 1|Difficulty 2|Predicted Difficulty 3|Predicted Difficulty 4|Predicted Difficulty 5|Predicted Difficulty 6|Predicted Settlement Index|Price
+----|-----|--------|---------|--------|--------|-----------|--------
+6.7 |6.7|	6.9|7.1|	7.3|	7.9|	3.55E-05|	1.55E-05
+6.7	|6.7|	7.4|7.6|	7.9|	8.3|	3.40E-05|	1.40E-05
+6.7	|6.7|	6.5|6.4|	6.3|	6.2|	3.89E-05|	1.89E-05
+
+_The difficulty unit in the above table is T (10<sup>12</sup>)_
+

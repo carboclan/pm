@@ -169,14 +169,14 @@ Market Protocol依赖预言机提供指数。预言机是整套系统的相对�
 
 例，在2019年5月1日时，BMI14指数为3.95E-5, 市场中比特币挖矿收益合约的成交价情况如下：
 
-合约头寸代币 | 预计到期日 | 市场价 | 蕴含挖矿收益
+合约头寸代币 | 预计到期日 | 市场价 | 隐含挖矿收益
 ------| -----|-----|---
 LBME28-300-500-190526 | 19-05-26 | 0.8E-5 WBTC | 3.8E-5 BTC / 1T\*24H
 SBME28-300-500-190526 | 19-05-26 | 1.2E-5 WBTC | 3.8E-5 BTC / 1T\*24H
 LBME84-200-400-190716 | 19-07-16 | 1.2E-5	WBTC | 3.2E-5 BTC / 1T\*24H
 SBME84-200-400-190716 | 19-07-16 | 0.8E-5	WBTC | 3.2E-5 BTC / 1T\*24H
 
-合约多头代币的成交价反应了市场对合约到期前N天的每T算力平均每日预期挖矿收益的判断。用多头成交价加上指数下限就可以得到成交价蕴含的预期挖矿收益。从成交价看，市场认为同等算力挖矿收益将逐渐下降。投资人从上述成交价洞察出预期挖矿收益的下降，从而对挖矿ROI做出更理性的预估。
+合约多头代币的成交价反应了市场对合约到期前N天的每T算力平均每日预期挖矿收益的判断。用多头成交价加上指数下限就可以得到成交价隐含的预期挖矿收益。从成交价看，市场认为同等算力挖矿收益将逐渐下降。投资人从上述成交价洞察出预期挖矿收益的下降，从而对挖矿ROI做出更理性的预估。
 
 ### 4.2 对冲风险
 
@@ -218,8 +218,70 @@ _\* 上表中货币单位为WBTC_
 ### 4.8 做市商
 任何双边市场都可以存在做市商。做市商通过为市场提供流动性并承担做市风险而获利。由于头寸代币是标准的ERC20代币，所有现有的加密货币做市商机制都可以引入进来。做市商可以通过观察订单薄进行低卖高卖的策略做市获利，也可以通过创建头寸代币对，并质押到Uniswap等自动化做市合约中做市获利。
 
+## 5. 定价
+算力收益合约是一种全新的算力衍生品，对其进行定价的方式尚待探索。这里介绍几种简单的技术指标。希望这些指标有助于交易方对合约定价。
 
-## 5. 社区介绍
+### 5.1 隐含难度
+每个合约的价格都隐含了一个预期的1T算力日均挖矿收益。隐含挖矿收益(Implied Earnings)可以由以下两个公式计算：
 
-## 6. 致谢
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}" title="\small \mathit{ImpliedEarnings}= \mathit{LongTokenPrice} + \mathit{IndexFloor}" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;-&space;\mathit{ShortTokenPrice}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;-&space;\mathit{ShortTokenPrice}" title="\small \mathit{ImpliedEarnings}= \math{IndexCap} - \mathit{ShortTokenPrice}" /></a>
+
+
+从隐含挖矿收益可以计算出对应的隐含挖矿难度。隐含挖矿难度（Implied Difficulty）由以下公式计算：
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings}}" title="\small \mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings}}" /></a>
+
+其中，_K_ 是2.1.1中指数公式使用的 _K_ 值。
+
+例子：引用4.1中的例子，在2019年5月1日时，难度为6.35T对应的BMI14指数为3.95E-5, 补充隐含难度和隐含难度增长率（见5.2）
+
+合约头寸代币           | 市场价       | 隐含挖矿收益          | 隐含难度  |  隐含难度增长率
+----------------------|-------------|----------------------|----------|----------------
+LBME28-300-500-190526 | 0.8E-5 WBTC | 3.8E-5 BTC / 1T\*24H | 6.62T    |  2.82%
+SBME28-300-500-190526 | 1.2E-5 WBTC | 3.8E-5 BTC / 1T\*24H | 6.62T    |  2.82%
+LBME84-200-400-190716 | 1.2E-5 WBTC | 3.2E-5 BTC / 1T\*24H | 7.86T    |  6.46%
+SBME84-200-400-190716 | 0.8E-5 WBTC | 3.2E-5 BTC / 1T\*24H | 7.86T    |  6.46%
+
+交易员可以对未来一段时间的难度变化进行预测，并给出一个隐含难度的推断值，从而倒推出自己的对应出价。
+
+### 5.2 隐含难度增长率
+算力收益指数中引用了一组连续的难度数据，而难度总在变化。合约的市场价也反应了对这种变化的预测。隐含难度增长率（Implied Difficulty Growth Rate, 简写为IDGR）是从合约价格反推出的每次难度调整后难度的平均增长率。隐含难度增长率与隐含挖矿收益之间具有以下关系：
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" title="\small \mathit{ImpliedEarnings}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot \left (1+\mathit{IDGR} \right )^{i}}" /></a>
+
+其中，
+ - _K_ 和 _T_ 都是2.1.1中指数公式使用的值
+ - _Difficulty<sub>0</sub>_ 是合约到期前倒数第T+1次难度调整后的难度
+ 
+将上式代入隐含难度公式可以得到隐含难度和隐含难度增长率之间的关系为：
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\frac{\mathit{Difficulty_0}}{\mathit{ImpliedDifficulty}}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{1}}{&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\frac{\mathit{Difficulty_0}}{\mathit{ImpliedDifficulty}}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{1}}{&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" title="\small \frac{\mathit{Difficulty_0}}{\mathit{ImpliedDifficulty}}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{1}}{ \left (1+\mathit{IDGR} \right )^{i}}" /></a>
+ 
+当T较大时，无法从隐含难度轻易求出隐含难度增长率的解析解，此时可以通过牛顿迭代法求其数值解。
+
+示例见5.1中的例子。
+
+交易员可以通过预测一个合理的隐含难度增长率进而计算出相应的合约价格。
+
+### 5.3 分解定价法
+由于合约的指数只与难度相关，通过逐个预测未知的难度周期的挖矿难度，可以推算出相应的交割指数，从而对头寸代币进行定价。
+
+通过一个例子来说明这一方法。在2019年5月20日，用分解定价法对LBME84-200-400-190716进行定价。注意此时该合约周期内有6次难度调整，在5月20日已经进行过2次难度调整，我们通过分别预测另外4次难度调整对该合约定价。下表给出了几个不同的预测数据及对应的代币价格：
+
+
+难度1|难度2|预测难度3|预测难度4|预测难度5|预测难度6|预测交割指数|代币价格
+----|-----|--------|---------|--------|--------|-----------|--------
+6.7 |6.7|	6.9|7.1|	7.3|	7.9|	3.55E-05|	1.55E-05
+6.7	|6.7|	7.4|7.6|	7.9|	8.3|	3.40E-05|	1.40E-05
+6.7	|6.7|	6.5|6.4|	6.3|	6.2|	3.89E-05|	1.89E-05
+
+_上表中难度单位为T_
+
+
+
+## 6. 社区介绍
+
+## 7. 致谢
 
