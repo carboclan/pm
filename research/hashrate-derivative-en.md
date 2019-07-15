@@ -76,6 +76,8 @@ Height  | Time                | Difficulty        | BME14     | BME28     | BME8
 582,624 | 2019-06-27 10:59:30 | 7,934,713,219,630 | 3.169E-05 | 3.281E-05 | 3.566E-05
 584,640 | 2019-07-09 17:17:48 | 9,064,159,826,491 | 2.774E-05 | 2.972E-05 | 3.368E-05
 
+More [BME Data](https://github.com/carboclan/pm/blob/master/research/BME.md)
+
 #### 2.1.2 Index Cap & Floor
 
 Each Synthetic BTC Mining Contract will specify its valid range, _Cap_ represents the upper bound, and _Floor_ represents the lower bound. Index reaching the upper or lower bound prior to expiration will trigger contract settlement.
