@@ -6,7 +6,9 @@ Keepers of free capital market for blockchain infrastructure.
 
 ### Research
 
-1. Hashrate Derivative (Tokenized Synthetic PoW Mining Contract) [en](research/hashrate-derivative-en.md) [cn](research/hashrate-derivative-cn.md)
+1. Hashrate Derivative (Tokenized Synthetic PoW Mining Contract) 
+    - Introduction [en](research/hashrate-derivative-en.md) [cn](research/hashrate-derivative-cn.md)
+    - [BME data](https://github.com/carboclan/pm/blob/master/research/BME.md)
 
 2. Staking Derivative
 
