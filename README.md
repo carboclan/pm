@@ -1,5 +1,5 @@
 # Yellow Hat DAO
-Keepers of free capital market for blockchain infrastructure.
+Defenders of free capital market, starting from blockchain infrastructure.
 
 
 ## Project Management Resources and Docs
