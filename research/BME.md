@@ -1,0 +1,2 @@
+# Bitcoin mining Earnings Index
+
