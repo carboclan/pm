@@ -80,9 +80,11 @@ More [BME Data](https://github.com/carboclan/pm/blob/master/research/BME.md)
 
 #### 2.1.2 Index Cap & Floor
 
-According to Market Protocol's regulation, each Synthetic BTC Mining Contract will specify its valid range, _Cap_ represents the upper bound, and _Floor_ represents the lower bound. Index reaching the upper or lower bound prior to expiration will trigger contract settlement.
+According to Market Protocol's design, each Synthetic BTC Mining Contract will specify its valid range, _Cap_ represents the upper bound, and _Floor_ represents the lower bound. Index reaching the upper or lower bound prior to expiration will trigger contract settlement.
 
-When issuing the contracts, in order to reduce the demand for margin and increase leverage, a smaller index range will be set as far as possible. On the other hand, a relatively safe index range will be set to prevent the early settelment triggered by the index reaching the bounds.
+Two principles to consider when setting the index range:
+  - When issuing the contracts, in order to reduce the demand for margin and increase leverage, a smaller index range is preferred.
+  - On the other hand, a relatively safe (wide) index range will be set to prevent the early settelment triggered if the index reaches the bounds early.
 
 #### 2.1.3 Index Currency
 
