@@ -82,27 +82,25 @@ More [BME Data](https://github.com/carboclan/pm/blob/master/research/BME.md)
 
 Each Synthetic BTC Mining Contract will specify its valid range, _Cap_ represents the upper bound, and _Floor_ represents the lower bound. Index reaching the upper or lower bound prior to expiration will trigger contract settlement.
 
-#### 2.1.3 Index Currency
+#### 2.1.3 Contract Size
 
-1BTC per Index Point
+The value of one contract = Multiplier * The index value
 
-#### 2.1.4 Contract Size
+Multiplier = 1 WBTC
 
-1WBTC per Index Point
-
-#### 2.1.5 Expiration
+#### 2.1.4 Expiration
 
 Each Synthetic BTC Mining Contract will specify an expiration date. The contract expires at 02:00:00 (UTC) on the expiration date. In order to avoid the impact of block time volatility, the expiration time is usually choosen to be 7 days after the estimated time of a difficulty adjustment. According to the requirement of Market Protocol, the expired contract can be settled one day after expiration.
 
-#### 2.1.6 Settlement
+#### 2.1.5 Settlement
 
 At settlement, Market Protocol smart contract will send WBTC to addresses that hold contract position tokens. Long token holder will receive ( _BME_ - _Floor_ ) in WBTC per Contract, short token holder will receive ( _Cap_ - _BME_ ) in WBTC per Contract.
 
-#### 2.1.7 Margin
+#### 2.1.6 Margin
 
 Issuer of the Tokenized Synthetic Ethereum Mining Contract needs to send ( _Cap_ - _Floor_ ) amount in WBTC to the Market Protocol smart contract as collateral in order to mint contract position tokens. Contract positions are fully collateralized with no need to top up margins prior to settlement.
 
-#### 2.1.8 Naming Convention for Contract Position Tokens
+#### 2.1.7 Naming Convention for Contract Position Tokens
 
 \<L|S\>BME\<N\>-\<Floor\>-\<Cap\>-\<YYMMDD\>
 
