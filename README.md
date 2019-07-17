@@ -14,7 +14,7 @@
 
 Date | Topic | Agenda  | Notes | Summary |
 |:---|:---|---|---|:---|
-Jul 14 | Governance | [Agenda](https://github.com/carboclan/pm/issues/32) | [en]() [cn](notes/20190717-meeting-governance-cn.md) |  Contract Design & 产品设计 |
+Jul 14 | Governance | [Agenda](https://github.com/carboclan/pm/issues/28) | [en]() [cn](notes/20190714-meeting-governance-cn.md) |  Contract Design & Product Design |
 Jul 10 | Governance | [Agenda](https://github.com/carboclan/pm/issues/27) | [en](notes/20190710-meeting-governance-en.md) [cn](notes/20190710-meeting-governance-cn.md) |  Index & Contract Design |
 Jul 7 | Governance | [Agenda](https://github.com/carboclan/pm/issues/13) | [en](notes/20190707-meeting-governance-en.md) [cn](notes/20190707-meeting-governance-cn.md) | Community Governance and "Yellow Hat DAO" proposal, Index & Contract Design |
 Jul 3 | Governance | [Agenda](https://github.com/carboclan/pm/issues/7) | [en](notes/20190703-meeting-governance-en.md) [cn](notes/20190703-meeting-governance-cn.md) |  |
