@@ -102,7 +102,7 @@ At settlement, Market Protocol smart contract will send WBTC to addresses that h
 
 #### 2.1.6 Margin
 
-Issuer of the Tokenized Synthetic Ethereum Mining Contract needs to send ( _Cap_ - _Floor_ ) amount in WBTC to the Market Protocol smart contract as collateral in order to mint contract position tokens. Contract positions are fully collateralized with no need to top up margins prior to settlement.
+Issuer of the Tokenized Synthetic BTC Mining Contract needs to send ( _Cap_ - _Floor_ ) amount in WBTC to the Market Protocol smart contract as collateral in order to mint contract position tokens. Contract positions are fully collateralized with no need to top up margins prior to settlement.
 
 #### 2.1.7 Naming Convention for Contract Position Tokens
 
@@ -144,7 +144,7 @@ Later on, the Index falls to 5.50E-5, a long token is worth 5.50E-5 - 4.50E-5 = 
 
 While the actual price of the position token may be above or below the Index, in this example actual price of the long position token (0.98E-5 WBTC) may be priced below the theoretical price (1E-5 WBTC) calculated from the current Index, which may be caused by market expectation that the Index may drop further by expiration. On the other hand, while Index drops (5.52E-5 - 5.50E-5) / 5.52E-5 = 0.36%, but theoretical price for the long position token calculated from the Index drops (1.02E-5 - 1.00E-5) / 1.02E-5 = 1.9%, which reflects 5.28 implicit leverage from the Index floor.
 
-The contract expires on 2019-05-11 02:00:00 UTC. The Index is at 5.25E-5. Market Protocol smart contract pays Bob (5.25E-5 - 4.50E-5) * 100,000 = 0.75 WBTC, and (6.00E-5 - 5.25E-5) * 100,000 = 0.75 WBTC to short position token owner Alice. Alice's earnings: -1.5 + 0.98 + 0.75 = 0.23 WBTC，Bob's earnings: -0.98 + 0.75 = -0.23 WBTC。
+The contract expires on 2019-05-11 02:00:00 UTC. The Index is at 5.25E-5. Market Protocol smart contract pays Bob (5.25E-5 - 4.50E-5) * 100,000 = 0.75 WBTC, and (6.00E-5 - 5.25E-5) * 100,000 = 0.75 WBTC to short position token owner Alice. Alice's earnings: -1.5 + 0.98 + 0.75 = 0.23 WBTC, Bob's earnings: -0.98 + 0.75 = -0.23 WBTC.
 
 ### 3.2 Oracle
 Market Protocol relies on oracle to provide the Index for settlement. Oracle is the only part in the entire system that is not completely decentralized.
