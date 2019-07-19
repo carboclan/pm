@@ -90,7 +90,7 @@ Two principles to consider when setting the index range:
 
 The value of one contract = Multiplier * The index value
 
-Multiplier = 1 WBTC
+Multiplier = 10<sup>6</sup> WBTC
 
 #### 2.1.4 Expiration
 
@@ -98,11 +98,11 @@ Each Synthetic BTC Mining Contract will specify an expiration date. The contract
 
 #### 2.1.5 Settlement
 
-At settlement, Market Protocol smart contract will send WBTC to addresses that hold contract position tokens. Long token holder will receive ( _BME_ - _Floor_ ) in WBTC per Contract, short token holder will receive ( _Cap_ - _BME_ ) in WBTC per Contract.
+At settlement, Market Protocol smart contract will send WBTC to addresses that hold contract position tokens. Long token holder will receive ( _BME_ - _Floor_ ) * _Multiplier_ in WBTC per Contract, short token holder will receive ( _Cap_ - _BME_ ) * _Multiplier_ in WBTC per Contract.
 
 #### 2.1.6 Margin
 
-Issuer of the Tokenized Synthetic BTC Mining Contract needs to send ( _Cap_ - _Floor_ ) amount in WBTC to the Market Protocol smart contract as collateral in order to mint contract position tokens. Contract positions are fully collateralized with no need to top up margins prior to settlement.
+Issuer of the Tokenized Synthetic BTC Mining Contract needs to send ( _Cap_ - _Floor_ ) * _Multiplier_ amount in WBTC to the Market Protocol smart contract as collateral in order to mint contract position tokens. Contract positions are fully collateralized with no need to top up margins prior to settlement.
 
 #### 2.1.7 Naming Convention for Contract Position Tokens
 
@@ -138,13 +138,13 @@ Example 1. The BME84 Index is at 5.52E-5 now, Carboclan Community specifies a ne
   - Floor: 4.50E-5
   - Expiration: 2019-05-11 02:00:00 UTC
 
-Alice would like to mint 100,000 units of contract position token pair. She sends (6E-5 - 4.5E-5) * 100,000 = 1.5WBTC to the Market smart contract as collateral, and minted 100,000 long position token and 100,000 short position token. A long token is worth 5.52E-5 - 4.50E-5  = 1.02E-5 WBTC, a short token is worth 6.00E-5 - 5.52E-5 = 4.8E-6 WBTC.
+Alice would like to mint 1.0 units of contract position token pair. She sends (6E-5 - 4.5E-5) * 1E6 * 1.0 = 15WBTC to the Market smart contract as collateral, and minted 1.0 long position token and 1.0 short position token. A long token is worth (5.52E-5 - 4.50E-5) * 1e6 = 10.2 WBTC, a short token is worth (6.00E-5 - 5.52E-5) * 1e6 = 4.8 WBTC.
 
-Later on, the Index falls to 5.50E-5, a long token is worth 5.50E-5 - 4.50E-5 = 1E-5 WBTC, a short token is worth 6.00E-5 - 5.50E-5 = 5E-6  WBTC. Alice would like to enter into a short position, so she lists her 100,000 long position in the market. Bob would like to enter into a long position, so he bought the 100,000 long position token, at a price of 0.98E-5 WBTC. Bob paid to Alice 0.98 WBTC and received 100,000 long token.
+Later on, the Index falls to 5.50E-5, a long token is worth (5.50E-5 - 4.50E-5) * 1E6 = 10 WBTC, a short token is worth (6.00E-5 - 5.50E-5) * 1E6 = 5 WBTC. Alice would like to enter into a short position, so she lists her 1.0 long position in the market. Bob would like to enter into a long position, so he bought the 1.0 long position token, at a price of 9.8 WBTC. Bob paid to Alice 9.8 WBTC and received 1.0 long token.
 
-While the actual price of the position token may be above or below the Index, in this example actual price of the long position token (0.98E-5 WBTC) may be priced below the theoretical price (1E-5 WBTC) calculated from the current Index, which may be caused by market expectation that the Index may drop further by expiration. On the other hand, while Index drops (5.52E-5 - 5.50E-5) / 5.52E-5 = 0.36%, but theoretical price for the long position token calculated from the Index drops (1.02E-5 - 1.00E-5) / 1.02E-5 = 1.9%, which reflects 5.28 implicit leverage from the Index floor.
+While the actual price of the position token may be above or below the Index, in this example actual price of the long position token (9.8 WBTC) may be priced below the theoretical price (10 WBTC) calculated from the current Index, which may be caused by market expectation that the Index may drop further by expiration. On the other hand, while Index drops (5.52E-5 - 5.50E-5) / 5.52E-5 = 0.36%, but theoretical price for the long position token calculated from the Index drops (10.2 - 10) / 10.2 = 1.9%, which reflects 5.28 implicit leverage from the Index floor.
 
-The contract expires on 2019-05-11 02:00:00 UTC. The Index is at 5.25E-5. Market Protocol smart contract pays Bob (5.25E-5 - 4.50E-5) * 100,000 = 0.75 WBTC, and (6.00E-5 - 5.25E-5) * 100,000 = 0.75 WBTC to short position token owner Alice. Alice's earnings: -1.5 + 0.98 + 0.75 = 0.23 WBTC, Bob's earnings: -0.98 + 0.75 = -0.23 WBTC.
+The contract expires on 2019-05-11 02:00:00 UTC and can be settled 1 day later. The Index is at 5.25E-5. Market Protocol smart contract pays Bob (5.25E-5 - 4.50E-5) * 1E6 * 1.0 = 7.5 WBTC, and (6.00E-5 - 5.25E-5) * 1E6 * 1.0 = 7.5 WBTC to short position token owner Alice. Alice's earnings: -15 + 9.8 + 7.5 = 2.3 WBTC, Bob's earnings: -9.8 + 7.5 = -2.3 WBTC.
 
 ### 3.2 Oracle
 Market Protocol relies on oracle to provide the Index for settlement. Oracle is the only part in the entire system that is not completely decentralized.
@@ -184,24 +184,24 @@ i.e On May 1st, 2019, BME14 Index is 3.95E-5. The following table indicates the 
 
 Contract position token |	Expiration date |	Market price	| Implied mining earnings
 ------------------------|-----------------|---------------|----- 
-LBME28-300-500-190526 | 19-05-26 | 0.8E-5 WBTC | 3.8E-5 BTC / 1T\*24H
-SBME28-300-500-190526 | 19-05-26 | 1.2E-5 WBTC | 3.8E-5 BTC / 1T\*24H
-LBME84-200-400-190716 | 19-07-16 | 1.2E-5	WBTC | 3.2E-5 BTC / 1T\*24H
-SBME84-200-400-190716 | 19-07-16 | 0.8E-5	WBTC | 3.2E-5 BTC / 1T\*24H
+LBME28-300-500-190526 | 19-05-26 | 8 WBTC | 3.8E-5 BTC / 1T\*24H
+SBME28-300-500-190526 | 19-05-26 | 12 WBTC | 3.8E-5 BTC / 1T\*24H
+LBME84-200-400-190716 | 19-07-16 | 12 WBTC | 3.2E-5 BTC / 1T\*24H
+SBME84-200-400-190716 | 19-07-16 | 8 WBTC | 3.2E-5 BTC / 1T\*24H
 
-Long position token prices reflect market view on expected average daily mining earnings within 1T hash/s during N days before the contract expires. The implied mining earnings = the market price of the long position token + the floor of the index.
+Long position token prices reflect market view on expected average daily mining earnings within 1T hash/s during N days before the contract expires. The implied mining earnings = the market price of the long position token / _Multiplier_ + the floor of the index.
 The market believes that under same amount of hashrate, the mining earnings will gradually decrease. Investors could figure out that expected mining earnings gradually decreases, thereby estimating their own mining ROI more rationally.
 
 ### 4.2 Hedging
 
-The synthetic POW mining contract can hedge mining risks in addition to revealing them. Similarly, we set aside the cryptocurrency price movement here, since there already exist derivatives for price hedges. Investors could enter a short position in said contract to hedge difficulty related risks when mining. When difficulty goes up, mining earnings goes down, the profit on the short position could negate the decrease in actual mining earnings. When difficulty goes down, mining earnings goes up, the loss on the short position could negate the increase in actual mining earnings. The hedging process thus locked in mining earnings. The earnings is (cap of the Index - the price when entering the position).
+The synthetic POW mining contract can hedge mining risks in addition to revealing them. Similarly, we set aside the cryptocurrency price movement here, since there already exist derivatives for price hedges. Investors could enter a short position in said contract to hedge difficulty related risks when mining. When difficulty goes up, mining earnings goes down, the profit on the short position could negate the decrease in actual mining earnings. When difficulty goes down, mining earnings goes up, the loss on the short position could negate the increase in actual mining earnings. The hedging process thus locked in mining earnings. The earnings is (cap of the Index * _Multiplier_ - the price when entering the position).
 
-For example, on May 1st, 2019, Alice purchased a batch of mining rigs that clocks 100T hash/s. She wanted to lock in mining earnings for the next 6 mining difficulty adjustment cycles (about 84 days, from 2019-5-4 to 2019-7-27). Therefore, Alice purchased 100 * 84 = 8,400 short position tokens of SBME84-200-400-190716. The following table reflects her P&L.
+For example, on May 1st, 2019, Alice purchased a batch of mining rigs that clocks 100T hash/s. She wanted to lock in mining earnings for the next 6 mining difficulty adjustment cycles (about 84 days, from 2019-5-4 to 2019-7-27). Therefore, Alice purchased 100 * 84 / 1E6 = 0.0084 short position tokens of SBME84-200-400-190716. The following table reflects her P&L.
 
-Position Token	| Entry Price	| Index when settled	| P&L / Token  | Position P&L 	| Mining income	| Comprehensive income
-----------------|:-----------:|:-------------------:|:------------:|:--------------:|:-------------:|:-------------------:
-SBME84-200-400-190716| 0.8E-5|            3.36E-5	|   -0.16E-5   |     -0.01344	  |        0.28224	| 0.26880
-SBME84-200-400-190716| 0.8E-5|            2.86E-5	|    0.34E-5   |      0.02856	  |        0.24024	| 0.26880
+Position Token       | Entry Price | Index when settled | P&L / Token  | Position P&L   | Mining income | Comprehensive income
+---------------------|:-----------:|:------------------:|:------------:|:--------------:|:-------------:|:-------------------:
+SBME84-200-400-190716| 8           |            3.36E-5 |   -1.6       |     -0.01344   |       0.28224 | 0.26880
+SBME84-200-400-190716| 8           |            2.86E-5 |    3.4       |      0.02856   |       0.24024 | 0.26880
 
 _\* Currency in above table is WBTC_
 
@@ -219,7 +219,7 @@ A synthetic cloud mining service can be easily built upon the mining contract. T
 
 Traditionally, investing in cloud mining has the following economic model: User invests a certain amount of money to purchase cloud mining capacity and receives mining earnings (netted of maintainence fees) daily in the period following the investment. The investor hopes that the total return would be greater than the initial investment. Disregarding token exchange rate fluctuation (or fully hedging exchange rate), cloud mining return only depends on mining difficulty.
 
-Mining contract can easily realize the above process: User purchases an array of same-sized long positions of mining contract that settle in chronological order, with the lower bound of the Index being 0. This process is very similar to cloud mining. The user will receive settlement amount from the mining contract in chronological order. The process of receiving the earnings mimics mining cashflow. The amount of hashrate user purchased corresponds to the long position of the Index. For example, the bitcoin mining contract use 10<sup>18</sup> hash/s as the basic unit. Therefore, purchasing one long position token is equivalent to purchasing 10<sup>18</sup> hash/s of cloud mining capacity. Since the lower bound of the Index is 0, long position will never be liquidated, which is similar to mining.
+Mining contract can easily realize the above process: User purchases an array of same-sized long positions of mining contract that settle in chronological order, with the lower bound of the Index being 0. This process is very similar to cloud mining. The user will receive settlement amount from the mining contract in chronological order. The process of receiving the earnings mimics mining cashflow. The amount of hashrate user purchased corresponds to the long position of the Index. For example, the bitcoin mining contract use 1T hash/s as the basic unit. Therefore, purchasing (1 / _Multiplier_) long position tokens is equivalent to purchasing 1T hash/s of cloud mining capacity. Since the lower bound of the Index is 0, long position will never be liquidated, which is similar to mining.
 
 
 ### 4.6 Speculation
@@ -242,31 +242,31 @@ Synthetic PoW Mining Contract is a new hashrate derivative, and the way to price
 ### 5.1 Implied Difficulty
 The price of each contract implies an expected daily average mining earnings within 1T/s hashrate. Implied Earnings can be calculated by the following two formulas:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}" title="\small \mathit{ImpliedEarnings}= \mathit{LongTokenPrice} + \mathit{IndexFloor}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}&space;\times&space;Multiplier" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}&space;\times&space;Multiplier" title="\small \mathit{ImpliedEarnings}= \mathit{LongTokenPrice} + \mathit{IndexFloor} \times Multiplier" /></a>
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;-&space;\mathit{ShortTokenPrice}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;-&space;\mathit{ShortTokenPrice}" title="\small \mathit{ImpliedEarnings}= \math{IndexCap} - \mathit{ShortTokenPrice}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;\times&space;Multiplier&space;-&space;\mathit{ShortTokenPrice}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;\times&space;Multiplier&space;-&space;\mathit{ShortTokenPrice}" title="\small \mathit{ImpliedEarnings}= \math{IndexCap} \times Multiplier - \mathit{ShortTokenPrice}" /></a>
 
 From the implied earnings, the corresponding implied difficulty can be calculated. The implied difficulty is calculated by the following formula:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings}}" title="\small \mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings&space;/&space;Multiplier}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings&space;/&space;Multiplier}}" title="\small \mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings / Multiplier}}" /></a>
 
 Where _K_ is the _K_ used by the formula in 2.1.1.
 
 Example: Referring to the example in 4.1, on May 1, 2019, the difficulty is 6.35T and the BMI14 index corresponding is 3.95E-5. The table below shows the implied difficulty and implied difficulty growth rate (IDGR, see 5.2). 
 
-Position Token        | Market Price| Implied Earnings     | Implied Difficulty |  IDGR
-----------------------|-------------|----------------------|--------------------|--------
-LBME28-300-500-190526 | 0.8E-5 WBTC | 3.8E-5 BTC / 1T\*24H | 6.62T              |  2.82%
-SBME28-300-500-190526 | 1.2E-5 WBTC | 3.8E-5 BTC / 1T\*24H | 6.62T              |  2.82%
-LBME84-200-400-190716 | 1.2E-5 WBTC | 3.2E-5 BTC / 1T\*24H | 7.86T              |  6.46%
-SBME84-200-400-190716 | 0.8E-5 WBTC | 3.2E-5 BTC / 1T\*24H | 7.86T              |  6.46%
+Position Token        | Market Price | Implied Earnings | Implied Difficulty |  IDGR
+----------------------|--------------|------------------|--------------------|--------
+LBME28-300-500-190526 | 8 WBTC       | 38 BTC / 1T\*24H | 6.62T              |  2.82%
+SBME28-300-500-190526 | 12 WBTC      | 38 BTC / 1T\*24H | 6.62T              |  2.82%
+LBME84-200-400-190716 | 12 WBTC      | 32 BTC / 1T\*24H | 7.86T              |  6.46%
+SBME84-200-400-190716 | 8 WBTC       | 32 BTC / 1T\*24H | 7.86T              |  6.46%
 
 Traders can predict the change of difficulty over time and give an predicted value of the implied difficulty, thus launching their corresponding bid.
 
 ### 5.2 Implied Difficulty Growth Rate
 The calculation of the BME index refers to a set of continuous difficulty data. The market price of the contract also reflects the prediction of the change of difficulty. Implied Difficulty Growth Rate (IDGR) is the average growth rate of difficulty after each difficulty adjustment implied from the contract price. The relationship between implied difficulty growth rate and implied mining earnings has the following relationship:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" title="\small \mathit{ImpliedEarnings}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot \left (1+\mathit{IDGR} \right )^{i}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=Multiplier&space;\times&space;\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=Multiplier&space;\times&space;\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" title="\small \mathit{ImpliedEarnings}=Multiplier \times \frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot \left (1+\mathit{IDGR} \right )^{i}}" /></a>
 
 Where,
   - _K_ and _T_ are the values used by the formula in 2.1.1
@@ -290,9 +290,9 @@ An example is used to illustrate this method. On May 20, 2019, LBME84-200-400-19
 
 Difficulty 1|Difficulty 2|Predicted Difficulty 3|Predicted Difficulty 4|Predicted Difficulty 5|Predicted Difficulty 6|Predicted Settlement Index|Price
 ----|-----|--------|---------|--------|--------|-----------|--------
-6.7 |6.7|	6.9|7.1|	7.3|	7.9|	3.55E-05|	1.55E-05
-6.7	|6.7|	7.4|7.6|	7.9|	8.3|	3.40E-05|	1.40E-05
-6.7	|6.7|	6.5|6.4|	6.3|	6.2|	3.89E-05|	1.89E-05
+6.7|6.7|6.9|7.1|7.3|7.9|3.55E-05|15.5
+6.7|6.7|7.4|7.6|7.9|8.3|3.40E-05|14.0
+6.7|6.7|6.5|6.4|6.3|6.2|3.89E-05|18.9
 
 _The difficulty unit in the above table is T (10<sup>12</sup>)_
 
