@@ -83,7 +83,7 @@ _NBlock_ | 144 | 每天的区块数
 
 每份合约的价值 = 合约乘数 * 指数
 
-合约乘数 = 1WBTC
+合约乘数 = _Multiplier_ = 10<sup>6</sup> WBTC
 
 #### 2.1.4 到期时间
 
@@ -91,11 +91,11 @@ _NBlock_ | 144 | 每天的区块数
 
 #### 2.1.5 交割
 
-合约发生交割时，Market智能合约将会向合约头寸持有人发送WBTC。每份合约多头将收到 ( _BMI_ - _Floor_ ) 个WBTC，每份合约空头将收到 ( _Cap_ - _BMI_ ) 个 WBTC。
+合约发生交割时，Market智能合约将会向合约头寸持有人发送WBTC。每份合约多头将收到 ( _BMI_ - _Floor_ ) * _Multiplier_ 个WBTC，每份合约空头将收到 ( _Cap_ - _BMI_ ) * _Multiplier_ 个 WBTC。
 
 #### 2.1.6 保证金
 
-合约发行人向Market智能合约抵押（ _Cap_ - _Floor_ ) 个WBTC以铸造合约头寸代币。合约的头寸是完全抵押的，合约在交割前不需要补充保证金。
+合约发行人向Market智能合约抵押（ _Cap_ - _Floor_ ) * _Multiplier_ 个WBTC以铸造合约头寸代币。合约的头寸是完全抵押的，合约在交割前不需要补充保证金。
 
 #### 2.1.7 头寸代币命名
 
@@ -133,13 +133,13 @@ _NBlock_ | 144 | 每天的区块数
   - 指数下限：4.50E-5
   - 到期时间：2019-05-11 02:00:00 UTC
 
-Alice希望创建100,000个合约代币对，为此她向Market智能合约质押了(6E-5 - 4.5E-5) * 100,000 = 1.5WBTC，从而铸造了100,000个合约多头代币和100,000个合约空头代币。此时，按指数计算的每个合约多头代币价值为5.52E-5 - 4.50E-5 = 1.02E-5 WBTC，每个合约空头代币价值为6.00E-5 - 5.52E-5 = 0.48E-5 WBTC。
+Alice希望创建1.0个合约代币对，为此她向Market智能合约质押了(6E-5 - 4.5E-5) * 1E6 * 1.0 = 15WBTC，从而铸造了1.0个合约多头代币和1.0个合约空头代币。此时，按指数计算的每个合约多头代币价值为(5.52E-5 - 4.50E-5) * 1E6 = 10.2 WBTC，每个合约空头代币价值为(6.00E-5 - 5.52E-5) * 1E6 = 4.8 WBTC。
 
-之后，指数下降到5.50E-5，此时，按指数计算的每个合约多头代币价值为5.50E-5 - 4.50E-5 = 1E-5 WBTC，每个合约空头代币价值为6.00E-5 - 5.50E-5 = 0.5E-5 WBTC。Alice希望进入合约空头，于是她在交易所中挂单出售100,000个多头代币。Bob恰好希望进入合约多头，最终Bob向Alice购买了合约多头币，成交价0.98E-5 WBTC。Bob向Alice支付0.98WBTC，Alice向Bob支付100,000个多头代币。
+之后，指数下降到5.50E-5，此时，按指数计算的每个合约多头代币价值为(5.50E-5 - 4.50E-5) * 1E6 = 10 WBTC，每个合约空头代币价值为(6.00E-5 - 5.50E-5) * 1E6 = 5 WBTC。Alice希望进入合约空头，于是她在交易所中挂单出售1.0个多头代币。Bob恰好希望进入合约多头，最终Bob向Alice购买了合约多头币，成交价9.8 WBTC。Bob向Alice支付9.8WBTC，Alice向Bob支付1.0个多头代币。
 
-这里在市场上头寸代币成交价（0.98E-5 WBTC）低于了按指数计算的价值（1E-5 WBTC），这是由于人们对到期日指数会进一步下降的预期造成的。另一方面，我们可以看到，指数下降了(5.52E-5 - 5.50E-5) / 5.52E-5 = 0.36%，但多头头寸按指数计算的价格却下降了(1.02E-5 - 1E-5) / 1.02E-5 = 1.9%，这就是指数下限造成的5.28倍杠杆作用。
+这里在市场上头寸代币成交价（9.8 WBTC）低于了按指数计算的价值（10 WBTC），这是由于人们对到期日指数会进一步下降的预期造成的。另一方面，我们可以看到，指数下降了(5.52E-5 - 5.50E-5) / 5.52E-5 = 0.36%，但多头头寸按指数计算的价格却下降了(10.2 - 10) / 10.2 = 1.9%，这就是指数下限造成的5.28倍杠杆作用。
 
-当UTC时间2019年5月11日02点合约到期。又过了1天，合约进行交割。此时合约指数为5.25E-5。Market智能合约向多头持有方Bob支付（5.25E-5 - 4.50E-5) * 100,000 = 0.75WBTC, 向空头持有方Alice支付(6.00E-5 - 5.25E-5) * 100,000 = 0.75WBTC。最终Alice的盈亏为：-1.5 + 0.98 + 0.75 = 0.23WBTC，Bob的盈亏为: -0.98 + 0.75 = -0.23WBTC。
+当UTC时间2019年5月11日02点合约到期。又过了1天，合约进行交割。此时合约指数为5.25E-5。Market智能合约向多头持有方Bob支付（5.25E-5 - 4.50E-5) * 1E6 * 1.0 = 7.5 WBTC, 向空头持有方Alice支付(6.00E-5 - 5.25E-5) * 1E6 * 1.0 = 7.5 WBTC。最终Alice的盈亏为：-15 + 9.8 + 7.5 = 2.3 WBTC，Bob的盈亏为: -9.8 + 7.5 = -2.3 WBTC。
 
 ### 3.2 预言机
 
@@ -175,23 +175,23 @@ Market Protocol依赖预言机提供指数。预言机是整套系统的相对�
 
 合约头寸代币 | 预计到期日 | 市场价 | 隐含挖矿收益
 ------| -----|-----|---
-LBME28-300-500-190526 | 19-05-26 | 0.8E-5 WBTC | 3.8E-5 BTC / 1T\*24H
-SBME28-300-500-190526 | 19-05-26 | 1.2E-5 WBTC | 3.8E-5 BTC / 1T\*24H
-LBME84-200-400-190716 | 19-07-16 | 1.2E-5	WBTC | 3.2E-5 BTC / 1T\*24H
-SBME84-200-400-190716 | 19-07-16 | 0.8E-5	WBTC | 3.2E-5 BTC / 1T\*24H
+LBME28-300-500-190526 | 19-05-26 | 8 WBTC | 3.8E-5 BTC / 1T\*24H
+SBME28-300-500-190526 | 19-05-26 | 12 WBTC | 3.8E-5 BTC / 1T\*24H
+LBME84-200-400-190716 | 19-07-16 | 12 WBTC | 3.2E-5 BTC / 1T\*24H
+SBME84-200-400-190716 | 19-07-16 | 8 WBTC | 3.2E-5 BTC / 1T\*24H
 
-合约多头代币的成交价反应了市场对合约到期前N天的每T算力平均每日预期挖矿收益的判断。用多头成交价加上指数下限就可以得到成交价隐含的预期挖矿收益。从成交价看，市场认为同等算力挖矿收益将逐渐下降。投资人从上述成交价洞察出预期挖矿收益的下降，从而对挖矿ROI做出更理性的预估。
+合约多头代币的成交价反应了市场对合约到期前N天的每T算力平均每日预期挖矿收益的判断。用多头成交价 / _Multiplier_ + 指数下限就可以得到成交价隐含的预期挖矿收益。从成交价看，市场认为同等算力挖矿收益将逐渐下降。投资人从上述成交价洞察出预期挖矿收益的下降，从而对挖矿ROI做出更理性的预估。
 
 ### 4.2 对冲风险
 
-算力收益合约在揭示挖矿风险的基础上，还可以进一步对冲挖矿风险。同样的，这里的讨论忽略币价的波动，因为有大量的衍生品可以对冲币价波动。投资人在购买矿机挖矿的同时，进入算力收益合约空头，对难度引起的挖矿收益波动进行对冲。当挖矿难度上升，挖矿收益下降时，合约空头的利润将抵消真实矿机挖矿收益下降的部分；当挖矿难度下降，挖矿收益上升时，合约空头的亏损将被真实矿机挖矿收益上升的部分抵消。上述对冲操作相当于提前锁定了挖矿收益，锁定的收益为（合约指数上限-进入头寸价格）。
+算力收益合约在揭示挖矿风险的基础上，还可以进一步对冲挖矿风险。同样的，这里的讨论忽略币价的波动，因为有大量的衍生品可以对冲币价波动。投资人在购买矿机挖矿的同时，进入算力收益合约空头，对难度引起的挖矿收益波动进行对冲。当挖矿难度上升，挖矿收益下降时，合约空头的利润将抵消真实矿机挖矿收益下降的部分；当挖矿难度下降，挖矿收益上升时，合约空头的亏损将被真实矿机挖矿收益上升的部分抵消。上述对冲操作相当于提前锁定了挖矿收益，锁定的收益为（合约指数上限 * _Multiplier_ - 进入头寸价格）。
 
-例，Alice在2019年5月1日，购买了一批具有100T Hash/s的矿机，她希望锁定未来6个难度周期（大约84天，从2019-5-4到2019-7-27）。于是Alice在市场上买入100 * 84 = 8400个算力收益合约空头代币。以下是到期交割时Alice的盈亏情况：
+例，Alice在2019年5月1日，购买了一批具有100T Hash/s的矿机，她希望锁定未来6个难度周期（大约84天，从2019-5-4到2019-7-27）。于是Alice在市场上买入100 * 84 / 1E6 = 0.0084 个算力收益合约空头代币SBME84-200-400-190716。以下是到期交割时Alice的盈亏情况：
 
-头寸代币 | 进入价格 | 交割指数 | 每代币盈亏|头寸盈亏 | 挖矿收入 |  综合收入 
---------|:-------:|:--------:|:--------:|:------:|:-------:|:-------
-SBME84-200-400-190716|0.8E-5|3.36E-5 |-0.16E-5  |-0.01344  | 0.28224	| 0.26880
-SBME84-200-400-190716|0.8E-5|2.86E-5 | 0.34E-5  | 0.02856  | 0.24024	| 0.26880
+头寸代币              | 进入价格 | 交割指数 | 每代币盈亏 | 头寸盈亏 | 挖矿收入 |  综合收入 
+----------------------|:--------:|:--------:|:----------:|:--------:|:--------:|:-------
+SBME84-200-400-190716 | 8        | 3.36E-5  | -1.6       | -0.01344 | 0.28224  | 0.26880
+SBME84-200-400-190716 | 8        | 2.86E-5  |  3.4       |  0.02856 | 0.24024  | 0.26880
 
 _\* 上表中货币单位为WBTC_
 
@@ -208,7 +208,7 @@ _\* 上表中货币单位为WBTC_
 
 传统投资云算力是这样一个经济模型：用户在初期投入一部分资金用于购买云算力，并在之后一段连续时间内陆续获得一系列挖矿收益。用户希望获得挖矿的总收益最终可以大于购买云算力的投入。不考虑币价波动的情况(或者对币价做完全对冲)，云算力投入的回报只和挖矿难度相关。
 
-可以很容易的利用算力收益智能合约模拟上述过程：用户在市场上进入一组大小相同的连续交割的算力收益合约多头，这些算力收益合约的指数下限都是0，这一过程类似于投资云算力。之后用户会不断收到头寸代币交割后返还的资金，收到资金的过程类似挖矿收益。用户购买的云算力的算力大小即是头寸大小对应的合约指数的算力大小。例如比特币挖矿合约指数使用10<sup>18</sup> Hash/s作为算力单位，则购买1个多头代币就相当于购买了10<sup>18</sup> Hash/s的云算力。由于这些算力收益合约的指数下限都是0，所以多头永远没有爆仓问题，非常类似于挖矿。
+可以很容易的利用算力收益智能合约模拟上述过程：用户在市场上进入一组大小相同的连续交割的算力收益合约多头，这些算力收益合约的指数下限都是0，这一过程类似于投资云算力。之后用户会不断收到头寸代币交割后返还的资金，收到资金的过程类似挖矿收益。用户购买的云算力的算力大小即是头寸大小对应的合约指数的算力大小。例如比特币挖矿合约指数使用1T Hash/s作为算力单位，则购买(1 / _Multiplier_)个多头代币就相当于购买了1T Hash/s的云算力。由于这些算力收益合约的指数下限都是0，所以多头永远没有爆仓问题，非常类似于挖矿。
 
 ### 4.6 投机
 
@@ -229,32 +229,31 @@ _\* 上表中货币单位为WBTC_
 ### 5.1 隐含难度
 每个合约的价格都隐含了一个预期的1T算力日均挖矿收益。隐含挖矿收益(Implied Earnings)可以由以下两个公式计算：
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}" title="\small \mathit{ImpliedEarnings}= \mathit{LongTokenPrice} + \mathit{IndexFloor}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}&space;\times&space;Multiplier" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}&space;\times&space;Multiplier" title="\small \mathit{ImpliedEarnings}= \mathit{LongTokenPrice} + \mathit{IndexFloor} \times Multiplier" /></a>
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;-&space;\mathit{ShortTokenPrice}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;-&space;\mathit{ShortTokenPrice}" title="\small \mathit{ImpliedEarnings}= \math{IndexCap} - \mathit{ShortTokenPrice}" /></a>
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;\times&space;Multiplier&space;-&space;\mathit{ShortTokenPrice}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;\times&space;Multiplier&space;-&space;\mathit{ShortTokenPrice}" title="\small \mathit{ImpliedEarnings}= \math{IndexCap} \times Multiplier - \mathit{ShortTokenPrice}" /></a>
 
 从隐含挖矿收益可以计算出对应的隐含挖矿难度。隐含挖矿难度（Implied Difficulty）由以下公式计算：
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings}}" title="\small \mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings&space;/&space;Multiplier}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings&space;/&space;Multiplier}}" title="\small \mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings / Multiplier}}" /></a>
 
 其中，_K_ 是2.1.1中指数公式使用的 _K_ 值。
 
 例子：引用4.1中的例子，在2019年5月1日时，难度为6.35T对应的BMI14指数为3.95E-5, 补充隐含难度和隐含难度增长率（见5.2）
 
-合约头寸代币           | 市场价       | 隐含挖矿收益          | 隐含难度  |  隐含难度增长率
-----------------------|-------------|----------------------|----------|----------------
-LBME28-300-500-190526 | 0.8E-5 WBTC | 3.8E-5 BTC / 1T\*24H | 6.62T    |  2.82%
-SBME28-300-500-190526 | 1.2E-5 WBTC | 3.8E-5 BTC / 1T\*24H | 6.62T    |  2.82%
-LBME84-200-400-190716 | 1.2E-5 WBTC | 3.2E-5 BTC / 1T\*24H | 7.86T    |  6.46%
-SBME84-200-400-190716 | 0.8E-5 WBTC | 3.2E-5 BTC / 1T\*24H | 7.86T    |  6.46%
+合约头寸代币          | 市场价  | 隐含挖矿收益     | 隐含难度 |  隐含难度增长率
+----------------------|---------|------------------|----------|----------------
+LBME28-300-500-190526 | 8 WBTC  | 38 BTC / 1T\*24H | 6.62T    |  2.82%
+SBME28-300-500-190526 | 12 WBTC | 38 BTC / 1T\*24H | 6.62T    |  2.82%
+LBME84-200-400-190716 | 12 WBTC | 32 BTC / 1T\*24H | 7.86T    |  6.46%
+SBME84-200-400-190716 | 8 WBTC  | 32 BTC / 1T\*24H | 7.86T    |  6.46%
 
 交易员可以对未来一段时间的难度变化进行预测，并给出一个隐含难度的推断值，从而倒推出自己的对应出价。
 
 ### 5.2 隐含难度增长率
 算力收益指数中引用了一组连续的难度数据，而难度总在变化。合约的市场价也反应了对这种变化的预测。隐含难度增长率（Implied Difficulty Growth Rate, 简写为IDGR）是从合约价格反推出的每次难度调整后难度的平均增长率。隐含难度增长率与隐含挖矿收益之间具有以下关系：
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" title="\small \mathit{ImpliedEarnings}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot \left (1+\mathit{IDGR} \right )^{i}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=Multiplier&space;\times&space;\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=Multiplier&space;\times&space;\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" title="\small \mathit{ImpliedEarnings}=Multiplier \times \frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot \left (1+\mathit{IDGR} \right )^{i}}" /></a>
 
 其中，
  - _K_ 和 _T_ 都是2.1.1中指数公式使用的值
@@ -277,10 +276,10 @@ SBME84-200-400-190716 | 0.8E-5 WBTC | 3.2E-5 BTC / 1T\*24H | 7.86T    |  6.46%
 
 
 难度1|难度2|预测难度3|预测难度4|预测难度5|预测难度6|预测交割指数|代币价格
-----|-----|--------|---------|--------|--------|-----------|--------
-6.7 |6.7|	6.9|7.1|	7.3|	7.9|	3.55E-05|	1.55E-05
-6.7	|6.7|	7.4|7.6|	7.9|	8.3|	3.40E-05|	1.40E-05
-6.7	|6.7|	6.5|6.4|	6.3|	6.2|	3.89E-05|	1.89E-05
+-----|-----|---------|---------|---------|---------|------------|--------
+6.7|6.7|6.9|7.1|7.3|7.9|3.55E-05|15.5
+6.7|6.7|7.4|7.6|7.9|8.3|3.40E-05|14.0
+6.7|6.7|6.5|6.4|6.3|6.2|3.89E-05|18.9
 
 _上表中难度单位为T_
 
