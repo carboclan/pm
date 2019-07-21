@@ -19,7 +19,7 @@ The [agenda](https://github.com/carboclan/pm/issues/41) has been approved
 Lack of precision in WBTC, [see issue46，4 proposals have been provided](https://github.com/carboclan/pm/issues/46)
 
 ## 2. product positioning and initial design
-[see issue32](https://github.com/carboclan/pm/issues/32)
+Basic elements of the product [see issue32](https://github.com/carboclan/pm/issues/32)
 
 Market size of Difficulty futures：by Taylor, [see spreadsheet](https://github.com/carboclan/pm/blob/master/research/Difficulty%20future%20market%20size.xlsx)
 
