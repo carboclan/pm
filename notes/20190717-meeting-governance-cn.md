@@ -19,7 +19,7 @@
 
 
 ## 1. index design and contract specs,
-关于wbtc小数点位数不够, [详见issue46，已提供4种方案](https://github.com/carboclan/pm/issues/46)
+关于wbtc小数点位数不够, [详见issue46，已提供4种方案](https://github.com/carboclan/pm/issues/46)和 [pr48](https://github.com/carboclan/pm/pull/48)
 
 ## 2. product positioning and initial design
 [详见issue32](https://github.com/carboclan/pm/issues/32)
