@@ -24,7 +24,7 @@
 ## 2. product positioning and initial design
 [详见issue32](https://github.com/carboclan/pm/issues/32)
 
-难度期货的市场规模：天然做, [详见](https://github.com/carboclan/pm/blob/master/research/Difficulty%20future%20market%20size.xlsx)
+难度期货的市场规模：天然做, [详见这个表格](https://github.com/carboclan/pm/blob/master/research/Difficulty%20future%20market%20size.xlsx)
 
 各参与方的决策流程和收益计算 [详见issue49](https://github.com/carboclan/pm/issues/49)
 
