@@ -18,10 +18,10 @@
 [提议的议案](https://github.com/carboclan/pm/issues/41)被会议接受。
 
 
-## 1. index design and contract specs,
+## 1. 指数设计和参数设计
 关于wbtc小数点位数不够, [详见issue46，已提供4种方案](https://github.com/carboclan/pm/issues/46)和 [pr48](https://github.com/carboclan/pm/pull/48)
 
-## 2. product positioning and initial design
+## 2. 产品定位和初步设计
 [详见issue32](https://github.com/carboclan/pm/issues/32)
 
 难度期货的市场规模：天然做, [详见这个表格](https://github.com/carboclan/pm/blob/master/research/Difficulty%20future%20market%20size.xlsx)
@@ -30,7 +30,7 @@
 
 mike估算产品工期
 
-## 3. governance 
+## 3. 治理 
 Restructure our meeting format. Add daily discussion in specific topic on wechat. Shorten biweekly discussion length. [详见 issue33](https://github.com/carboclan/pm/issues/33) 
 
 剩余issue由天然分配讨论
