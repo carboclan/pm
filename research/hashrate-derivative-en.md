@@ -43,14 +43,14 @@ The BTC Mining Earnings Index (_BME_) represents **average daily bitcoins mined 
 ##### Formula
 _BME_ is calculated as following:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_i}}" title="\small \mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_i}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K_i}}{\mathit{Difficulty_i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K_i}}{\mathit{Difficulty_i}}" title="\small \mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K_i}}{\mathit{Difficulty_i}}" /></a>
 
 Where:
 - **_T_** represents the number of difficulty adjustments during N days. **Let T=N/14**
 - **_Difficulty<sub>i</sub>_** represents the value of difficulty after the i-th last difficulty adjustment
-- **_K_** is a scaling factor calculated as below:
+- **_K<sub>i</sub>_** is a scaling factor calculated as below:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{K}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;\mathit{NBlock}}{&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{K}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;\mathit{NBlock}}{&space;2^{^{32}}}" title="\small \mathit{K}=\frac{\mathit{HashrateUnit} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot \mathit{NBlock}}{ 2^{^{32}}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{K_i}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;\mathit{NBlock}}{&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{K_i}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;\mathit{NBlock}}{&space;2^{^{32}}}" title="\small \mathit{K_i}=\frac{\mathit{HashrateUnit} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot \mathit{NBlock}}{ 2^{^{32}}}" /></a>
 
 Parameter | Value | Note
 ------| -----|-------
@@ -58,7 +58,7 @@ _HashrateUnit_  | 10 <sup>12</sup> Hash/s  | 1T hash |
 _TargetBlockTime_ | 600 s | Target block time for bitcoin is fixed at 10 minutes
 _Coinbase<sub>i</sub>_  | 12.5 BTC per Block | The block reward at i-th last mining difficulty adjustment. <br/>Block reward halves every 21,000 blocks.
 _NBlock_ | 144 | Number of blocks per day
-**_K_**| **251457095** | havles as _Coinbase<sub>i</sub>_ halves
+**_K<sub>i</sub>_**| **251457095** | havles as _Coinbase<sub>i</sub>_ halves
 
 ##### Notes
 - As the difficulty adjusts every 2016 blocks, which is roughly 14 days, the N of the index is set to be a multiple of 14. 
