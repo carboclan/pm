@@ -35,14 +35,14 @@
 ##### 公式
 _BME_ 用以下公式计算:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_i}}" title="\small \mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_i}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K_i}}{\mathit{Difficulty_i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K_i}}{\mathit{Difficulty_i}}" title="\small \mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K_i}}{\mathit{Difficulty_i}}" /></a>
 
 其中:
 - **_T_** 表示N天内的挖矿难度调整次数. **令T=N/14**
 - **_Difficulty<sub>i</sub>_** 表示最近倒数第i次难度调整后的难度值
-- **_K_** 是一个缩放系数，由以下公式计算:
+- **_K<sub>i</sub>_** 是一个缩放系数，由以下公式计算:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{K}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;\mathit{NBlock}}{&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{K}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;\mathit{NBlock}}{&space;2^{^{32}}}" title="\small \mathit{K}=\frac{\mathit{HashrateUnit} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot \mathit{NBlock}}{ 2^{^{32}}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{K_i}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;\mathit{NBlock}}{&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{K_i}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;\mathit{NBlock}}{&space;2^{^{32}}}" title="\small \mathit{K_i}=\frac{\mathit{HashrateUnit} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot \mathit{NBlock}}{ 2^{^{32}}}" /></a>
 
 参数 | 取值 | 备注
 ------| -----|-------
@@ -50,7 +50,7 @@ _HashrateUnit_  | 10 <sup>12</sup> Hash/s  | 1T 算力 |
 _TargetBlockTime_ | 600 s | 比特币预期出块时间，10分钟
 _Coinbase<sub>i</sub>_  | 12.5 BTC | 区块挖矿收益，每21,000区块收益减半
 _NBlock_ | 144 | 每天的区块数
-**_K_**| **251457095** | 随 _Coinbase<sub>i</sub>_ 减半而减半
+**_K<sub>i</sub>_**| **251457095** | 随 _Coinbase<sub>i</sub>_ 减半而减半
 
 ##### 其他要点
 - 因为比特币挖矿难度每2016个区块调整一次（大约相当于14天），所以指数中的天数N一般设置为14的整数倍。
