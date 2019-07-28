@@ -6,16 +6,14 @@ Defenders of free capital market, starting from blockchain infrastructure.
 
 ### Research
 
-1. Bitcoin Mining Earnings Index (BME Index) [EN](research/bme-index-en.md) [CN](research/bme-index-cn.md)  ([BME data](research/BME.md))
+1. Hashrate Derivative
+1.1 Bitcoin Mining Earnings Index (BME Index) [EN](research/bme-index-en.md) [CN](research/bme-index-cn.md)  ([BME data](research/BME.md))
+1.2 BME Index Futures [EN](research/bme-index-future-en.md) [CN](research/bme-index-future-cn.md)
+1.3 Tokenized Synthetic Bitcoin Mining Contract [EN](research/hashrate-derivative-en.md) [CN](research/hashrate-derivative-cn.md)
 
+2. Staking Derivative
 
-2. BME Index Futures [EN](research/bme-index-future-en.md) [CN](research/bme-index-future-cn.md)
-
-3. Hashrate Derivative (Tokenized Synthetic PoW Mining Contract) [EN](research/hashrate-derivative-en.md) [CN](research/hashrate-derivative-cn.md)
-
-4. Staking Derivative
-
-5. PoW vs. PoS Network Cartel Formation Analysis
+3. PoW vs. PoS Network Cartel Formation Analysis
 
 ### Meeting Notes
 
