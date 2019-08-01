@@ -15,4 +15,4 @@
 
 ### 1. 议程评审
 
-[提议的议案](https://github.com/carboclan/pm/issues/50)被会议接受。
+[提议的议案](https://github.com/carboclan/pm/issues/54)被会议接受。
