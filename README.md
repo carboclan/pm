@@ -20,6 +20,7 @@ Defenders of free capital market, starting from blockchain infrastructure.
 
 Date | Topic | Agenda  | Notes | Summary |
 |:---|:---|---|---|:---|
+Aug 18 | Governance | [Agenda](https://github.com/carboclan/pm/issues/60) | [en](notes/20190818-meeting-governance-en.md) [cn](notes/20190818-meeting-governance-cn.md) |  product design, governence |
 Aug 1 | Governance | [Agenda](https://github.com/carboclan/pm/issues/56) | [en](notes/20190801-meeting-governance-en.md) [cn](notes/20190801-meeting-governance-cn.md) |  product design, governence |
 Jul 28 | Governance | [Agenda](https://github.com/carboclan/pm/issues/54) | [en](notes/20190728-meeting-governance-en.md) [cn](notes/20190728-meeting-governance-cn.md) |  product design |
 Jul 21 | Governance | [Agenda](https://github.com/carboclan/pm/issues/43) | [en](notes/20190721-meeting-governance-en.md) [cn](notes/20190721-meeting-governance-cn.md) |  Index & Contract Design, product design |
