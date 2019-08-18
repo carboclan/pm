@@ -17,8 +17,7 @@ Defenders of free capital market, starting from blockchain infrastructure.
 
 4. CoinCow: Fair Coin Mining, Fun Cow Milking!
     - Concept Video: [CoinCow in 60 Seconds](https://www.youtube.com/watch?v=x6eRwmhyLt4&feature=youtu.be)
-    - Core Game Loop
-    - Game Economy
+    - Core Game Loop & Game Economy (Coming Soon!)
 
 
 ### Research
@@ -26,11 +25,9 @@ Defenders of free capital market, starting from blockchain infrastructure.
 1. DAO & Decentralized Governance Research
     - [Accountability in Decentralized Networks: The MolochDAO Case](https://link.medium.com/8QB9u3KEfZ) by @Arikan
 
-2. PoW vs. PoS Network Cartel Formation Analysis (Coming Soon)
-    - Reading List
+2. PoW vs. PoS Network Cartel Formation Analysis (Coming Soon!)
     
-3. Staking Derivative (Coming Soon)
-    - Reading List
+3. Staking Derivative (Coming Soon!)
 
 ### Meeting Notes
 
