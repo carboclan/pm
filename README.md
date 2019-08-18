@@ -9,25 +9,25 @@ Defenders of free capital market, starting from blockchain infrastructure.
 1. Hashrate Derivative (Tokenized Synthetic PoW Mining Contract) 
     - Introduction [en](research/hashrate-derivative-en.md) [cn](research/hashrate-derivative-cn.md)
     - [BME data](https://github.com/carboclan/pm/blob/master/research/BME.md)
+    - Product Demo (Coming Soon!)
     
 3. Hashedge: Decentralized Marketplace for Generalized Mining ([www.hashedge.io](https://www.hashedge.io/))
     - Introduction [en](research/HashedgeAuctionMarket.md)
     - Product Demo: [Hashedge Alpha v0.3](demo.hashedge.io) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)
 
 4. CoinCow: Fair Coin Mining, Fun Cow Milking!
-    - Concept Video [CoinCow in 60 Seconds](https://www.youtube.com/watch?v=x6eRwmhyLt4&feature=youtu.be)
+    - Concept Video: [CoinCow in 60 Seconds](https://www.youtube.com/watch?v=x6eRwmhyLt4&feature=youtu.be)
     - Core Game Loop
     - Game Economy
 
 
 ### Research
 
-1. PoW vs. PoS Network Cartel Formation Analysis (Coming Soon)
-    - Reading List
-
-2. DAO Governance Research (Coming Soon)
-    - Reading List
+1. DAO & Decentralized Governance Research
     - [Accountability in Decentralized Networks: The MolochDAO Case](https://link.medium.com/8QB9u3KEfZ) by @Arikan
+
+2. PoW vs. PoS Network Cartel Formation Analysis (Coming Soon)
+    - Reading List
     
 3. Staking Derivative (Coming Soon)
     - Reading List
