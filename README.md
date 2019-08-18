@@ -11,7 +11,7 @@ Defenders of free capital market, starting from blockchain infrastructure.
     - [BME data](https://github.com/carboclan/pm/blob/master/research/BME.md)
     
 3. Hashedge: Decentralized Marketplace for Generalized Mining ([www.hashedge.io](https://www.hashedge.io/))
-    - Introduction [en](research/Hashedge Auction Marketplace)
+    - Introduction [en](research/HashedgeAuctionMarket.md)
     - Product Demo: [Hashedge Alpha v0.3](demo.hashedge.io) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)
 
 4. CoinCow: Fair Coin Mining, Fun Cow Milking!
