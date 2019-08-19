@@ -7,17 +7,17 @@ Defenders of free capital market, starting from blockchain infrastructure.
 ### Projects
 
 1. Hashrate Derivative (Tokenized Synthetic PoW Mining Contract) 
-   Core Contributors: @jie85 @CarboClanC @Mikefotiaoqing @tzhan28
+    - Core Contributors: @jie85 @CarboClanC @Mikefotiaoqing @tzhan28
     - Introduction [en](research/hashrate-derivative-en.md) [cn](research/hashrate-derivative-cn.md)
     - [BME data](https://github.com/carboclan/pm/blob/master/research/BME.md)
      
 3. Hashedge: Decentralized Marketplace for Generalized Mining ([www.hashedge.io](https://www.hashedge.io/))
-   Core Contributors: @talrasha007 @CarboClanC @nyuspc @tzhan28
+    - Core Contributors: @talrasha007 @CarboClanC @nyuspc @qingduyyy @tzhan28
     - Introduction [en](research/HashedgeAuctionMarket.md)
     - Product Demo: [Hashedge Alpha v0.3](demo.hashedge.io) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)
 
 4. CoinCow: Fair Coin Mining, Fun Cow Milking!
-   Core Contributors: @CarboClanC @talrasha007 @Xi0ng
+    - Core Contributors: @CarboClanC @talrasha007 @Xi0ng
     - Concept Video: [CoinCow in 60 Seconds](https://www.youtube.com/watch?v=x6eRwmhyLt4&feature=youtu.be)
 
 ### Research
