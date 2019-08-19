@@ -12,7 +12,7 @@ Defenders of free capital market, starting from blockchain infrastructure.
     - [BME data](https://github.com/carboclan/pm/blob/master/research/BME.md)
      
 3. Hashedge: Decentralized Marketplace for Generalized Mining ([www.hashedge.io](https://www.hashedge.io/))
-    - Core Contributors: @talrasha007 @CarboClanC @nyuspc @qingduyyy
+    - Core Contributors: @talrasha007 @CarboClanC @nyuspc @qingduyyy @tzhan28
     - Introduction [en](research/HashedgeAuctionMarket.md)
     - Product Demo: [Hashedge Alpha v0.3](demo.hashedge.io) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)
 
