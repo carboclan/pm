@@ -1,4 +1,4 @@
-**Open request for comments. Please refer to [Issues](https://github.com/carboclan/pm/issues) for most updated discussions.**
+**Open request for comments. Please refer to [Issues](https://github.com/carboclan/pm/issues) for most updated discussions, and post your questions and comments as an Issue. You may follow the best practice set by reviewer @anthonyleezhang in this brilliant thread of dicussion on Issue #39 [Thoughts on MARKET vs UMA protocols](https://github.com/carboclan/pm/issues/39) .**
 
 # Tokenized Synthetic PoW Mining Contract
 
