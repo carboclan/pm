@@ -37,6 +37,8 @@ Defenders of free capital market, starting from blockchain infrastructure.
 
 Date | Topic | Agenda  | Notes | Summary |
 |:---|:---|---|---|:---|
+Aug 28 | Governance | [Agenda](https://github.com/carboclan/pm/issues/60) | [en](notes/20190828-meeting-governance-en.md) [cn](notes/20190828-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
+Aug 26 | Governance | [Agenda](https://github.com/carboclan/pm/issues/65) | [en](notes/20190826-meeting-governance-en.md) [cn](notes/20190826-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
 Aug 18 | Governance | [Agenda](https://github.com/carboclan/pm/issues/60) | [en](notes/20190818-meeting-governance-en.md) [cn](notes/20190818-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
 Aug 1 | Governance | [Agenda](https://github.com/carboclan/pm/issues/56) | [en](notes/20190801-meeting-governance-en.md) [cn](notes/20190801-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
 Jul 28 | Governance | [Agenda](https://github.com/carboclan/pm/issues/54) | [en](notes/20190728-meeting-governance-en.md) [cn](notes/20190728-meeting-governance-cn.md) |  Hashrate Derivative product design |
