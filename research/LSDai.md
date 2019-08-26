@@ -1,4 +1,6 @@
+**Open request for comments. Please refer to [Issues](https://github.com/carboclan/pm/issues) for most updated discussions, and post your questions and comments as an Issue. You may follow the best practice set by reviewer @anthonyleezhang in this brilliant thread of dicussion on Issue #39 [Thoughts on MARKET vs UMA protocols](https://github.com/carboclan/pm/issues/39) .**
 
+![Technical overview of how the LSDai system works](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/829/681/datas/gallery.jpg)
 
 ## Inspiration
 In a world of roller-coaster crypto volatility, we turned to Dai for stability. With the emergence of interest generating instruments born through layers of collateralization on crypto native synthetic assets, we are entering a phase of interest rate volatility. Introducing LSDai, for your escape to a peace of mind: earn Compound interest on your collateral with rDai, while providing liquidity for hedges against variable Compound interest.  
