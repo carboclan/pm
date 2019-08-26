@@ -4,7 +4,7 @@ Defenders of free capital market, starting from blockchain infrastructure.
 
 ## Project Management Resources and Docs
 
-### Projects
+### Community Projects
 
 1. Hashrate Derivative (Tokenized Synthetic PoW Mining Contract) 
    Core Contributors: @jie85 @CarboClanC @Mikefotiaoqing @tzhan28
@@ -16,9 +16,14 @@ Defenders of free capital market, starting from blockchain infrastructure.
     - Introduction [en](research/HashedgeAuctionMarket.md)
     - Product Demo: [Hashedge Alpha v0.3](demo.hashedge.io) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)
 
-4. CoinCow: Fair Coin Mining, Fun Cow Milking!
+4. CoinCow: Fair Coin Mining, Fun Cow Milking! A crypto social satire.
    Core Contributors: @CarboClanC @talrasha007 @Xi0ng
     - Concept Video: [CoinCow in 60 Seconds](https://www.youtube.com/watch?v=x6eRwmhyLt4&feature=youtu.be)
+
+5. LSDai: Get high on Interest!
+   Core Contributor: @dmvt @hellwolf @kobuta23 @CarboClanC @leafcutterant
+   - Introduction [en](research/LSDai.md)
+   - Product Demo: www.LSDai.market
 
 ### Research
 
