@@ -1,6 +1,10 @@
 # Yellow Hat DAO
 Defenders of free capital market, starting from blockchain infrastructure.
 
+This is a common co-creation space for the Yellow Hats. New project ideas, or research directions that fit the Yellow Hat Dao mission,  may be posted as an [Issues](https://github.com/carboclan/pm/issues) . You may also post your comments or questions on existing project or research as  [Issues](https://github.com/carboclan/pm/issues) . Outstanding Issues will be addressed in the Yellow Hats Community Semi-weekly Governance Call.
+
+Detailed contribution guideline and community governance coming soon.
+
 
 ## Project Management Resources and Docs
 
