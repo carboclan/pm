@@ -43,7 +43,5 @@ We encountered a hard coded Infura key that hit its rate limit today in the Airs
 2. Created an innovative solution of decentralized interest rate swaps for DeFi.
 3. Aligned a global team from 3 continents. Met at EthBerlin, and start from scratch, ideation to launching on Ethereum Main Net in less than 30 hours.  
 
-## What we learned
-
 ## What's next for LSDai
 We plan to fix up the front end bug and roll out a new version based on the updates on rDai 2.0 contract, in September. A truly **Stable-revenue-stable-value synthetic token** is coming. Stay tuned!
