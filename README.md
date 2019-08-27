@@ -1,9 +1,11 @@
 # Yellow Hat DAO
 Defenders of free capital market, starting from blockchain infrastructure.
 
-This is a common co-creation space for the Yellow Hats. New project ideas, or research directions that fit the Yellow Hat Dao mission,  may be posted as an [Issues](https://github.com/carboclan/pm/issues) . You may also post your comments or questions on existing project or research as  [Issues](https://github.com/carboclan/pm/issues) . Outstanding Issues will be addressed in the Yellow Hats Community Semi-weekly Governance Call.
+We are the Yellow Hats who experiment with decentralized financial primitives to solve crypto-native problems, in such way that tests the limit of cryptoeconomics. The Yellow Hat DAO is a social experiment itself, designed to pool research and capital across initiatives. Interdisciplinary collaboration on Community GitHub can and will be recorded at the present and accounted for in the future. The Yellow Hats participate in the community on an individual bases, projects retain independence from each other and maintain their own value-capture models. 
 
-Documentation and updates on Yellow Hats' live projects may be found in **Project Management Resources and Docs** below. Detailed contribution guideline and community governance coming soon.
+Our GitHub Organization is a common co-creation space for the Yellow Hats. New project ideas, or research directions that fit the Yellow Hat Dao mission,  may be posted as an [Issues](https://github.com/carboclan/pm/issues) . You may also post your comments or questions on existing project or research as  [Issues](https://github.com/carboclan/pm/issues) or directly create a Pull Request. Outstanding Issues will be addressed in the Yellow Hats Community Semi-weekly Governance Call.
+
+Documentation and updates on Yellow Hats' live projects may be found in **Project Management Resources and Docs** below. We are soliciting suggestions from the Community on **Contribution Guideline** and **Community Governance**.
 
 
 ## Project Management Resources and Docs
