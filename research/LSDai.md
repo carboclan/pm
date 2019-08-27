@@ -16,14 +16,14 @@ We have seen recent wild swings of Compound interest on Dai, going from 5% to pe
 This is why we decided to build a tokenized interest rate swap on Dai interest, to fill in the void with an essential decentralized stabilizer for the DeFi market. 
 
 ## What it does
-LSDai creates a Euro-dollar like construct, that is a future on the Compound Dai lending rate over the duration of the contract. By leveraging Market Protocol, LSDai takes on the approach of de-coupling the risk of the two sides  
+LSDai creates a Euro-dollar like construct, that is a future on the Compound Dai lending rate over the duration of the contract. By leveraging [Market Protocol](https://marketprotocol.io), LSDai takes on the approach of de-coupling the risk of the two sides  
 It enables three different types of users to gain the kind of exposure to the interest rate fluctuation that fits their profile, while aligns incentives.
 
-* **Hedgers**: Hedgers are lending out their Dai on Compound and earn interest, but fear that the interest rate — thus, their passive revenue — will drop. LSDai’s Market Makers mint and sell them *short Dai interest tokens* for Dai, in the amount that will completely hedge their interest-earning position. This means they will experience no fluctuation: if the interest rate drops, the profit from the short will make them even, and if the rate goes up, the extra interest makes up for their loss. Hedgers can insure themselves against loss of income.
+* **Hedgers**: Hedgers are lending out their Dai on Compound and earn interest, but fear that the interest rate — thus, their passive revenue — will drop. LSDai’s Market Makers mint and sell them *short Dai interest tokens (SDI)* for Dai to hedge their interest-earning position. This means they will offset the rate fluctuation through gains in SDI: if the interest rate drops, they profit from the short SDI position. If the rate goes up, the extra interest makes up for their loss of value in SDI. Hedgers can insure themselves against loss of income.
 
-* **Speculators**: These players have no stake in the lending business, they just want to speculate on the changes in the interest rate. Bettors expect Dai’s lending interest rate on Compound to go up or down, and buy *long* or *short Dai interest tokens* from the LSDai Market Makers for Dai. They either gain or lose money, depending on where the interest rate goes… and how clear their mind was when they made their bet.
+* **Speculators**: These players have no stake in the lending business, they just want to speculate on the changes in the interest rate. Bettors expect Dai’s lending interest rate on Compound to go up or down, and buy *long* or *short Dai interest tokens* from the LSDai Market Makers for Dai. They either gain or lose money, depending on where the interest rate goes… and how clear their mind was when they made their bet. *(coming soon)*
 
-* **Market makers**: Market makers manage the minting and selling of the *long* or *short Dai interest tokens*
+* **Market makers**: Market makers manage the minting and selling of the *long* or *short Dai interest tokens* *(coming soon)*
 
 ## How we built it
 We took a decentralized approach, adopting Market Protocol in decoupling the interest rate swap positions into margin-embedded Long and Short position tokens. We used Airswap to find the price of the Long ad Short position tokens. Given the importance of liquidity in the model, we programmed a bot to arbitrage away the spread across the Market Makers (Minters) of the token pairs and the Hedgers/Speculators.
