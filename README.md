@@ -33,8 +33,12 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 
 ### Research
 
-1. DAO & Decentralized Governance Research
-    - [Accountability in Decentralized Networks: The MolochDAO Case](https://link.medium.com/8QB9u3KEfZ) by @Arikan
+1. DeFi.WTF Summit
+   - Agenda
+   - Research
+
+2. DAO & Decentralized Governance Research
+   - [Accountability in Decentralized Networks: The MolochDAO Case](https://link.medium.com/8QB9u3KEfZ) by @Arikan
 
 2. PoW vs. PoS Network Cartel Formation Analysis (Coming Soon!)
 
