@@ -18,17 +18,18 @@ Location: Somewhere mysterious, Osaka, Japan
   - Evolution of the DEXes
   - Update on DeFi Liquidity Models: MMORPG, Single Player Game, and beyond
   
-### 3. Conversation with your DeFi PM 13:30-14:30
+### 3. Conversation with your DeFi PM 13:00-14:00
   - Profiling the players: Arbs, MMs, Hodlers, Traders, Gamblers
   - The Onramp: KYCed Volume vs. Permissionless Volume
   - DeFi Mechanism Design: Design Principles and Shades of Decentralization 
   - Fall of Veil, rise of Simple Interfaces: What’s trending in DeFi UI
   - DeFi Product-Market-Fit: Institutions v.s. retail?
   
-### 4. Inception or Deception? 14:30-15:30
+### 4. Inception or Deception? 14:00-15:00
   - The fluid collateral: ETH-WETH-MKR-DAI-cDAI-rDAI-…LSDai?
   - Collateralization schema in a glance: CeFi v.s. DeFi
   - How much money have we printed on Ethereum DeFi stack?
+  - Deep dive into tBTC, wBTC v.s Liquid
   - Can we and should we go from Overcollateralization to Under-collateralization in DeFi?
 
 ### 5. Intra and Interdependency of DeFi ecosystem 15:30-16:30
