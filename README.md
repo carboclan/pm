@@ -34,7 +34,7 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 ### Research
 
 1. DeFi.WTF Summit
-   - Agenda
+   - [Agenda](research/DeFi.WTF_Agenda.md)
    - Research
 
 2. DAO & Decentralized Governance Research
