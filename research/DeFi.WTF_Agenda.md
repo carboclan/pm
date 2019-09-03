@@ -1,4 +1,4 @@
-**Open request for Topics. Please open refer to [Issues](https://github.com/carboclan/pm/issues) for most updated discussions on this Agenda, and post your questions and comments as an Issue. **
+**Open request for Topics. Please refer to [Issue#69](https://github.com/carboclan/pm/issues/69) for most updated discussions on this Agenda, and post your questions and comments under [Issue#69](https://github.com/carboclan/pm/issues/69). Alternatively, you may post a Pull Request for this post directly. **
 
 # DeFi.WTF
 ## A community-driven anti-networking network discussion.
