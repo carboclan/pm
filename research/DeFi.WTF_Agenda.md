@@ -1,10 +1,10 @@
-**Open request for comments. Please refer to [Issues](https://github.com/carboclan/pm/issues) for most updated discussions, and post your questions and comments as an Issue. You may follow the best practice set by reviewer @anthonyleezhang in this brilliant thread of dicussion on Issue #39 [Thoughts on MARKET vs UMA protocols](https://github.com/carboclan/pm/issues/39) .**
+**Open request for Topics. Please open refer to [Issues](https://github.com/carboclan/pm/issues) for most updated discussions on this Agenda, and post your questions and comments as an Issue. **
 
 # DeFi.WTF
-## An anti-networking network discussion.
-Event will be streamed real time. Content transcript will be published upon permission, in English, Japanese and Chinese.
-Time: Saturday, 2019/10/12 (Your Chill Day AFTER DevCon)
-Location: Somewhere mysterious, Osaka, Japan
+## A community-driven anti-networking network discussion.
+  - Event will be streamed real time. Content transcript will be published upon permission, in English, Japanese and Chinese.
+  - Time: Saturday, 2019/10/12 (Your Chill Day AFTER DevCon)
+  - Location: Somewhere interesting, Osaka, Japan
 
 ## Tentative Agenda: 
 ### 1.	Bird-eye view of the Ethereum DeFi Microcosm 10:00-11:00
