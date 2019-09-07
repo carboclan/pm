@@ -5,6 +5,7 @@
   - Event will be streamed real time. Content transcript will be published upon permission, in English, Japanese and Chinese.
   - Time: 2019/10/07 (Monday, the day before DevCon) or 2019/10/12 (Saturday, the day after Devcon) 
   - Location: Somewhere interesting, Osaka, Japan
+  - Community Participation: donation to Community ENS (to be released soon) & "A DeFi Billboard" Social Experiment on Harberger Tax 
 
 ## Tentative Agenda: 
 ### 1.	Bird-eye view of the Ethereum DeFi Microcosm 10:00-10:30 //Lightning talks
