@@ -35,7 +35,7 @@
   - Security and liquidity implications of interoperable asset and bridges: MCD, tBTC, etc…
   - Implication of MakerDao 1.0 to 2.0 and ETH 1.0 to 2.0 for the DeFi Stack
   
-### 6. Economic engineering 16:00-16:30 //Stream of talks
+### 6. Economic Engineering 16:00-16:30 //Stream of talks
   - Identifying the generalized, most commonly occuring attack vectors in interdependent blockchains
   - Design against risk: Models of thinking, frameworks, and methodologies
   - Economics of bridges (Case study: Cosmos-ETH bridge)
