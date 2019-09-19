@@ -1,11 +1,24 @@
 **Open request for Topics. Please refer to [Issue#69](https://github.com/carboclan/pm/issues/69) for most updated discussions on this Agenda, and post your questions and comments under [Issue#69](https://github.com/carboclan/pm/issues/69). Alternatively, you may post a Pull Request for this post directly. **
 
 # DeFi.WTF
+  
 ## A community-driven anti-networking network discussion.
+  - DeFi.WTF is a purely community-driven event as part of a concerted effort of modern resurrection of the Pynx, a supportive space for open, inclusive, informed, and thoughtful exchanges of ideas.
   - Event will be streamed real time. Content transcript will be published upon permission, in English, Japanese and Chinese.
-  - Time: 2019/10/07 (Monday, the day before DevCon) or 2019/10/12 (Saturday, the day after Devcon) 
-  - Location: Somewhere interesting, Osaka, Japan
-  - Community Participation: donation to Community ENS (to be released soon) & "A DeFi Billboard" Social Experiment on Harberger Tax 
+  - Time: 2019/10/07 (Monday, the day before DevCon)
+  - Location: Osaka, Japan
+
+## Community Participation: 
+### 1. Donation to Community ENS: defiwtf.eth
+  - You may include a 140 letter message detailing why you are pledging your support, or something you would like to say to the community.
+ - Your name and message will be recognized at DeFi.WTF website (coming soon), and the event.
+ 
+### 2. "A DeFi Billboard" Harberger Tax Social Experiment
+ - This is the only place you may see logo. We are creating "A DeFi Billboard" to take the salesman pitch off the serious discussions. "A DeFi Billboard" is both physical and virtual: we will have a Physical retro-style neon billboard at the venue for the event for the winning logos, and a banner on DeFi.WTF website. The proceeds of the billboard will go into funding the event, as well as the funding continued research that comes out of the event.
+
+### 3. If you are a programmer/creative/activist
+ - Enter our virtual hackathon, join of pop-up collective and volunteer for preparation of the event.
+ - We need more help with design and implementation of Quadratic Voting tool, and the Harberger Tax experiment!
 
 ## Tentative Agenda: 
 ### 1.	Bird-eye view of the Ethereum DeFi Microcosm 10:00-10:30 //Lightning talks
