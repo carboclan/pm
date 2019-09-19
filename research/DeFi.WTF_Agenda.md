@@ -1,6 +1,5 @@
 **Open request for Topics. Please refer to [Issue#69](https://github.com/carboclan/pm/issues/69) for most updated discussions on this Agenda, and post your questions and comments under [Issue#69](https://github.com/carboclan/pm/issues/69). Alternatively, you may post a Pull Request for this post directly. **
 
-[Working Draft as of 2019.09.18](https://github.com/carboclan/pm/blob/master/research/DeFi.WTF_Agenda.md)
 
 # DeFi.WTF
 
