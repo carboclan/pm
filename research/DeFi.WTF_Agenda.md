@@ -38,12 +38,16 @@
 ### 5. Intra and Interdependency of DeFi ecosystem 15:00-16:00 //Stream of talks
   - The DeFi Interdependency Graph: cluster and direction of interdependency
   - Security and liquidity implications of interoperable asset and bridges: MCD, tBTC, etc…
+  - Common types of attacks in smart contracts operating on a single blockchain
   - Implication of ETH 1.0 to 2.0 for the DeFi Stack
   
 ### 6. Network of Networks 16:00-16:30 //Stream of talks
-  - Identifying the generalized, most commonly occuring attack vectors in interdependent blockchains
+  - How to identify generalized attack vectors in smart contracts operating across interdependent blockchains
   - Blockchain Confirmation Assurance Framework & Cost of Attacks across Blockchains
   - Design against risk: Models of thinking, frameworks, and methodologies
+  - Highly coupled systems: Failures cascading through highly interdependent or bridged blockchains 
+  - Special considerations in formal verification of bridge smart contracts
+  - Is formal verification enough? //Panel
 
 ### 7. DeFi beyond Ethereum 16:30-17:30 //Discussion
  - Overview of collateralized assets across major blockchains
@@ -58,14 +62,16 @@
  
 ### 1. "A DeFi Billboard" Harberger Taxes Social Experiment (Coming Soon!)
  - This is the only place you may see logos, REALLY LOUD LOGOS. We are creating "A DeFi Billboard" specifically to take the salesman pitch off the serious discussions. 
- - "A DeFi Billboard" is both physical and virtual: we will conduct a continuous auction on 10 Slots collecting Harberger Taxes, have a Physical retro-style neon billboard at the Event Venue for the winning logos, and a banner on DeFi.WTF website (coming soon). The proceeds will go into funding the event, as well as the funding continued research that comes out of the event.
+ - "A DeFi Billboard" is both physical and virtual: we will conduct a continuous auction on 10 Slots collecting Harberger Taxes, have a physical retro-style neon billboard at the event venue for the winning logos, and a banner on DeFi.WTF website (coming soon). The proceeds will go into funding the event, as well as funding the continued research that comes out of the event.
+ - To participate in the Harberger Taxes Experiment, DM me at Github: @ShrutiAppiah or Telegram: @ShrutiAppiah1
 
 ### 2. Donation to Community ENS: defiwtf.eth
   - You may include a 140 letter message detailing why you are pledging your support, or something you would like to say to the community.
  - Your name and message will be recognized at DeFi.WTF website (coming soon), DeFi.WTF Twitter, and at the event.
+ - If you'd like to support Community ENS, DM us at Github: @ShrutiAppiah/@CarboClanC or Telegram: @shrutiappiah1/TinaZhen
 
 ### 3. Pop-up Collective - Dissolves after 21 Days
  - If you are a thinker/creative/hacker, join our pop-up collective of volunteers in preparation of that will exist for 21 days then dissolve. The collective will determine the spending of the donations and "A DeFi Billboard" proceeds, and publish the financials once the collective dissolves.
- - The collective will determine prior to dissolving, which research direction gets the remaining balance, and whether to turn into a loosely-organized community or a more institutionalized DAO with clear governing mechanism.
- - We need more help with design and implementation of the Quadratic Voting tool, and the Harberger Taxes social experiment! (DM me @CarboClanC on GitHub or Telegram @TinaZhen)
+ - The collective will determine which research streams gets the remaining balance. Prior to dissolving, the collective also decides whether to turn into a loosely-organized community or a more institutionalized DAO with clear governing mechanism.
  - We need your brain power in helping us come up with the toughest questions that YOU care. Comment directly under this thread if you have a proposal or comments, and don't forget to VOTE when voting period begins. More details, coming soon!
+  - We need more help with design and implementation of the Quadratic Voting tool, and the Harberger Taxes social experiment! (DM me @CarboClanC on GitHub or Telegram @TinaZhen)
