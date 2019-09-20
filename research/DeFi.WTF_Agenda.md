@@ -21,27 +21,31 @@
   - Liquidity Microstructure: CeFi vs. DeFi
   - Evolution of the DEXes
   - DeFi Liquidity Models: MMORPG, Single Player Game, and beyond
+
+### 3.	Putting the "De" Back in DeFi 11:30-12:30
+  - 50 Shades of Decentralization: Design Principles and trade offs
+  - DeFi Bull vs. DeFi Bear: A Debate
   
-### 3. Conversation with your DeFi PM 12:30-13:30 //Lightning talks
+### 4. Conversation with your DeFi PM 12:30-13:30 //Lightning talks
   - Profiling the DeFi Users
   - The Onramp: KYCed Volume vs. Permissionless Volume, and what's trending in DeFi UI?
   - DeFi Product-Market-Fit: Institutions v.s. Retail v.s. Bots?
-  - DeFi Mechanism Design: Design Principles and trade offs in Decentralization
+
   - Optimization towards liquidity in protocol design
   - DeFi Gamification vs. DeFi Games vs. DeFi in Games
   
-### 4. Inception or Deception? 13:30-14:30 //Stream of talks
+### 5. Inception or Deception? 13:30-14:30 //Stream of talks
   - The fluid collateral: ETH-WETH-MKR-DAI-cDAI-rDAI-…LSDai? Identify the weakest link
   - Collateralization schema in a glance: CeFi v.s. DeFi, can we go from Overcollateralization to Under-collateralization?
   - Chasing Yield across DeFi, PoS towards Generalized Mining
 
-### 5. Intra and Interdependency of DeFi ecosystem 15:00-16:00 //Stream of talks
+### 6. Intra and Interdependency of DeFi ecosystem 15:00-16:00 //Stream of talks
   - The DeFi Interdependency Graph: cluster and direction of interdependency
   - Security and liquidity implications of interoperable asset and bridges: MCD, tBTC, etc…
   - Common types of attacks in smart contracts operating on a single blockchain
   - Implication of ETH 1.0 to 2.0 for the DeFi Stack
   
-### 6. Network of Networks 16:00-16:30 //Stream of talks
+### 7. Network of Networks 16:00-17:00 //Stream of talks
   - How to identify generalized attack vectors in smart contracts operating across interdependent blockchains
   - Blockchain Confirmation Assurance Framework & Cost of Attacks across Blockchains
   - Design against risk: Models of thinking, frameworks, and methodologies
@@ -49,7 +53,7 @@
   - Special considerations in formal verification of bridge smart contracts
   - Is formal verification enough? //Panel
 
-### 7. DeFi beyond Ethereum 16:30-17:30 //Discussion
+### 8. DeFi beyond Ethereum 17:00-18:00 //Discussion
  - Overview of collateralized assets across major blockchains
  - Panel: Ethereum vs. Cosmos vs. Polkadot vs. Near vs. EOS vs. Nervos vs. Libra
  - What is DeFi? Definition Revisited.
