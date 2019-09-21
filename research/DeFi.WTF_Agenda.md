@@ -41,18 +41,18 @@
   - Road to Under-Collateralization
 
 ### 6. Internet of Blockchains 15:00-16:00 //Stream of talks
-  - <b> Security </b> : Common types of attacks in smart contracts operating on a single blockchain
-  - <b> Security </b> : How to identify generalized attack vectors in smart contracts operating across interdependent blockchains
-  - <b> Security </b> : Blockchain Confirmation Assurance Framework & cost of attacks across blockchains
-  - <b> Formal verification </b>: Special considerations in formal verification of bridge smart contracts
-  - <b> Formal verification </b>: Is formal verification enough? //Panel
+  - **Security** : Common types of attacks in smart contracts operating on a single blockchain
+  - **Security** : How to identify generalized attack vectors in smart contracts operating across interdependent blockchains
+  - **Security** : Blockchain Confirmation Assurance Framework & cost of attacks across blockchains
+  - **Formal verification** : Special considerations in formal verification of bridge smart contracts
+  - **Formal verification** : Is formal verification enough? //Panel
   
 ### 7. Engineering the Network of Networks 16:00-17:00 //Stream of talks
-  - Design against risk: Models of thinking, frameworks, and methodologies
-  - Highly coupled systems: Failures cascading through highly interdependent or bridged blockchains
-  - The DeFi Interdependency Graph: cluster and direction of interdependency
+  - **Design against risk** : Models of thinking, frameworks, and methodologies
+  - **Highly coupled systems** : Failures cascading through highly interdependent or bridged blockchains
+  - **The DeFi Interdependency Graph** : cluster and direction of interdependency
+  - **Economics of bridges** : Case study on Cosmos - ETH bridge
   - Security and liquidity implications of interoperable asset and bridges: MCD, tBTC, etc.
-  - Economics of bridges: Case study on Cosmos - ETH bridge
 
 ### 8. DeFi beyond Ethereum 17:00-18:00 //Discussion
  - Overview of collateralized assets across major blockchains
