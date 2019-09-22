@@ -1,6 +1,8 @@
 **Open request for Topics. Please refer to [Issue#69](https://github.com/carboclan/pm/issues/69) for most updated discussions on this Agenda, and post your questions and comments under [Issue#69](https://github.com/carboclan/pm/issues/69). Alternatively, you may post a Pull Request for this post directly. **
 
 
+**Please comment directly under this Issue for topic proposal or revisions.**
+
 # DeFi.WTF
 
 ## A community-driven anti-networking network discussion.
@@ -14,7 +16,7 @@
 ## Tentative Agenda: 
 ### 1.	Bird's-eye view of the Ethereum DeFi Microcosm 10:00-10:30 //Lightning talks
   - Story of DeFi, how it started, and where we stand now
-  - Let’s play Lego: DeFi ecosystem mapping (NOT another DeFi Billboard)
+  - Let’s play Lego: DeFi ecosystem mapping
   - DeFi East meets West
   
 ### 2.	Evolution of Liquidity 10:30-11:30 //Stream of talks
@@ -23,14 +25,14 @@
   - DeFi Liquidity Models: MMORPG, Single Player Game, and beyond
 
 ### 3.	Putting the "De" Back in DeFi 11:30-12:30
-  - 50 Shades of Decentralization: Design Principles and trade offs
+  - 50 Shades of Decentralization: Design Principles and Trade-offs
   - DeFi Bull vs. DeFi Bear: A Debate
   
 ### 4.Conversation with your DeFi Investor 12:30-13:30 //Lightning talks 
-  - Profiling DeFi projects 
+  - Profiling DeFi Projects 
   - Will DeFi make ETH valuable?
-  - Open finance project equity or token: What's a better investment
-  - Chasing Yield across DeFi, what are the best strategies
+  - Open finance project equity or token: what's a better investment?
+  - Chasing yield across DeFi: what are the best strategies?
   
 ### 5. Inception or Deception? 13:30-14:30 //Stream of talks
   - **The Onramp**: KYCed Volume vs. Permissionless Volume, and what's trending in DeFi UI?
@@ -58,7 +60,7 @@
  - Implication of ETH 1.0 to 2.0 for the DeFi Stack
  - Panel: Ethereum vs. Cosmos vs. Polkadot vs. EOS vs. Libra (Moderated by Nervos)
  - What is DeFi? Definition Revisited.
-
+ 
 ## DeFi.WTF Community Participation: 
  
 ### 1. "A DeFi Billboard" Harberger Taxes Social Experiment (Coming Soon!)
