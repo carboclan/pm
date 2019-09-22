@@ -12,7 +12,7 @@
 ![DeFi WTF_KV_Banner](https://user-images.githubusercontent.com/50804295/65270524-32b0a180-dad0-11e9-9d44-2cfb24e635e5.jpg)
 
 ## Tentative Agenda: 
-### 1.	Bird-eye view of the Ethereum DeFi Microcosm 10:00-10:30 //Lightning talks
+### 1.	Bird's-eye view of the Ethereum DeFi Microcosm 10:00-10:30 //Lightning talks
   - Story of DeFi, how it started, and where we stand now
   - Let’s play Lego: DeFi ecosystem mapping (NOT another DeFi Billboard)
   - DeFi East meets West
@@ -33,11 +33,11 @@
   - Chasing Yield across DeFi, what are the best strategies
   
 ### 5. Inception or Deception? 13:30-14:30 //Stream of talks
-  - The Onramp: KYCed Volume vs. Permissionless Volume, and what's trending in DeFi UI?
-  - DeFi Product-Market-Fit: Institutions v.s. Retail v.s. Bots?
-  - DeFi Mechanism Design: Design Principles and trade offs in Decentralization
-  - DeFi Gamification vs. DeFi Games vs. DeFi in Games
-  - The Killer Use Case: Can double-digit rates last, borrower/lender dilema 
+  - **The Onramp**: KYCed Volume vs. Permissionless Volume, and what's trending in DeFi UI?
+  - **Product-Market-Fit**: Institutions v.s. Retail, Human v.s. Bots v.s. Other Smart Contracts?
+  - **Mechanism Design**: Design Principles and trade offs in Decentralization
+  - **Gamification**: DeFi Games vs. DeFi in Games
+  - **Killer User Case**: Can double-digit rates last, borrower/lender dilema 
   - Road to Under-Collateralization
 
 ### 6. Internet of Blockchains 15:00-16:00 //Stream of talks
@@ -55,13 +55,9 @@
   - Security and liquidity implications of interoperable asset and bridges: MCD, tBTC, etc.
 
 ### 8. DeFi beyond Ethereum 17:00-18:00 //Discussion
- - Overview of collateralized assets across major blockchains
- - Panel: Ethereum vs. Cosmos vs. Polkadot vs. Near vs. EOS vs. Nervos vs. Libra
+ - Implication of ETH 1.0 to 2.0 for the DeFi Stack
+ - Panel: Ethereum vs. Cosmos vs. Polkadot vs. EOS vs. Libra (Moderated by Nervos)
  - What is DeFi? Definition Revisited.
- - Does DeFi need scalability or better security?
- - What are the missing infrastructure component for DeFi?
- - What can each chain bring to the table for DeFi?
- - “Why can’t we port over the Ethereum tech stack to a new blockchain?” How to prevent building ghost cities of liquidity
 
 ## DeFi.WTF Community Participation: 
  
