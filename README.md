@@ -1,5 +1,5 @@
 # Yellow Hat DAO
-Defenders of free capital market, starting from blockchain infrastructure.
+Keepers of free capital market, starting from blockchain infrastructure.
 
 We are the Yellow Hats who experiment with decentralized financial primitives to solve crypto-native problems, in such way that tests the limit of cryptoeconomics. The Yellow Hat DAO is a social experiment itself, designed to pool research and capital across initiatives. Interdisciplinary collaboration on Community GitHub can and will be recorded at the present and accounted for in the future. The Yellow Hats participate in the community on an individual bases, projects retain independence from each other and maintain their own value-capture models. 
 
