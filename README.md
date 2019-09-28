@@ -57,9 +57,9 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 Date | Topic | Agenda  | Notes | Summary |
 |:---|:---|---|---|:---|
 Aug 28 | Governance | [Agenda](https://github.com/carboclan/pm/issues/60) | [en (tbc)](notes/20190828-meeting-governance-en.md) [cn (tbc)](notes/20190828-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
-Aug 26 | Governance | [Agenda](https://github.com/carboclan/pm/issues/65) | [en (tbc)](notes/20190826-meeting-governance-en.md) [cn (tbc)](notes/20190826-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
-Aug 19 | Governance | [Agenda](https://github.com/carboclan/pm/issues/60) | [en (tbc)](notes/20190819-meeting-governance-en.md) [cn (tbc)](notes/20190819-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
-Aug 1 | Governance | [Agenda](https://github.com/carboclan/pm/issues/56) | [en](notes/20190801-meeting-governance-en.md) [cn](notes/20190801-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
+Aug 26 | Governance | [Agenda](https://github.com/carboclan/pm/issues/65) | [en (tbc)](notes/20190826-meeting-governance-en.md) [cn](notes/20190826-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
+Aug 19 | Governance | [Agenda](https://github.com/carboclan/pm/issues/60) | [en (tbc)](notes/20190819-meeting-governance-en.md) [cn](notes/20190819-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
+Aug 1 | Governance | [Agenda](https://github.com/carboclan/pm/issues/56) | [en](notes/20190801-meeting-governance-en.md) [cn (tbc)](notes/20190801-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
 Jul 28 | Governance | [Agenda](https://github.com/carboclan/pm/issues/54) | [en tbc](notes/20190728-meeting-governance-en.md) [cn](notes/20190728-meeting-governance-cn.md) |  Hashrate Derivative product design |
 Jul 21 | Governance | [Agenda](https://github.com/carboclan/pm/issues/43) | [en](notes/20190721-meeting-governance-en.md) [cn](notes/20190721-meeting-governance-cn.md) |  Index & Contract Design, product design |
 Jul 17 | Governance | [Agenda](https://github.com/carboclan/pm/issues/41) | [en](notes/20190717-meeting-governance-en.md) [cn](notes/20190717-meeting-governance-cn.md) |  Index & Contract Design, product design |
