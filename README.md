@@ -14,7 +14,7 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 
 ### Community Projects
 
-1. LSDefi (LSDai): Get high on Interest! (winning hack @ETHBerlinZwei 2019)
+1. LSDai: Get high on Interest! (winning hack @ETHBerlinZwei 2019)
  - Core Contributor: @dmvt @hellwolf @kobuta23 @CarboClanC @leafcutterant
    - Introduction [en](research/LSDai.md)
    - Product Demo: www.LSDai.market
@@ -67,13 +67,13 @@ Aug 28 | Governance | [Agenda](https://github.com/carboclan/pm/issues/60) | [en 
 Aug 26 | Governance | [Agenda](https://github.com/carboclan/pm/issues/65) | [en (tbc)](notes/20190826-meeting-governance-en.md) [cn](notes/20190826-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
 Aug 19 | Governance | [Agenda](https://github.com/carboclan/pm/issues/60) | [en (tbc)](notes/20190819-meeting-governance-en.md) [cn](notes/20190819-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
 Aug 1 | Governance | [Agenda](https://github.com/carboclan/pm/issues/56) | [en](notes/20190801-meeting-governance-en.md) [cn (tbc)](notes/20190801-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
-Jul 28 | Governance | [Agenda](https://github.com/carboclan/pm/issues/54) | [en tbc](notes/20190728-meeting-governance-en.md) [cn](notes/20190728-meeting-governance-cn.md) |  Hashrate Derivative product design |
-Jul 21 | Governance | [Agenda](https://github.com/carboclan/pm/issues/43) | [en](notes/20190721-meeting-governance-en.md) [cn](notes/20190721-meeting-governance-cn.md) |  Index & Contract Design, product design |
+Jul 28 | Governance | [Agenda](https://github.com/carboclan/pm/issues/54) | [en (tbc)](notes/20190728-meeting-governance-en.md) [cn (tbc)](notes/20190728-meeting-governance-cn.md) |  Hashrate Derivative product design |
+Jul 21 | Governance | [Agenda](https://github.com/carboclan/pm/issues/43) | [en (tbc)](notes/20190721-meeting-governance-en.md) [cn (tbc)](notes/20190721-meeting-governance-cn.md) |  Index & Contract Design, product design |
 Jul 17 | Governance | [Agenda](https://github.com/carboclan/pm/issues/41) | [en](notes/20190717-meeting-governance-en.md) [cn](notes/20190717-meeting-governance-cn.md) |  Index & Contract Design, product design |
-Jul 14 | Governance | [Agenda](https://github.com/carboclan/pm/issues/28) | [en](notes/20190714-meeting-governance-en.md) [cn](notes/20190714-meeting-governance-cn.md) |  Index & Contract Design, product design |
+Jul 14 | Governance | [Agenda](https://github.com/carboclan/pm/issues/28) | [en (tbc)](notes/20190714-meeting-governance-en.md) [cn](notes/20190714-meeting-governance-cn.md) |  Index & Contract Design, product design |
 Jul 10 | Governance | [Agenda](https://github.com/carboclan/pm/issues/27) | [en](notes/20190710-meeting-governance-en.md) [cn](notes/20190710-meeting-governance-cn.md) |  Index & Contract Design |
 Jul 7 | Governance | [Agenda](https://github.com/carboclan/pm/issues/13) | [en](notes/20190707-meeting-governance-en.md) [cn](notes/20190707-meeting-governance-cn.md) | Community Governance and "Yellow Hat DAO" proposal, Index & Contract Design |
-Jul 3 | Governance | [Agenda](https://github.com/carboclan/pm/issues/7) | [en](notes/20190703-meeting-governance-en.md) [cn](notes/20190703-meeting-governance-cn.md) |  |
-Jun 30 | Governance | [Agenda](https://github.com/carboclan/pm/issues/6) | [en](notes/20190630-meeting-governance-en.md) [cn](notes/20190630-meeting-governance-cn.md) | Hashrate Derivative v1.0 White Paper Draft, Trade Offs of MARKET Protocol Integration |
-Jun 23 | Governance | [Agenda](https://github.com/carboclan/pm/issues/1) | [en](notes/20190623-meeting-governance-en.md) [cn](notes/20190623-meeting-governance-cn.md) | Mission, Organization Principle, Hashrate Derivative v1.0, Reconciliation with Hashedge |
+Jul 3 | Governance | [Agenda](https://github.com/carboclan/pm/issues/7) | [en (tbc)](notes/20190703-meeting-governance-en.md) [cn (tbc)](notes/20190703-meeting-governance-cn.md) |  |
+Jun 30 | Governance | [Agenda](https://github.com/carboclan/pm/issues/6) | [en (tbc)](notes/20190630-meeting-governance-en.md) [cn](notes/20190630-meeting-governance-cn.md) | Hashrate Derivative v1.0 White Paper Draft, Trade Offs of MARKET Protocol Integration |
+Jun 23 | Governance | [Agenda](https://github.com/carboclan/pm/issues/1) | [en (tbc)](notes/20190623-meeting-governance-en.md) [cn](notes/20190623-meeting-governance-cn.md) | Mission, Organization Principle, Hashrate Derivative v1.0, Reconciliation with Hashedge |
 Jun 20 | Governance | | [en](notes/20190620-meeting-governance-en.md) [cn](notes/20190620-meeting-governance-cn.md) | Carbo Clan Community vision, UMA and Other Derivative Protocols |
