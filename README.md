@@ -15,29 +15,31 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 ### Community Projects
 
 1. Hashrate Derivative (Tokenized Synthetic PoW Mining Contract) 
-   Core Contributors: @jie85 @CarboClanC @Mikefotiaoqing @tzhan28
+- Core Contributors: @jie85 @CarboClanC @Mikefotiaoqing @tzhan28
     - Introduction [en](research/hashrate-derivative-en.md) [cn](research/hashrate-derivative-cn.md)
     - [BME data](https://github.com/carboclan/pm/blob/master/research/BME.md)
      
 3. Hashedge: Decentralized Marketplace for Generalized Mining ([www.hashedge.io](https://www.hashedge.io/))
-   Core Contributors: @talrasha007 @CarboClanC @nyuspc @tzhan28
+ - Core Contributors: @talrasha007 @CarboClanC @nyuspc @tzhan28
     - Introduction [en](research/HashedgeAuctionMarket.md)
     - Product Demo: [Hashedge Alpha v0.3](demo.hashedge.io) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)
 
 4. CoinCow: Fair Coin Mining, Fun Cow Milking! A crypto social satire.
-   Core Contributors: @CarboClanC @talrasha007 @Xi0ng
+ - Core Contributors: @CarboClanC @talrasha007 @Xi0ng
     - Concept Video: [CoinCow in 60 Seconds](https://www.youtube.com/watch?v=x6eRwmhyLt4&feature=youtu.be)
 
 5. LSDai: Get high on Interest!
-   Core Contributor: @dmvt @hellwolf @kobuta23 @CarboClanC @leafcutterant
+ - Core Contributor: @dmvt @hellwolf @kobuta23 @CarboClanC @leafcutterant
    - Introduction [en](research/LSDai.md)
    - Product Demo: www.LSDai.market
 
 ### Research
 
-1. DeFi.WTF Summit
+1. DeFi.WTF Summit: www.DeFi.wtf
+ - Core Contributor: 21-Day Pop-up Collective that Dissolves on 10/8/2019
    - [Agenda](research/DeFi.WTF_Agenda.md)
-   - Research
+   - "A DeFi Billboard" Harberger Tax Social Experiment: [Repo]( https://github.com/carboclan/billboards-admin)
+   - Quadratic Voting Toolkit: [Repo](https://github.com/carboclan/QVToolkit)
 
 2. DAO & Decentralized Governance Research
    - [Accountability in Decentralized Networks: The MolochDAO Case](https://link.medium.com/8QB9u3KEfZ) by @Arikan
