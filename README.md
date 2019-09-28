@@ -14,7 +14,7 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 
 ### Community Projects
 
-1. LSDai: Get high on Interest! (winning hack @ETHBerlinZwei 2019)
+1. LSDefi (LSDai): Get high on Interest! (winning hack @ETHBerlinZwei 2019)
  - Core Contributor: @dmvt @hellwolf @kobuta23 @CarboClanC @leafcutterant
    - Introduction [en](research/LSDai.md)
    - Product Demo: www.LSDai.market
