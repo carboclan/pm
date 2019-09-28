@@ -1,9 +1,9 @@
 # Yellow Hat DAO
 Keepers of free capital market, starting from blockchain infrastructure.
 
-We are the Yellow Hats who experiment with decentralized financial primitives to solve crypto-native problems, in such way that tests the limit of cryptoeconomics. We are the construction workers who make the infrastructure more robust by building the inevitables that may break the weaker protocols.
+We are the Yellow Hats who play with decentralized financial primitives to experiment with crypto-native problems, in such way that tests the limit of cryptoeconomics. We wear Yellow Hats as construction workers, who make the infrastructure more robust by building the inevitables that may break the weaker ones.
 
-The Yellow Hat DAO is a social experiment itself, emerged out of the need to pool research and capital across frontier initiatives. Interdisciplinary collaboration on Community GitHub can and will be recorded at the present and accounted for in the future. The Yellow Hats participate in the community on an individual bases, projects compete for resources within the organization, retain independence from each other and maintain their own value-capture models. 
+The Yellow Hat DAO is a social experiment itself, emerged out of the need to pool research and capital across interesting independent initiatives. Interdisciplinary collaboration on Community GitHub can and will be recorded at the present and accounted for in the future. The Yellow Hats participate in the community on an individual bases, projects compete for resources within the organization, retain independence from each other, and maintain their own value-capture models. 
 
 Our GitHub Organization is a common co-creation space for the Yellow Hats in ideation and prototyping experiments. New project ideas, or research directions that fit the Yellow Hat Dao mission,  may be posted as an [Issues](https://github.com/carboclan/pm/issues) . You may also post your comments or questions on existing project or research as  [Issues](https://github.com/carboclan/pm/issues) or directly create a Pull Request. Outstanding Issues will be addressed in the Yellow Hats Community Semi-weekly Governance Call.
 
@@ -14,29 +14,38 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 
 ### Community Projects
 
-1. Hashrate Derivative (Tokenized Synthetic PoW Mining Contract) 
-- Core Contributors: @jie85 @CarboClanC @Mikefotiaoqing @tzhan28
-    - Introduction [en](research/hashrate-derivative-en.md) [cn](research/hashrate-derivative-cn.md)
-    - [BME data](https://github.com/carboclan/pm/blob/master/research/BME.md)
-     
-3. Hashedge: Decentralized Marketplace for Generalized Mining ([www.hashedge.io](https://www.hashedge.io/))
- - Core Contributors: @talrasha007 @CarboClanC @nyuspc @tzhan28
-    - Introduction [en](research/HashedgeAuctionMarket.md)
-    - Product Demo: [Hashedge Alpha v0.3](demo.hashedge.io) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)
-
-4. CoinCow: Fair Coin Mining, Fun Cow Milking! A crypto social satire.
- - Core Contributors: @CarboClanC @talrasha007 @Xi0ng
-    - Concept Video: [CoinCow in 60 Seconds](https://www.youtube.com/watch?v=x6eRwmhyLt4&feature=youtu.be)
-
-5. LSDai: Get high on Interest!
+1. LSDai: Get high on Interest! (winning hack @ETHBerlinZwei 2019)
  - Core Contributor: @dmvt @hellwolf @kobuta23 @CarboClanC @leafcutterant
    - Introduction [en](research/LSDai.md)
    - Product Demo: www.LSDai.market
 
+2. BME(Bitcoin Mining Earnings) Index Futures: Tokenized Synthetic PoW Mining Contract
+- Core Contributors: @jie85 @CarboClanC @Mikefotiaoqing @tzhan28
+    - Introduction [en](research/hashrate-derivative-en.md) [cn](research/hashrate-derivative-cn.md)
+    - [BME data](https://github.com/carboclan/pm/blob/master/research/BME.md)
+     
+3. Hashedge: Decentralized Marketplace for Generalized Mining (winning hack @ETHSingapore 2018)
+ - Core Contributors: @talrasha007 @CarboClanC @nyuspc @tzhan28
+    - Introduction [en](research/HashedgeAuctionMarket.md)
+    - Website: [www.hashedge.io](https://www.hashedge.io/)
+    - Product Demo: [Hashedge Alpha v0.3](demo.hashedge.io) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)
+
+4. StaFi Protocol: PoS Staking Network
+- Core Contributors: @Tore19 @stafiprotocol
+   - Introduction [en](https://docs.stafi.io/)
+   - [Github Repo](https://github.com/stafiprotocol/stafi-node)
+  
+5. CoinCow: Fair Coin Mining, Fun Cow Milking! (A crypto social satire born out of a dream.)
+ - Core Contributors: @CarboClanC @talrasha007 @Xi0ng
+    - Concept Video: [CoinCow in 60 Seconds](https://www.youtube.com/watch?v=x6eRwmhyLt4&feature=youtu.be)
+
+6. LiquiDAO: Crowd-funded liquidity AMM for bootstrapping new markets (winning hack @EOS San Francisco 2018)
+
+
 ### Research
 
 1. DeFi.WTF Summit: www.DeFi.wtf
- - Core Contributor: 21-Day Pop-up Collective that Dissolves on 10/8/2019
+ - Core Contributor: 21-Day Flashmob Collective that Dissolves on 10/8/2019
    - [Agenda](research/DeFi.WTF_Agenda.md)
    - "A DeFi Billboard" Harberger Tax Social Experiment: [Repo]( https://github.com/carboclan/billboards-admin)
    - Quadratic Voting Toolkit: [Repo](https://github.com/carboclan/QVToolkit)
@@ -44,11 +53,9 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 2. DAO & Decentralized Governance Research
    - [Accountability in Decentralized Networks: The MolochDAO Case](https://link.medium.com/8QB9u3KEfZ) by @Arikan
 
-2. PoW vs. PoS Network Cartel Formation Analysis (Coming Soon!)
+3. PoW vs. PoS Network Cartel Formation Analysis (Coming Soon!)
 
-3. Cost of Liquidity Attacks (Coming Soon!)
-    
-3. Staking Derivative (Coming Soon!)
+4. Cost of Liquidity Attacks (Coming Soon!)
 
 ### Meeting Notes
 
