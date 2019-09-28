@@ -7,16 +7,19 @@ www.LSDai.Market
 ![Technical overview of how the LSDai system works](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/829/681/datas/gallery.jpg)
 
 ## Inspiration
-In a world of roller-coaster crypto volatility, we turned to Dai for stability. With the emergence of interest generating instruments born through layers of collateralization on crypto-native synthetic assets, we are entering a phase of interest rate volatility. Introducing LSDai, for your escape to a peace of mind: earn Compound interest on your collateral with rDai while providing liquidity for hedges against the variable Compound interest rate.
+In a world of roller-coaster crypto volatility, we turned to Dai for stability. With the emergence of interest generating instruments born through layers of collateralization on crypto native synthetic assets, we are entering a phase of interest rate volatility. Introducing LSDai, for your escape to a peace of mind: earn Compound interest on your collateral with rDai, while providing liquidity for hedges against variable Compound interest.
 
-Empirical studies from traditional finance have shown the adverse impact of variability in interest rates (the “price” of money) on the real economy. Accordingly, interest rate swaps, used by non-financial firms in managing the interest rate risk of their debt, are one of the most important fixed-income instruments in the trading and hedging of interest rate risk.
+Empirical studies from traditional finance have shown the adverse impact of variability in interest rates (the “price” of money) on the real economy. Accordingly, interest rate swap, used by non-financial firms in the management of the interest rate risk of their debt, is one of the most important fixed-income instrument in the trading and hedging of interest rate risk. An alternative to interest rate swap, Eurodollar futures, is the biggest and most liquid futures market traded in the US by volume.
 
-Recently we have seen wild swings in Dai's interest rate on Compound, going from 5% to peaking over 16% within a month. With the emergence of the DeFi stack, more synthetic crypto assets composed of native assets are created and then rebundled within Ethereum, enabling new possibilities while introducing complex interdependencies. 
-
-This is why we decided to build a tokenized interest rate swap on the Dai interest — to fill the void with an essential decentralized stabilizer for the DeFi market.
+We have seen recent wild swings of Compound interest on Dai, going from 5% to peaking over 16% within a month. With the emergence of DeFi stack, more synthetic crypto assets composed of native assets are created and then rebundled on the Ethereum tech stack, enabling new possibilities while introducing complex interdependencies into the system. This is why we are creating LSDai.market, for hedgers and speculators to take leveraged long and short positions on Dai interest rates without borrowing by simply buying and selling LongDi and ShortDi tokens.
 
 ## What it does
 LSDai creates a [Eurodollar](https://en.wikipedia.org/wiki/Eurodollar)-style derivative that is a future on the Dai lending rate on Compound over the duration of the contract. By leveraging [Market Protocol](https://marketprotocol.io), LSDai takes the approach of de-coupling the risk of the two sides.
+
+LSDai creates a [Eurodollar](https://en.wikipedia.org/wiki/Eurodollar) like construct, that is a future on the Compound Dai lending rate over the duration of the contract. By leveraging Market Protocol which takes on the approach of constructing index futures via "iron-cross options" approach, LSDai de-couples the risk of the two sides via long and short position tokens.
+It enables three different types of users to gain the kind of exposure to the interest rate fluctuation that fits their profile, while aligns incentives.
+
+
 
 It enables three different types of users to gain the kind of exposure to the interest rate fluctuation that fits their profile, while also aligning their incentives:
 
@@ -45,3 +48,12 @@ In addition, we encountered a hard-coded Infura key in the Airswap widget that h
 
 ## What's next for LSDai
 We plan to fix up the frontend bug and roll out a new version based on the updates in the rDai 2.0 contract in September. And — drumroll, please — a truly **stable-revenue-stable-value synthetic token** is coming! Stay tuned and have a nice trip!
+
+## Updates!!!
+LSDai.Market creates a unique mechanism to tokenize on-chain variable rates, which allows the market to take leveraged long and short positions against the movement of variable rates without borrowing. Simultaneously, it also enables market makers — who seed liquidity to the system — to earn interest on collateral, in addition to spreads. We start with the variable Dai interest rate, a financial primitive currently most common in the Ethereum DeFi space. This way, we’re creating the first tokenized Eurodollar-style futures on the Dai interest rate. Positions are represented by the LongDi and ShortDi tokens (Long and Short Dai interest). Establishing a liquid market for these is significant for the DeFi space beyond trading or hedging: it can inform the market of the expectations about the future interest rate. For example, in MakerDAO’s case, it can serve as a signal to the MKR governance (who set the stability fee) and Dai users (who are affected by the peg). In the future, we will extend our market to interest rates beyond stablecoins, creating long/short token pairs for indices of other crypto-native variable rates (e.g. variable staking rewards).
+
+DApp Interface: www.lsdai.market
+Documentation (working draft): https://github.com/carboclan/pm/blob/master/research/LSDai.md
+GitHub repos: https://github.com/carboclan/LSDai-dapp https://github.com/carboclan/LSDi-airswap-bot
+
+As a next step, we plan on offering structured products such as tokenized fixed rates and term-limited lending and borrowing, while leveraging the liquidity of existing variable rate DeFi lending products. We are currently designing a stable-revenue-stable-interest rate token, the LSDai token. This will be backed by a rate insurance pool called the LSDao, with a simple interface and ease of UX, similar to that of a certificate of deposit that may be redeemed at any time or traded on secondary markets. LSDao members will seed the liquidity of LSDai tokens and earn the best available variable interest on their collateral, along with a spread (insurance premium). When LSDai holders redeem their tokens, the LSDao will automatically buy them back. Essentially, these tokens behave as puttable bonds. The fixed interest rate of newly issued LSDai tokens and the LSDao insurance premium can be algorithmically priced and dynamically adjusted. These values are functions of the capital supply in the LSDao collateral pool and the fixed-rate lending pool.
