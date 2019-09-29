@@ -13,8 +13,11 @@ Suji
 Minako
 Xiangxiang
 
+# Agenda Review
+Gather all possible resources to host Defi.WTF Summit
+Will discuss in subsections
 
-# Agenda & Speaker 
+# Summit Agenda & Speaker 
 
 ## Type 1 curated sections
 We have 7 curated sections,  2-4 subsections udner each section. mostly still flexible. 
