@@ -11,6 +11,7 @@ Future from blockbeats
 Toya
 Suji
 Minako
+Xiangxiang
 
 
 # Agenda & Speaker 
