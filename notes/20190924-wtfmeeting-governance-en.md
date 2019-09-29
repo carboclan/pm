@@ -9,6 +9,8 @@ Diane
 Shruti
 Future from blockbeats
 Toya
+Suji
+Minako
 
 
 # Agenda & Speaker 
