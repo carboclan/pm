@@ -1,4 +1,4 @@
-# Meeting minutes：Governance meeting，2019/9/24
+# Meeting minutes：WTF Governance meeting，2019/9/24
 The community governance meeting took place on 1030 pm Beijing time Sept 24th 2019
 
 ## Attendees：
