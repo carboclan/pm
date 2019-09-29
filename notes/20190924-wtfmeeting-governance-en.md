@@ -44,11 +44,11 @@ Type 2 self proposal have amounted to 4 ? We have a limit of 6?
 ## Online Marketing
 
 ### Twitter
-A specialized social media volunteer subgroup that inculdes Toya, Camila Bowen,Diane, Maybe Taylor, Xingxing?
-Camila will some content to be twitted
-Twitter Campaign could be conducted together with the Type 3 questions above
-Bowen suggested creating some hashtag for the event to  stimulate social media engagement.
-Diane suggested creating some posters to be spread around
+#### A specialized social media volunteer subgroup that inculdes Toya, Camila Bowen,Diane, Maybe Taylor, Xingxing?
+#### Camila will create some content to be twitted
+#### Twitter Campaign could be conducted together with the Type 3 questions above
+#### Bowen suggested creating some hashtag for the event to  stimulate social media engagement.
+#### Diane suggested creating some posters to be spread around
 ——Taylor has already created the gif version of some of the posters with the lips moving
 
 ### Newsletter
