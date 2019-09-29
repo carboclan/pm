@@ -63,6 +63,8 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 
 Date | Topic | Agenda  | Notes | Summary |
 |:---|:---|---|---|:---|
+Sept 29 | Governance | [Agenda](https://github.com/carboclan/pm/issues/69) | [en](notes/20190929-wtfmeeting-governance-en.md) [cn (tbc)](notes/20190929-wtfmeeting-governance-cn.md) |  defi.wtf summit preparation |
+Sept 24 | Governance | [Agenda](https://github.com/carboclan/pm/issues/69) | [en](notes/20190924-wtfmeeting-governance-en.md) [cn (tbc)](notes/20190924-wtfmeeting-governance-cn.md) |  defi.wtf summit preparation |
 Aug 28 | Governance | [Agenda](https://github.com/carboclan/pm/issues/60) | [en (tbc)](notes/20190828-meeting-governance-en.md) [cn (tbc)](notes/20190828-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
 Aug 26 | Governance | [Agenda](https://github.com/carboclan/pm/issues/65) | [en (tbc)](notes/20190826-meeting-governance-en.md) [cn](notes/20190826-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
 Aug 19 | Governance | [Agenda](https://github.com/carboclan/pm/issues/60) | [en (tbc)](notes/20190819-meeting-governance-en.md) [cn](notes/20190819-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
