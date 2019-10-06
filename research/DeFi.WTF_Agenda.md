@@ -8,7 +8,7 @@
 
 ![DeFi WTF_KV_Banner](https://user-images.githubusercontent.com/50804295/65270524-32b0a180-dad0-11e9-9d44-2cfb24e635e5.jpg)
 
-## Tentative Agenda: 
+## Agenda: 
 ![DeFi.WTF Agenda Working Draft as of 2019.10.06](https://raw.githubusercontent.com/carboclan/pm/master/research/Updated%20DEFI.wtf%20Agenda.png)
 
 ## DeFi.WTF Community Participation: 
