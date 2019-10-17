@@ -47,6 +47,7 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 1. DeFi.WTF Summit: www.DeFi.wtf
  - Core Contributor: 21-Day Flashmob Collective that Dissolves on 10/8/2019
    - [Agenda](research/DeFi.WTF_Agenda.md)
+   - [Archive for Slides & Videos](https://github.com/carboclan/pm/issues/69)
    - "A DeFi Billboard" Harberger Tax Social Experiment: [Repo]( https://github.com/carboclan/billboards-admin)
    - Quadratic Voting Toolkit: [Repo](https://github.com/carboclan/QVToolkit)
 
