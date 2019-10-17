@@ -1,4 +1,4 @@
-**Open request for Topics. Please refer to [Issue#69](https://github.com/carboclan/pm/issues/69) for most updated discussions on this Agenda, and post your questions and comments under [Issue#69](https://github.com/carboclan/pm/issues/69). Alternatively, you may post a Pull Request for this post directly. **
+**Please refer to [Issue#69](https://github.com/carboclan/pm/issues/69) for archive of DeFi.WTF Summit video recaps and speakers' slides, and post your questions and comments under [Issue#69](https://github.com/carboclan/pm/issues/69). **
 
 ## DeFi.WTF | The Power of Asking
   - DeFi.WTF is a purely community-driven event as part of a concerted effort of modern resurrection of the Pynx, a supportive space for open, inclusive, informed, and thoughtful exchanges of ideas.
