@@ -1,4 +1,4 @@
-**Please refer to [Issue#69](https://github.com/carboclan/pm/issues/69) for archive of DeFi.WTF Summit video recaps and speakers' slides, and post your questions and comments under [Issue#69](https://github.com/carboclan/pm/issues/69). **
+## Please refer to [Issue#69](https://github.com/carboclan/pm/issues/69) for Archive of DeFi.WTF video recaps, speakers' slides, and post your questions and comments under [Issue#69](https://github.com/carboclan/pm/issues/69).
 
 ## DeFi.WTF | The Power of Asking
   - DeFi.WTF is a purely community-driven event as part of a concerted effort of modern resurrection of the Pynx, a supportive space for open, inclusive, informed, and thoughtful exchanges of ideas.
@@ -18,7 +18,7 @@
 
  - “A DeFi Billboard” is both physical and virtual: We will conduct a continuous auction for 10 display slots on www.Defi.wtf  with a Harberger Tax mechanism. In a Harberger Taxation model, the buyer/advertiser sets the price, then the next buyer accepts the price, and pays a tax until he/she is bought out by another buyer, or he stops paying taxes. The tax goes to the event’s ENS address: defiwtf.eth. The proceeds will go into funding the event and funding research that comes out of the event.
 
- - Auction starts Oct 2, 2019
+ - Auction starts Oct 7, 2019
 
  - Participating in the continuous auction may result in: 
  - 1. Logo showing on a virtual DeFi Billboard on DeFi.WTF website.
