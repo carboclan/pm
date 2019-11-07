@@ -14,32 +14,38 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 
 ### Community Projects
 
-1. LSDai: Get high on Interest! (winning hack @ETHBerlinZwei 2019)
- - Core Contributor: @dmvt @hellwolf @kobuta23 @CarboClanC @leafcutterant
-   - Introduction [en](research/LSDai.md)
-   - Product Demo: www.LSDai.market
-
+1. Hashedge: Decentralized Marketplace for Generalized Mining (winning hack @ETHSingapore 2018)
+ - Core Contributors: @talrasha007 @CarboClanC @nyuspc @tzhan28
+    - Introduction [en](research/HashedgeAuctionMarket.md)
+    - Website: [www.hashedge.io](https://www.hashedge.io/)
+    - Product Demo: [Hashedge Alpha v0.3](demo.hashedge.io) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)
+    
 2. BME(Bitcoin Mining Earnings) Index Futures: Tokenized Synthetic PoW Mining Contract
 - Core Contributors: @jie85 @CarboClanC @Mikefotiaoqing @tzhan28
     - Introduction [en](research/hashrate-derivative-en.md) [cn](research/hashrate-derivative-cn.md)
     - [BME data](https://github.com/carboclan/pm/blob/master/research/BME.md)
      
-3. Hashedge: Decentralized Marketplace for Generalized Mining (winning hack @ETHSingapore 2018)
- - Core Contributors: @talrasha007 @CarboClanC @nyuspc @tzhan28
-    - Introduction [en](research/HashedgeAuctionMarket.md)
-    - Website: [www.hashedge.io](https://www.hashedge.io/)
-    - Product Demo: [Hashedge Alpha v0.3](demo.hashedge.io) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)
+3. LSDai: Get high on Interest! (winning hack @ETHBerlinZwei 2019)
+ - Core Contributor: @dmvt @hellwolf @kobuta23 @CarboClanC @leafcutterant
+   - Introduction [en](research/LSDai.md)
+   - Product Demo: www.LSDai.market
+   
+4. DDai: Interest delegating DAI with smart DeFi Recipes
+  - Core Contributors: @alexintosh
+    - Introduction: [en](https://devpost.com/software/ddai)
+    - Product Demo: https://ddai.netlify.com
+    - [Github Repo](https://github.com/dexlab-io/DDAI)
 
-4. StaFi Protocol: PoS Staking Network
+5. StaFi Protocol: PoS Staking Network
 - Core Contributors: @Tore19 @stafiprotocol
    - Introduction [en](https://docs.stafi.io/)
    - [Github Repo](https://github.com/stafiprotocol/stafi-node)
   
-5. CoinCow: Fair Coin Mining, Fun Cow Milking! (A crypto social satire born out of a dream.)
+6. CoinCow: Fair Coin Mining, Fun Cow Milking! (A crypto social satire born out of a dream.)
  - Core Contributors: @CarboClanC @talrasha007 @Xi0ng
     - Concept Video: [CoinCow in 60 Seconds](https://www.youtube.com/watch?v=x6eRwmhyLt4&feature=youtu.be)
 
-6. LiquiDAO: Crowd-funded liquidity AMM for bootstrapping new markets (winning hack @EOS San Francisco 2018)
+7. LiquiDAO: Crowd-funded liquidity AMM for bootstrapping new markets (winning hack @EOS San Francisco 2018)
 
 
 ### Research
