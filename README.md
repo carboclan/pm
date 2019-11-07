@@ -12,57 +12,66 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 
 ## Project Management Resources and Docs
 
-### Community Projects
+### Buidl (Community Projects)
 
-1. Hashedge: Decentralized Marketplace for Generalized Mining (winning hack @ETHSingapore 2018)
- - Core Contributors: @talrasha007 @CarboClanC @nyuspc @tzhan28
+#### 1. Liqui3D: Fomo3D x Liquidity Mining 
+**Grand Prize @DeFi Hackathon San Francisco Blockchain Week 2019, 1st Place in Cosmos Tendermint Challenge**
+- Core Contributors: @Dominator008 @ShrutiAppiah @alanywang @CarboClanC
+   - Introduction: [Devpost](https://devpost.com/software/liqui3d-by-team-adjust) | [Slides](https://docs.google.com/presentation/d/1HWbNjYh7EQNKyv4GThJrusJsMEPzdDp3BQrK3pemikw/edit) | [Doc](https://docs.google.com/document/d/14VyCw5Ir7mJ9DbZzCXVJHuzJhVoUgr9Jbe2cWkHTe_Y/edit?usp=sharing)
+   - [Github Repo](https://github.com/carboclan/liqui3d)
+
+#### 2. Hashedge: Decentralized Marketplace for Generalized Mining
+**Winning hack @ETHSingapore 2018, 0x prize @ETHny 2019**
+- Core Contributors: @talrasha007 @CarboClanC @nyuspc @tzhan28
     - Introduction [en](research/HashedgeAuctionMarket.md)
     - Website: [www.hashedge.io](https://www.hashedge.io/)
     - Product Demo: [Hashedge Alpha v0.3](demo.hashedge.io) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)
     
-2. BME(Bitcoin Mining Earnings) Index Futures: Tokenized Synthetic PoW Mining Contract
+#### 3. BME(Bitcoin Mining Earnings) Index Futures: Tokenized Synthetic PoW Mining Contract
 - Core Contributors: @jie85 @CarboClanC @Mikefotiaoqing @tzhan28
     - Introduction [en](research/hashrate-derivative-en.md) [cn](research/hashrate-derivative-cn.md)
     - [BME data](https://github.com/carboclan/pm/blob/master/research/BME.md)
      
-3. LSDai: Get high on Interest! (winning hack @ETHBerlinZwei 2019)
- - Core Contributor: @dmvt @hellwolf @kobuta23 @CarboClanC @leafcutterant
+#### 4. LSDai: Get high on Interest!
+**Winning hack @ETHBerlinZwei 2019**
+- Core Contributor: @dmvt @hellwolf @kobuta23 @CarboClanC @leafcutterant
    - Introduction [en](research/LSDai.md)
    - Product Demo: www.LSDai.market
    
-4. DDai: Interest delegating DAI with smart DeFi Recipes
+#### 5. DDai: Interest delegating DAI with smart DeFi Recipes
   - Core Contributors: @alexintosh
     - Introduction: [en](https://devpost.com/software/ddai)
     - Product Demo: https://ddai.netlify.com
     - [Github Repo](https://github.com/dexlab-io/DDAI)
 
-5. StaFi Protocol: PoS Staking Network
+#### 6. StaFi Protocol: PoS Staking Network
 - Core Contributors: @Tore19 @stafiprotocol
    - Introduction [en](https://docs.stafi.io/)
    - [Github Repo](https://github.com/stafiprotocol/stafi-node)
   
-6. CoinCow: Fair Coin Mining, Fun Cow Milking! (A crypto social satire born out of a dream.)
+#### 7. CoinCow: Fair Coin Mining, Fun Cow Milking! (A crypto social satire born out of a dream.)
  - Core Contributors: @CarboClanC @talrasha007 @Xi0ng
     - Concept Video: [CoinCow in 60 Seconds](https://www.youtube.com/watch?v=x6eRwmhyLt4&feature=youtu.be)
 
-7. LiquiDAO: Crowd-funded liquidity AMM for bootstrapping new markets (winning hack @EOS San Francisco 2018)
 
 
-### Research
+### Curious (Research)
 
-1. DeFi.WTF Summit: www.DeFi.wtf
- - Core Contributor: 21-Day Flashmob Collective that Dissolves on 10/8/2019
+#### 1. .WTFdao
+- Macro.WTF Summit: www.Macro.wtf
+- DeFi.WTF Summit: www.DeFi.wtf
+   - Core Contributor: 21-Day Flashmob Collective that Dissolves on 10/8/2019
    - [Agenda](research/DeFi.WTF_Agenda.md)
    - [Archive for Slides & Videos](https://github.com/carboclan/pm/issues/69)
    - "A DeFi Billboard" Harberger Tax Social Experiment: [Repo]( https://github.com/carboclan/billboards-admin)
    - Quadratic Voting Toolkit: [Repo](https://github.com/carboclan/QVToolkit)
 
-2. DAO & Decentralized Governance Research
+#### 2. DAO & Decentralized Governance Research
    - [Accountability in Decentralized Networks: The MolochDAO Case](https://link.medium.com/8QB9u3KEfZ) by @Arikan
 
-3. PoW vs. PoS Network Cartel Formation Analysis (Coming Soon!)
+#### 3. PoW vs. PoS Network Cartel Formation Analysis (Coming Soon!)
 
-4. Cost of Liquidity Attacks (Coming Soon!)
+#### 4. Cost of Liquidity Attacks (Coming Soon!)
 
 ### Meeting Notes
 
