@@ -38,10 +38,10 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
    - Introduction [en](research/LSDai.md)
    - Product Demo: www.LSDai.market
    
-#### 5. DDai: Interest delegating DAI with smart DeFi Recipes
+#### 5. ÐÐai: Interest delegating DAI with smart DeFi Recipes
   - Core Contributors: @alexintosh
     - Introduction: [en](https://devpost.com/software/ddai)
-    - Product Demo: https://ddai.netlify.com
+    - Product Demo: https://ddai.dexwallet.io/
     - [Github Repo](https://github.com/dexlab-io/DDAI)
 
 #### 6. StaFi Protocol: PoS Staking Network
