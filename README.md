@@ -15,13 +15,13 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 ### Buidl (Community Projects)
 
 #### 1. Liqui3D: Fomo3D x Liquidity Mining 
-**Grand Prize @DeFi Hackathon San Francisco Blockchain Week 2019, 1st Place in Cosmos Tendermint Challenge**
+- **Grand Prize @DeFi Hackathon San Francisco Blockchain Week 2019, 1st Place in Cosmos Tendermint Challenge**
 - Core Contributors: @Dominator008 @ShrutiAppiah @alanywang @CarboClanC
    - Introduction: [Devpost](https://devpost.com/software/liqui3d-by-team-adjust) | [Slides](https://docs.google.com/presentation/d/1HWbNjYh7EQNKyv4GThJrusJsMEPzdDp3BQrK3pemikw/edit) | [Doc](https://docs.google.com/document/d/14VyCw5Ir7mJ9DbZzCXVJHuzJhVoUgr9Jbe2cWkHTe_Y/edit?usp=sharing)
    - [Github Repo](https://github.com/carboclan/liqui3d)
 
 #### 2. Hashedge: Decentralized Marketplace for Generalized Mining
-**Winning hack @ETHSingapore 2018, 0x prize @ETHny 2019**
+- **Winning hack @ETHSingapore 2018, 0x prize @ETHny 2019**
 - Core Contributors: @talrasha007 @CarboClanC @nyuspc @tzhan28
     - Introduction [en](research/HashedgeAuctionMarket.md)
     - Website: [www.hashedge.io](https://www.hashedge.io/)
@@ -33,7 +33,7 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
     - [BME data](https://github.com/carboclan/pm/blob/master/research/BME.md)
      
 #### 4. LSDai: Get high on Interest!
-**Winning hack @ETHBerlinZwei 2019**
+- **Winning hack @ETHBerlinZwei 2019**
 - Core Contributor: @dmvt @hellwolf @kobuta23 @CarboClanC @leafcutterant
    - Introduction [en](research/LSDai.md)
    - Product Demo: www.LSDai.market
