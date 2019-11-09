@@ -19,6 +19,7 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 - Core Contributors: @Dominator008 @ShrutiAppiah @alanywang @CarboClanC
    - Introduction: [Devpost](https://devpost.com/software/liqui3d-by-team-adjust) | [Slides](https://docs.google.com/presentation/d/1HWbNjYh7EQNKyv4GThJrusJsMEPzdDp3BQrK3pemikw/edit) | [Doc](https://docs.google.com/document/d/14VyCw5Ir7mJ9DbZzCXVJHuzJhVoUgr9Jbe2cWkHTe_Y/edit?usp=sharing)
    - [Github Repo](https://github.com/carboclan/liqui3d)
+   - [DeFi Hackathon Recap](notes/DeFiHackathonRecap.md)
 
 #### 2. Hashedge: Decentralized Marketplace for Generalized Mining
 - **Winning hack @ETHSingapore 2018, 0x prize @ETHny 2019**
