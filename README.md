@@ -60,6 +60,7 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 
 #### 1. .WTFdao
 - Macro.WTF Summit: www.Macro.wtf
+   - [Archie for Slides & Video](notes/MacroWTF_Archive.md)
 - DeFi.WTF Summit: www.DeFi.wtf
    - Core Contributor: 21-Day Flashmob Collective that Dissolves on 10/8/2019
    - [Agenda](research/DeFi.WTF_Agenda.md)
