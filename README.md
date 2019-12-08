@@ -56,7 +56,7 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 
 
 
-### Ask (Research)
+### Ask (Experiments)
 
 #### 1. .WTFdao
 - Macro.WTF Summit: www.Macro.wtf
