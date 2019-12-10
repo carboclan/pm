@@ -43,14 +43,14 @@ The BTC Mining Earnings Index (_BME_) represents **average daily bitcoins mined 
 ##### Formula
 _BME_ is calculated as following:
 
-<img src="f1.png"/>
+<img src="f1-1.png"/>
 
 Where:
 - **_T_** represents the number of difficulty adjustments during N days. **Let T=N/14**
 - **_Difficulty<sub>i</sub>_** represents the value of difficulty after the i-th last difficulty adjustment
 - **_K<sub>i</sub>_** is a scaling factor calculated as below:
 
-<img src="f2.png"/>
+<img src="f2-1.png"/>
 
 Parameter | Value | Note
 ------| -----|-------
@@ -242,13 +242,13 @@ Synthetic PoW Mining Contract is a new hashrate derivative, and the way to price
 ### 5.1 Implied Difficulty
 The price of each contract implies an expected daily average mining earnings within 1T/s hashrate. Implied Earnings can be calculated by the following two formulas:
 
-<img src="f3.png"/>
+<img src="f3-1.png"/>
 
-<img src="f4.png"/>
+<img src="f4-1.png"/>
 
 From the implied earnings, the corresponding implied difficulty can be calculated. The implied difficulty is calculated by the following formula:
 
-<img src="f5.png"/>
+<img src="f5-1.png"/>
 
 Where _K_ is the _K_ used by the formula in 2.1.1.
 
