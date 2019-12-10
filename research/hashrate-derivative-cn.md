@@ -35,14 +35,14 @@
 ##### 公式
 _BME_ 用以下公式计算:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K_i}}{\mathit{Difficulty_i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K_i}}{\mathit{Difficulty_i}}" title="\small \mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K_i}}{\mathit{Difficulty_i}}" /></a>
+<img src="f1-1.png"/>
 
 其中:
 - **_T_** 表示N天内的挖矿难度调整次数. **令T=N/14**
 - **_Difficulty<sub>i</sub>_** 表示最近倒数第i次难度调整后的难度值
 - **_K<sub>i</sub>_** 是一个缩放系数，由以下公式计算:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{K_i}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;\mathit{NBlock}}{&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{K_i}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;\mathit{NBlock}}{&space;2^{^{32}}}" title="\small \mathit{K_i}=\frac{\mathit{HashrateUnit} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot \mathit{NBlock}}{ 2^{^{32}}}" /></a>
+<img src="f2-1.png"/>
 
 参数 | 取值 | 备注
 ------| -----|-------
@@ -229,13 +229,13 @@ _\* 上表中货币单位为WBTC_
 ### 5.1 隐含难度
 每个合约的价格都隐含了一个预期的1T算力日均挖矿收益。隐含挖矿收益(Implied Earnings)可以由以下两个公式计算：
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}&space;\times&space;Multiplier" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}&space;\times&space;Multiplier" title="\small \mathit{ImpliedEarnings}= \mathit{LongTokenPrice} + \mathit{IndexFloor} \times Multiplier" /></a>
+<img src="f3-1.png"/>
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;\times&space;Multiplier&space;-&space;\mathit{ShortTokenPrice}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;\times&space;Multiplier&space;-&space;\mathit{ShortTokenPrice}" title="\small \mathit{ImpliedEarnings}= \math{IndexCap} \times Multiplier - \mathit{ShortTokenPrice}" /></a>
+<img src="f4-1.png"/>
 
 从隐含挖矿收益可以计算出对应的隐含挖矿难度。隐含挖矿难度（Implied Difficulty）由以下公式计算：
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings&space;/&space;Multiplier}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings&space;/&space;Multiplier}}" title="\small \mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings / Multiplier}}" /></a>
+<img src="f5-1.png"/>
 
 其中，_K_ 是2.1.1中指数公式使用的 _K_ 值。
 
@@ -253,7 +253,7 @@ SBME84-200-400-190716 | 8 WBTC  | 32 BTC / 1T\*24H | 7.86T    |  6.46%
 ### 5.2 隐含难度增长率
 算力收益指数中引用了一组连续的难度数据，而难度总在变化。合约的市场价也反应了对这种变化的预测。隐含难度增长率（Implied Difficulty Growth Rate, 简写为IDGR）是从合约价格反推出的每次难度调整后难度的平均增长率。隐含难度增长率与隐含挖矿收益之间具有以下关系：
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=Multiplier&space;\times&space;\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=Multiplier&space;\times&space;\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" title="\small \mathit{ImpliedEarnings}=Multiplier \times \frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot \left (1+\mathit{IDGR} \right )^{i}}" /></a>
+<img src="f6.png"/>
 
 其中，
  - _K_ 和 _T_ 都是2.1.1中指数公式使用的值
@@ -261,7 +261,7 @@ SBME84-200-400-190716 | 8 WBTC  | 32 BTC / 1T\*24H | 7.86T    |  6.46%
  
 将上式代入隐含难度公式可以得到隐含难度和隐含难度增长率之间的关系为：
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\frac{\mathit{Difficulty_0}}{\mathit{ImpliedDifficulty}}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{1}}{&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\frac{\mathit{Difficulty_0}}{\mathit{ImpliedDifficulty}}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{1}}{&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" title="\small \frac{\mathit{Difficulty_0}}{\mathit{ImpliedDifficulty}}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{1}}{ \left (1+\mathit{IDGR} \right )^{i}}" /></a>
+<img src="f7.png"/>
  
 当T较大时，无法从隐含难度轻易求出隐含难度增长率的解析解，此时可以通过牛顿迭代法求其数值解。
 
