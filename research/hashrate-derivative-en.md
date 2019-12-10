@@ -43,14 +43,14 @@ The BTC Mining Earnings Index (_BME_) represents **average daily bitcoins mined 
 ##### Formula
 _BME_ is calculated as following:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K_i}}{\mathit{Difficulty_i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K_i}}{\mathit{Difficulty_i}}" title="\small \mathit{BME}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K_i}}{\mathit{Difficulty_i}}" /></a>
+<img src="f1.png"/>
 
 Where:
 - **_T_** represents the number of difficulty adjustments during N days. **Let T=N/14**
 - **_Difficulty<sub>i</sub>_** represents the value of difficulty after the i-th last difficulty adjustment
 - **_K<sub>i</sub>_** is a scaling factor calculated as below:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{K_i}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;\mathit{NBlock}}{&space;2^{^{32}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{K_i}=\frac{\mathit{HashrateUnit}&space;\cdot&space;\mathit{TargetBlockTime}&space;\cdot&space;Coinbase_i&space;\cdot&space;\mathit{NBlock}}{&space;2^{^{32}}}" title="\small \mathit{K_i}=\frac{\mathit{HashrateUnit} \cdot \mathit{TargetBlockTime} \cdot Coinbase_i \cdot \mathit{NBlock}}{ 2^{^{32}}}" /></a>
+<img src="f2.png"/>
 
 Parameter | Value | Note
 ------| -----|-------
@@ -242,13 +242,13 @@ Synthetic PoW Mining Contract is a new hashrate derivative, and the way to price
 ### 5.1 Implied Difficulty
 The price of each contract implies an expected daily average mining earnings within 1T/s hashrate. Implied Earnings can be calculated by the following two formulas:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}&space;\times&space;Multiplier" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\mathit{LongTokenPrice}&space;&plus;&space;\mathit{IndexFloor}&space;\times&space;Multiplier" title="\small \mathit{ImpliedEarnings}= \mathit{LongTokenPrice} + \mathit{IndexFloor} \times Multiplier" /></a>
+<img src="f3.png"/>
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;\times&space;Multiplier&space;-&space;\mathit{ShortTokenPrice}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=&space;\math{IndexCap}&space;\times&space;Multiplier&space;-&space;\mathit{ShortTokenPrice}" title="\small \mathit{ImpliedEarnings}= \math{IndexCap} \times Multiplier - \mathit{ShortTokenPrice}" /></a>
+<img src="f4.png"/>
 
 From the implied earnings, the corresponding implied difficulty can be calculated. The implied difficulty is calculated by the following formula:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings&space;/&space;Multiplier}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings&space;/&space;Multiplier}}" title="\small \mathit{ImpliedDifficulty}=\frac{\mathit{K}}{\mathit{ImpliedEarnings / Multiplier}}" /></a>
+<img src="f5.png"/>
 
 Where _K_ is the _K_ used by the formula in 2.1.1.
 
@@ -266,7 +266,7 @@ Traders can predict the change of difficulty over time and give an predicted val
 ### 5.2 Implied Difficulty Growth Rate
 The calculation of the BME index refers to a set of continuous difficulty data. The market price of the contract also reflects the prediction of the change of difficulty. Implied Difficulty Growth Rate (IDGR) is the average growth rate of difficulty after each difficulty adjustment implied from the contract price. The relationship between implied difficulty growth rate and implied mining earnings has the following relationship:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=Multiplier&space;\times&space;\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mathit{ImpliedEarnings}=Multiplier&space;\times&space;\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" title="\small \mathit{ImpliedEarnings}=Multiplier \times \frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{K}}{\mathit{Difficulty_0}\cdot \left (1+\mathit{IDGR} \right )^{i}}" /></a>
+<img src="f6.png"/>
 
 Where,
   - _K_ and _T_ are the values used by the formula in 2.1.1
@@ -274,7 +274,7 @@ Where,
  
 Substituting the above formula into the implicit difficulty formula can give the relationship between the implied difficulty and the implied difficulty growth rate as:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;\frac{\mathit{Difficulty_0}}{\mathit{ImpliedDifficulty}}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{1}}{&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\frac{\mathit{Difficulty_0}}{\mathit{ImpliedDifficulty}}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{1}}{&space;\left&space;(1&plus;\mathit{IDGR}&space;\right&space;)^{i}}" title="\small \frac{\mathit{Difficulty_0}}{\mathit{ImpliedDifficulty}}=\frac{1}{T}\sum_{i=1}^{T}\frac{\mathit{1}}{ \left (1+\mathit{IDGR} \right )^{i}}" /></a>
+<img src="f7.png"/>
  
 When T is large, the analytical solution of the implied difficulty growth rate cannot be easily obtained from the implicit difficulty. At this time, the numerical solution can be obtained by Newton iteration method.
 
