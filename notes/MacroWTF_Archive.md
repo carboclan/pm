@@ -1,6 +1,7 @@
 # Macro.WTF | The Power of Asking
   - Macro.WTF is a community-driven event as part of a concerted effort of modern resurrection of the Pynx, a supportive space for open, inclusive, informed, and thoughtful exchanges of ideas. Brought to you by a 21-Day Flash Organization: the WTF Collective.
   - San Francisco, USA, 2019.10.30
+  - If you like what we do, here is our Community ENS for Donation: defiwtf.eth
   
   
 ## WTF Vault: Archive of Speakers' Slides & Video Recaps (Updating)
