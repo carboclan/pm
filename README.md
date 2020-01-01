@@ -81,7 +81,7 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 
 Date | Topic | Agenda  | Notes | Summary |
 |:---|:---|---|---|:---|
-Dec 01 | Governance | [Agenda](tbc) | [cn](notes/A_Response_to_YellowHat_Gov_Call_20191201.md) |  黄帽联盟进化论 Evolution of the YellowHats - A Letter to Community |
+Dec 01 | Governance | - | [cn](notes/A_Response_to_YellowHat_Gov_Call_20191201.md) |  黄帽联盟进化论 Evolution of the YellowHats - A Letter to Community |
 Sept 29 | Governance | [Agenda](https://github.com/carboclan/pm/issues/69) | [en](notes/20190929-wtfmeeting-governance-en.md) [cn (tbc)](notes/20190929-wtfmeeting-governance-cn.md) |  defi.wtf summit preparation |
 Sept 24 | Governance | [Agenda](https://github.com/carboclan/pm/issues/69) | [en](notes/20190924-wtfmeeting-governance-en.md) [cn (tbc)](notes/20190924-wtfmeeting-governance-cn.md) |  defi.wtf summit preparation |
 Aug 28 | Governance | [Agenda](https://github.com/carboclan/pm/issues/60) | [en (tbc)](notes/20190828-meeting-governance-en.md) [cn (tbc)](notes/20190828-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
