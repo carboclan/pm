@@ -60,7 +60,7 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 
 #### 1. .WTFdao
 - Macro.WTF Summit: http://macro.wtf/
-   - [Archie for Slides & Video](notes/MacroWTF_Archive.md)
+   - [Archive for Slides & Video](notes/MacroWTF_Archive.md)
 - DeFi.WTF Summit: www.DeFi.wtf
    - Core Contributor: 21-Day Flashmob Collective that Dissolves on 10/8/2019
    - [Agenda](research/DeFi.WTF_Agenda.md)
@@ -81,7 +81,7 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 
 Date | Topic | Agenda  | Notes | Summary |
 |:---|:---|---|---|:---|
-Dec 01 | Governance | [Agenda](tbc) | [en](tbc) [cn (notes/A_Response_to_YellowHat_Gov_Call_20191201.md)] |  A Letter to Community Written on Dec 1 2019 |
+Dec 01 | Governance | [Agenda](tbc) | [en](tbc) [cn](notes/A_Response_to_YellowHat_Gov_Call_20191201.md) |  A Letter to Community Written on Dec 1 2019 |
 Sept 29 | Governance | [Agenda](https://github.com/carboclan/pm/issues/69) | [en](notes/20190929-wtfmeeting-governance-en.md) [cn (tbc)](notes/20190929-wtfmeeting-governance-cn.md) |  defi.wtf summit preparation |
 Sept 24 | Governance | [Agenda](https://github.com/carboclan/pm/issues/69) | [en](notes/20190924-wtfmeeting-governance-en.md) [cn (tbc)](notes/20190924-wtfmeeting-governance-cn.md) |  defi.wtf summit preparation |
 Aug 28 | Governance | [Agenda](https://github.com/carboclan/pm/issues/60) | [en (tbc)](notes/20190828-meeting-governance-en.md) [cn (tbc)](notes/20190828-meeting-governance-cn.md) |  Hashrate Derivative product design, governence |
