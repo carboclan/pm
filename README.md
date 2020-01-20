@@ -26,7 +26,7 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 - Core Contributors: @talrasha007 @CarboClanC @nyuspc @tzhan28
     - Introduction [en](research/HashedgeAuctionMarket.md)
     - Website: [www.hashedge.io](https://www.hashedge.io/)
-    - Product Demo: [Hashedge Alpha v0.3](https://demo.hashedge.io) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)
+    - Product Demo: [Hashedge Alpha v0.3](http://demo.hashedge.io/) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)
     
 #### 3. BME(Bitcoin Mining Earnings) Index Futures: Tokenized Synthetic PoW Mining Contract
 - Core Contributors: @jie85 @CarboClanC @Mikefotiaoqing @tzhan28
