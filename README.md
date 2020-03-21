@@ -14,13 +14,13 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 
 ### Buidl (Community Projects)
 
-#### 1. HoneyLemon: liquid mining derivatives 
+#### 1. HoneyLemon: Liquid Mining Derivatives 
 - **A16Z Crypto Startup School Project / Consensys Tachyon / FlashGirls Pi-rate Ship**
 - Core Contributors: 
    - @talrasha007 @carboclanc @jin10086 : [www.honeylemon.market](https://www.honeylemon.market/)
    - @dmvt @scott-l-e-w-i-s @chrismaree @carboclanc: [Market Protocol V2.0 approach](research/Honeylemon/MarketProtocolV2Approach.md)
    - @andrei-aisimov: Bonding Curve approach 
-   - @scott-l-e-w-i-s @carboclanc: MakerDAO w/ flashloans softed pegged to Mining Revenue Index approach
+   - @scott-l-e-w-i-s : MakerDAO w/ flashloans softed pegged to Mining Revenue Index approach
 
 #### 2. Hashedge: Decentralized Marketplace for Generalized Mining
 - **Winning hack @ETHSingapore 2018, 0x prize @ETHny 2019**
