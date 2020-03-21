@@ -14,17 +14,17 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 
 ### Buidl (Community Projects)
 
-#### 1. Liqui3D: Fomo3D x Liquidity Mining 
-- **Grand Prize @DeFi Hackathon San Francisco Blockchain Week 2019, 1st Place in Cosmos Tendermint Challenge**
-- Core Contributors: @Dominator008 @ShrutiAppiah @alanywang @CarboClanC
-   - Introduction: [Devpost](https://devpost.com/software/liqui3d-by-team-adjust) | [Slides](https://docs.google.com/presentation/d/1HWbNjYh7EQNKyv4GThJrusJsMEPzdDp3BQrK3pemikw/edit) | [Doc](https://docs.google.com/document/d/14VyCw5Ir7mJ9DbZzCXVJHuzJhVoUgr9Jbe2cWkHTe_Y/edit?usp=sharing)
-   - [Github Repo](https://github.com/carboclan/liqui3d)
-   - [DeFi Hackathon Recap](notes/DeFiHackathonRecap.md)
+#### 1. HoneyLemon: liquid mining derivatives 
+- **A16Z Crypto Startup School Project / Consensys Tachyon / FlashGirls Pi-rate Ship**
+- Core Contributors: 
+   - Proposal 1: Market Protocol V2.0 approach
+   - Proposal 2: Bonding Curve approach 
+   - Proposal 3: HoneylemonDAO - MakerDAO approach
 
 #### 2. Hashedge: Decentralized Marketplace for Generalized Mining
 - **Winning hack @ETHSingapore 2018, 0x prize @ETHny 2019**
 - Core Contributors: @talrasha007 @CarboClanC @nyuspc @tzhan28
-    - Introduction [en](research/HashedgeAuctionMarket.md)
+    - Introduction [to be updated]
     - Website: [www.hashedge.io](https://www.hashedge.io/)
     - Product Demo: [Hashedge Alpha v0.3](http://demo.hashedge.io/) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)
     
@@ -33,24 +33,31 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
     - Introduction [en](research/hashrate-derivative-en.md) [cn](research/hashrate-derivative-cn.md)
     - [BME data](https://github.com/carboclan/pm/blob/master/research/BME.md)
      
-#### 4. LSDai: Get high on Interest!
+#### 4. Liqui3D: Fomo3D x Liquidity Mining 
+- **Grand Prize @DeFi Hackathon San Francisco Blockchain Week 2019, 1st Place in Cosmos Tendermint Challenge**
+- Core Contributors: @Dominator008 @ShrutiAppiah @alanywang @CarboClanC
+   - Introduction: [Devpost](https://devpost.com/software/liqui3d-by-team-adjust) | [Slides](https://docs.google.com/presentation/d/1HWbNjYh7EQNKyv4GThJrusJsMEPzdDp3BQrK3pemikw/edit) | [Doc](https://docs.google.com/document/d/14VyCw5Ir7mJ9DbZzCXVJHuzJhVoUgr9Jbe2cWkHTe_Y/edit?usp=sharing)
+   - [Github Repo](https://github.com/carboclan/liqui3d)
+   - [DeFi Hackathon Recap](notes/DeFiHackathonRecap.md)
+
+#### 5. LSDai: Get high on Interest!
 - **Winning hack @ETHBerlinZwei 2019**
 - Core Contributor: @dmvt @hellwolf @kobuta23 @CarboClanC @leafcutterant
    - Introduction [en](research/LSDai.md)
    - Product Demo: www.LSDai.market
    
-#### 5. ÐÐai: Interest delegating DAI with smart DeFi Recipes
+#### 6. ÐÐai: Interest delegating DAI with smart DeFi Recipes
   - Core Contributors: @alexintosh
     - Introduction: [en](https://devpost.com/software/ddai)
     - Product Demo: https://ddai.dexwallet.io/
     - [Github Repo](https://github.com/dexlab-io/DDAI)
 
-#### 6. StaFi Protocol: PoS Staking Network
+#### 7. StaFi Protocol: PoS Staking Network
 - Core Contributors: @Tore19 @stafiprotocol
    - Introduction [en](https://docs.stafi.io/)
    - [Github Repo](https://github.com/stafiprotocol/stafi-node)
   
-#### 7. CoinCow: Fair Coin Mining, Fun Cow Milking! (A crypto social satire born out of a dream.)
+#### 8. CoinCow: Fair Coin Mining, Fun Cow Milking! (A crypto social satire born out of a dream.)
  - Core Contributors: @CarboClanC @talrasha007 @Xi0ng
     - Concept Video: [CoinCow in 60 Seconds](https://www.youtube.com/watch?v=x6eRwmhyLt4&feature=youtu.be)
 
