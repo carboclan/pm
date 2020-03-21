@@ -17,7 +17,7 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 #### 1. HoneyLemon: liquid mining derivatives 
 - **A16Z Crypto Startup School Project / Consensys Tachyon / FlashGirls Pi-rate Ship**
 - Core Contributors: 
-   - Proposal 1: Market Protocol V2.0 approach
+   - Proposal 1: Market Protocol V2.0 approach [en](research/Honeylemon/MarketProtocolV2Approach.md)
    - Proposal 2: Bonding Curve approach 
    - Proposal 3: HoneylemonDAO - MakerDAO approach
 
