@@ -36,9 +36,9 @@ After analysis across DeFi stack, and considering the various stages of developm
 The index names "Mining Revenue Index N days", short for _MRI{N}_, for example MRI28 and so on. We will publish the 1-day Mining Revenue Index daily, and abbreviate it as MRI.
 
 ##### Meaning
-The BTC Mining Revenue Index (_BMRI_) represents **average daily block reward plus fees with 1TH/s hashrate over the last N days**.
+The BTC Mining Revenue Index (_BMRI_) represents **average daily block reward plus fees with 1Th/s hashrate over the last N days**.
 
-1T = 10<sup>12</sup>
+1Th/s = 10<sup>12</sup> h/s (Hashes per second)
 
 ##### Formula
 _BMRI_ is calculated as following:
