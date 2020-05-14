@@ -37,15 +37,14 @@ After contract settlement investor can claim imBTC reward from MarketCollateralP
 ## 0x ERC20Bridge contract + Market protocol
 ### High-level order flow
 
-
 0x v3 ERC20Bridge contract enables custom logic execution on order fill. That logic can mint Market protocol position tokens (see here) and distribute them to buyer and seller atomically within a single 0x ‘fillOrder’ transaction. Such orders are fully-compatible with the rest of 0x infrastructure and libraries.
 
-## Smart Contracts
+### Smart Contracts
 MarketContractProxy - responsible for deploying, settlement and keeping the list of daily MarketContract and PositionToken instances. Proxies market protocol position token minting to the daily contract. Emits an event that our indexer captures to keep track of all entered contracts and their prices.
 MinterBridge - an implementation of 0x ERC20Bridge that enables custom logic execution on 0x order fill. Interacts with MarketContractProxy to mint position tokens.
 DSProxy - an instance is deployed for each user to enable redemption of multiple position tokens at once. Position tokens are minted to DSProxy, this allows users to redeem multiple contracts in a single transaction, without having to give approval for each position token (this is particularly useful for miners who are likely to hold multiple contracts).
 
-## Backend Components
+### Backend Components
 0x API - used by the front-end to store signed 0x orders. Keeps track of order state and fillable amounts. Returns a sorted order book of fillable orders. Interacts with 0x Mesh instance to perform some of the functions. We use the API docker image as-is.
 0x Mesh - is used by 0x API to keep track of order states and fillable amounts. We had to fork the code and modify the logic that calculates order fillable amount.
 Graph Protocol node - indexes on-chain events and provides a GraphQL API to query them. Is used by the front-end to get the list of current/expired contracts.
