@@ -28,15 +28,15 @@ After analysis across DeFi stack, and considering the various stages of developm
 
 ##### Design Considerations
 - The index MUST has a clear physical meaning.
-- The index SHOULD be relative to the mining difficulty only, which makes the index easy to predict.
-- The index SHOULD make the contract easy for miners(hedgers) to trade. Thus, the miners could hedge the mining risk of a period of time by entering a position of this contract.
-- The index SHOULD be comparable with some well-known number, such as the numbers in btc.com
+- The index SHOULD be able to reflect miner's payoff in reality
+- The index SHOULD make the contract easy for miners (hedgers) to trade. Thus, the miners could hedge the mining risk of a period of time by entering into a position of this contract.
+- The index SHOULD be consistent with mining industry conventional practice
 
 ##### Naming
 The index names "Mining Revenue Index N days", short for _MRI{N}_, for example MRI28 and so on. We will publish the 1-day Mining Revenue Index daily, and abbreviate it as MRI.
 
 ##### Meaning
-The BTC Mining Revenue Index (_BMRI_) represents **average daily block reward plus fees with 1Th/s hashrate over the last N days**.
+The BTC Mining Revenue Index (_BMRI_) represents **average daily block reward plus fees with 1Th/s hashrate over 1 Day**.
 
 1Th/s = 10<sup>12</sup> h/s (Hashes per second)
 
