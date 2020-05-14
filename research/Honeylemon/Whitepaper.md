@@ -4,7 +4,7 @@
 
 ## 1. Motivation
 
-Crypto mining market has been one of the most important market . In 2019, a total of over US$ 9 billion worth of Proof-of-Work coins/tokens were distributed to miners as block rewards and transaction fees. Crypto mining often requires upfront capex investment to purchase hardware in order to receive certain amount of cryptocurrency as reward. There is significant risk involved in mining investment. Aside from operational risk in the construction and maintenance of mining and power facility, adverse weather condition and policy risks, there are two major risks associated with crypto mining: market price of cryptocurrencies and the fluctuation of network mining difficulties.
+Establishing a healthy and efficient capital market for cryptocurrency mining & staking is crucial for the security of the foundation of our decentralized world. In 2019, a total of over US$ 9 billion worth of Proof-of-Work coins/tokens were distributed to miners as block rewards and transaction fees. Crypto mining often requires upfront capex investment to purchase hardware in order to receive certain amount of cryptocurrency as reward. There is significant risk involved in mining investment. Aside from operational risk in the construction and maintenance of mining and power facility, adverse weather condition and policy risks, there are two major risks associated with crypto mining: market price of cryptocurrencies and the fluctuation of network mining difficulties.
 
 There are financial instruments readily available to hedge against the market price movements of cryptocurrencies, such as the CME Bitcoin futures. Our goal is to provide miners and other market participants instruments with exposure to the volatility of mining difficulties, enabling them to hedge against the underlying risks.
 
@@ -43,27 +43,7 @@ The BTC Mining Revenue Index (_BMRI_) represents **average daily block reward pl
 ##### Formula
 _BMRI_ is calculated as following:
 
-<img src="f1-1.png"/>
-
-Where:
-- **_T_** represents the number of difficulty adjustments during N days. **Let T=N/14**
-- **_Difficulty<sub>i</sub>_** represents the value of difficulty after the i-th last difficulty adjustment
-- **_K<sub>i</sub>_** is a scaling factor calculated as below:
-
-<img src="f2-1.png"/>
-
-Parameter | Value | Note
-------| -----|-------
-_HashrateUnit_  | 10 <sup>12</sup> Hash/s  | 1T hash |
-_TargetBlockTime_ | 600 s | Target block time for bitcoin is fixed at 10 minutes
-_Coinbase<sub>i</sub>_  | 12.5 BTC per Block | The block reward at i-th last mining difficulty adjustment. <br/>Block reward halves every 21,000 blocks.
-_NBlock_ | 144 | Number of blocks per day
-**_K<sub>i</sub>_**| **251457095** | havles as _Coinbase<sub>i</sub>_ halves
-
-##### Notes
-- As the difficulty adjusts every 2016 blocks, which is roughly 14 days, the N of the index is set to be a multiple of 14. 
-- The index is changed whenever the difficulty adjusts before next block reward halves.
-- The index is comparable with the "mining earnings" of btc.com. Especially, BME14 should be the same with the "mining earnings" of btc.com
+![BMRI Formula](WhitePaper_BMRIformula_LaTex.png)
 
 ##### Examples
 Height  | Time                | Difficulty        | BME14     | BME28     | BME84
@@ -76,7 +56,7 @@ Height  | Time                | Difficulty        | BME14     | BME28     | BME8
 582,624 | 2019-06-27 10:59:30 | 7,934,713,219,630 | 3.169E-05 | 3.281E-05 | 3.566E-05
 584,640 | 2019-07-09 17:17:48 | 9,064,159,826,491 | 2.774E-05 | 2.972E-05 | 3.368E-05
 
-More [BME Data](https://github.com/carboclan/pm/blob/master/research/BME.md)
+More [MRI Data](https://github.com/carboclan/pm/blob/master/research/BME.md)
 
 #### 2.1.2 Index Cap & Floor
 
