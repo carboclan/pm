@@ -46,7 +46,7 @@ _BMRI_ is calculated as following:
 ![BMRI Formula](WhitePaper_BMRIformula_LaTex.png)
 
 ##### Examples
-Height  | Time                | Difficulty        | BME14     | BME28     | BME84
+Height  | Time                | Difficulty        | BMRI14     | BMRI28     | BMRI84
 --------| --------------------|-------------------|-----------|-----------|--------
 572,544 | 2019-04-21 09:54:28 | 6,353,030,562,983 | 3.958E-05 |           |  
 574,560 | 2019-05-04 16:32:13 | 6,702,169,884,349 | 3.752E-05 | 3.855E-05 |  
@@ -56,7 +56,7 @@ Height  | Time                | Difficulty        | BME14     | BME28     | BME8
 582,624 | 2019-06-27 10:59:30 | 7,934,713,219,630 | 3.169E-05 | 3.281E-05 | 3.566E-05
 584,640 | 2019-07-09 17:17:48 | 9,064,159,826,491 | 2.774E-05 | 2.972E-05 | 3.368E-05
 
-More [MRI Data](https://github.com/carboclan/pm/blob/master/research/BME.md)
+More [BMRI Data](https://github.com/carboclan/pm/blob/master/research/BME.md)
 
 #### 2.1.2 Index Cap & Floor
 
@@ -78,7 +78,7 @@ Each Synthetic BTC Mining Contract will specify an expiration date. The contract
 
 #### 2.1.5 Settlement
 
-At settlement, Market Protocol smart contract will send WBTC to addresses that hold contract position tokens. Long token holder will receive ( _BME_ - _Floor_ ) * _Multiplier_ in WBTC per Contract, short token holder will receive ( _Cap_ - _BME_ ) * _Multiplier_ in WBTC per Contract.
+At settlement, Market Protocol smart contract will send WBTC to addresses that hold contract position tokens. Long token holder will receive ( _BMRI_ - _Floor_ ) * _Multiplier_ in WBTC per Contract, short token holder will receive ( _Cap_ - _BME_ ) * _Multiplier_ in WBTC per Contract.
 
 #### 2.1.6 Margin
 
@@ -86,7 +86,7 @@ Issuer of the Tokenized Synthetic BTC Mining Contract needs to send ( _Cap_ - _F
 
 #### 2.1.7 Naming Convention for Contract Position Tokens
 
-\<L|S\>BME\<N\>-\<Floor\>-\<Cap\>-\<YYMMDD\>
+\<L|S\>BMRI\<N\>-\<Floor\>-\<Cap\>-\<YYMMDD\>
 
 - L: long position
 - S: short position
@@ -113,7 +113,7 @@ The contract specifications pre-define the cap and floor of the Index, and issue
 
 Although contracts are fully collateralized upon issuance, the position range specification provides implicit leverage. When Index fluctuates, the rate of change in contract positions often will exceed that of the Index. The amount of leverage depends on the width of the position ranges relative to the Index, and the price of the position relative to the price range.
 
-Example 1. The BME84 Index is at 5.52E-5 now, Carboclan Community specifies a new Synthetic BTC Mining Contract will expire in 84 days later. The contract specifications are as follow: 
+Example 1. The BMRI84 Index is at 5.52E-5 now, Carboclan Community specifies a new Synthetic BTC Mining Contract will expire in 84 days later. The contract specifications are as follow: 
   - Cap: 6.00E-5
   - Floor: 4.50E-5
   - Expiration: 2019-05-11 02:00:00 UTC
@@ -129,27 +129,12 @@ The contract expires on 2019-05-11 02:00:00 UTC and can be settled 1 day later. 
 ### 3.2 Oracle
 Market Protocol relies on oracle to provide the Index for settlement. Oracle is the only part in the entire system that is not completely decentralized.
 
-Calculating BME requires off-chain data. Bitcoin mining difficulty data needs to be obtained from third party provider. The difficulty data is then processed by the oracle smart contract. The good news is that bitcoin mining difficulty only change every 14 days on average. Since the difficulty data is recorded on the bitcoin chain, all people can validate the authenticity of the data.
+Calculating BMRI requires off-chain data. Bitcoin mining difficulty data needs to be obtained from third party provider. The difficulty data is then processed by the oracle smart contract. The good news is that bitcoin mining difficulty only change every 14 days on average. Since the difficulty data is recorded on the bitcoin chain, all people can validate the authenticity of the data.
 
 ### 3.3 Trading Layer
 
 Since the position tokens issued by Market Protocol are fully collateralized and fit ERC-20 standard, the position tokens can be traded on any centralized exchange (i.e. Binance and Bitstamp), and decentralized exchanges (i.e. 0x and Uniswap). Thus, tokenized Synthetic PoW Mining Contract is readily tradeable without having to develop new infrastructure or technology.
 
-### 3.4 Variable Margin Layer
-
-In 3.1 we’ve already analyzed the implicit leverage of the Market Protocol. However, when the Index fluctuates significantly, in order for the Index not to touch the cap or floor, the Index range needs to be set wider, which leads to a higher collateral ratio and lower leverage (capital utilization rate).
-
-Short-term mining contracts (i.e 30 days) have less fluctuation. Therefore, the Index range is narrow and Market Protocol itself enables enough implicit leverage. However, long-term mining contracts (i.e 180 days) could fluctuate more than 100%, the fully collateralized method of Market Protocol will be capital inefficient.
-
-Therefore, a variable margin layer could be introduced on top of the position token. The variable margin layer has such characteristic that a certain margin ratio is set according to the market price of the position. Margins only need to cover fluctuation in the short run and cannot cover the entire position. When the margin ratio drops due to market price change, margin calls can be issued to the party lacking margin to cover further market movement. On the other hand, if the margin ratio increases to more than necessary, the excess margin can be withdrawn from the margin account to realize the profit. Such a variable margin system lowers the margin requirement and increase capital efficiency.
-
-A few DeFi protocols (i.e. dydx, bzx) can enable variable margin function. User can borrow token from dydx. Lender can deposit token A to the token pool of the smart contract. Borrower mortgages token B to create margin account and borrow token A from the token pool. The token A he borrowed is sold for token B. The token B he bought is again mortgaged into the margin account so that he can borrow more token A to be sold. The leveraged short on token A is now complete.
-
-On the contrary, lender could deposit Token B to the token pool of the smart contract. Borrower mortgage Token A to create margin account and borrow Token B from the token pool. The Token B he borrowed is sold for Token A. Token A he bought is again mortgaged into the margin account so that he can borrow more Token B and exchange for Token A. A leveraged long postion on Token A is now complete.
-
-Dydx supports a maximum leverage of 4x. When the price of the mortgaged token drops relative to the borrowed token, margin could drop to an insufficient amount. If the borrower cannot deposit enough collateral to meet the margin requirement in time, forced liquidation could occur. Variable margin is thus functional.
-
-At the moment, dydx or bzx do not fully support position tokens from Market Protocol, more integration work still needs to be done.
 
 
 ## 4. Use Cases
@@ -160,14 +145,14 @@ Tokenized Synthetic PoW Mining Contract has multiple use cases.
 
 Before purchasing mining rigs and start mining, investors need to estimate ROI. Purchasing mining rigs is a onetime investment. Electricity cost for mining is relatively stable as well. Therefore, investment for mining can be considered fixed over some period of time. The only factors affecting mining return is the price movement of the underlying coin(s) mined and their mining difficulties. Various financial product (futures, perpetual swaps and options) can be utilized to hedge against price fluctuation. Synthetic POW Mining Contract fills the market void by providing a financial instrument with exposure to risks associated with mining difficulty fluctuation. Investors could observe the market price for mining contract of various terms, reflecting market’s collective projection on mining earnings, similar to that of the term structure of interest rates or that of the volatility surface of options.
 
-i.e On May 1st, 2019, BME14 Index is 3.95E-5. The following table indicates the market price for Tokenized Synthetic PoW Mining Contracts in various terms.
+i.e On May 1st, 2019, BMRI14 Index is 3.95E-5. The following table indicates the market price for Tokenized Synthetic PoW Mining Contracts in various terms.
 
 Contract position token |	Expiration date |	Market price	| Implied mining earnings
 ------------------------|-----------------|---------------|----- 
-LBME28-300-500-190526 | 19-05-26 | 8 WBTC | 3.8E-5 BTC / 1T\*24H
-SBME28-300-500-190526 | 19-05-26 | 12 WBTC | 3.8E-5 BTC / 1T\*24H
-LBME84-200-400-190716 | 19-07-16 | 12 WBTC | 3.2E-5 BTC / 1T\*24H
-SBME84-200-400-190716 | 19-07-16 | 8 WBTC | 3.2E-5 BTC / 1T\*24H
+LBMRI28-300-500-190526 | 19-05-26 | 8 WBTC | 3.8E-5 BTC / 1T\*24H
+SBMRI28-300-500-190526 | 19-05-26 | 12 WBTC | 3.8E-5 BTC / 1T\*24H
+LBMRI84-200-400-190716 | 19-07-16 | 12 WBTC | 3.2E-5 BTC / 1T\*24H
+SBMRI84-200-400-190716 | 19-07-16 | 8 WBTC | 3.2E-5 BTC / 1T\*24H
 
 Long position token prices reflect market view on expected average daily mining earnings within 1T hash/s during N days before the contract expires. The implied mining earnings = the market price of the long position token / _Multiplier_ + the floor of the index.
 The market believes that under same amount of hashrate, the mining earnings will gradually decrease. Investors could figure out that expected mining earnings gradually decreases, thereby estimating their own mining ROI more rationally.
@@ -180,8 +165,8 @@ For example, on May 1st, 2019, Alice purchased a batch of mining rigs that clock
 
 Position Token       | Entry Price | Index when settled | P&L / Token  | Position P&L   | Mining income | Comprehensive income
 ---------------------|:-----------:|:------------------:|:------------:|:--------------:|:-------------:|:-------------------:
-SBME84-200-400-190716| 8           |            3.36E-5 |   -1.6       |     -0.01344   |       0.28224 | 0.26880
-SBME84-200-400-190716| 8           |            2.86E-5 |    3.4       |      0.02856   |       0.24024 | 0.26880
+SBMRI84-200-400-190716| 8           |            3.36E-5 |   -1.6       |     -0.01344   |       0.28224 | 0.26880
+SBMRI84-200-400-190716| 8           |            2.86E-5 |    3.4       |      0.02856   |       0.24024 | 0.26880
 
 _\* Currency in above table is WBTC_
 
