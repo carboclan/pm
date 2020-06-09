@@ -55,3 +55,6 @@ There are 3 main roles in the protocol: the Honeylemon admin, Miner and Investor
 * IPFS node - is used by the graph node.
 
 See [docker-compose](https://github.com/carboclan/dapp.honeylemon.market/blob/master/docker/docker-compose-local.yml) for details.
+
+### Market Making
+Market protocol supports early contract redemption if an address owns both short and long position tokens for the same daily contract. This is useful for market makers to be able to net out their long/short exposure in the daily contract and unlock the collateral. The `redeemPositionTokens` transaction should be executed directly on the deployed instance of `MarketCollateralPool` contract. See implementation [here](https://github.com/MARKETProtocol/MARKETProtocol/blob/master/contracts/MarketCollateralPool.sol#L146).
