@@ -1,4 +1,4 @@
-# Yellow Hat DAO
+# Yellow Hat DAO (aka Pi-rate $HIP)
 Keepers of free capital market, starting from blockchain infrastructure.
 
 We are the Yellow Hats who play with decentralized financial primitives to experiment with crypto-native problems, in such way that tests the limit of cryptoeconomics. We wear Yellow Hats as construction workers, who make the infrastructure more robust by building the inevitables that may break the weaker ones.
@@ -14,55 +14,54 @@ Documentation and updates on Yellow Hats' live projects may be found in **Projec
 
 ### Buidl (Community Projects)
 
-#### 1. HoneyLemon: Liquid Mining Derivatives 
-- **A16Z Crypto Startup School Project / Consensys Tachyon / FlashGirls Pi-rate Ship**
+#### 1. HoneyLemon (Hashedge)
+##### Phase 2: HoneyLemon Mining Revenue Contract & dApp: Liquid Mining Derivatives 
+- **A16Z Crypto Startup School Project / SF FlashGirls Pi-rate $HIP Flash Org**
 - Core Contributors: 
    - @talrasha007 @carboclanc @jin10086 : [www.honeylemon.market](https://www.honeylemon.market/)
-   - @dmvt @scott-l-e-w-i-s @chrismaree @carboclanc: [Market Protocol V2.0 approach](research/Honeylemon/MarketProtocolV2Approach.md)
-   - @andrei-aisimov: Bonding Curve approach 
-   - @scott-l-e-w-i-s : MakerDAO w/ flashloans softed pegged to Mining Revenue Index approach
-
-#### 2. Hashedge: Decentralized Marketplace for Generalized Mining
-- **Winning hack @ETHSingapore 2018, 0x prize @ETHny 2019**
+   - @andrei-aisimov @chrismaree @carboclanc @FSM1 @dmvt : 
+      - [28-Day BTC Mining Revenue Contract](https://github.com/carboclan/dapp.honeylemon.market/blob/master/Docs/BTCMiningRevenueContract.md) 
+      - [Technical Documentation](https://github.com/carboclan/dapp.honeylemon.market/blob/master/design/technical-architecture.md)
+   - @andrei-aisimov @jie85 @longyunlyd: Market Making Strategies & Pricing
+   
+##### Phase 1: HoneyLemon.market: Cloud Mining Contract Aggregator
+- **Consensys Tachyon Accelerator / NY FlashGirls Pi-rate $HIP Flash Org**
+- Core Contributors: @talrasha007 @carboclanc @jin10086 
+   - Website: [www.honeylemon.market](https://www.honeylemon.market/)
+   
+##### Phase 0
+**Hashedge: Decentralized Marketplace for Generalized Mining**
+- **Winning hack @EthSingapore 2018, 0x prize @EthNY 2019**
 - Core Contributors: @talrasha007 @CarboClanC @nyuspc @tzhan28
     - Introduction [to be updated]
     - Website: [www.hashedge.io](https://www.hashedge.io/)
-    - Product Demo: [Hashedge Alpha v0.3](http://demo.hashedge.io/) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)
-    
-#### 3. BME(Bitcoin Mining Earnings) Index Futures: Tokenized Synthetic PoW Mining Contract
-- Core Contributors: @jie85 @CarboClanC @Mikefotiaoqing @tzhan28
+    - Product Demo: [Hashedge Alpha v0.3](http://demo.hashedge.io/) on Ropsten Testnet, for testnet tokens please sign up follow instruction on [www.hashedge.io](https://www.hashedge.io/)  
+**BME(Bitcoin Mining Earnings) Index Futures: Tokenized Synthetic PoW Mining Contract**
+ - Core Contributors: @jie85 @CarboClanC @Mikefotiaoqing @tzhan28
     - Introduction [en](research/hashrate-derivative-en.md) [cn](research/hashrate-derivative-cn.md)
     - [BME data](https://github.com/carboclan/pm/blob/master/research/BME.md)
-     
-#### 4. Liqui3D: Fomo3D x Liquidity Mining 
+**CoinCow: Fair Coin Mining, Fun Cow Milking! (A crypto social satire born out of a dream.)**
+ - Core Contributors: @CarboClanC @talrasha007 @Xi0ng
+    - Concept Video: [CoinCow in 60 Seconds](https://www.youtube.com/watch?v=x6eRwmhyLt4&feature=youtu.be)
+
+#### 2. Liqui3D: Fomo3D x Liquidity Mining 
 - **Grand Prize @DeFi Hackathon San Francisco Blockchain Week 2019, 1st Place in Cosmos Tendermint Challenge**
 - Core Contributors: @Dominator008 @ShrutiAppiah @alanywang @CarboClanC
    - Introduction: [Devpost](https://devpost.com/software/liqui3d-by-team-adjust) | [Slides](https://docs.google.com/presentation/d/1HWbNjYh7EQNKyv4GThJrusJsMEPzdDp3BQrK3pemikw/edit) | [Doc](https://docs.google.com/document/d/14VyCw5Ir7mJ9DbZzCXVJHuzJhVoUgr9Jbe2cWkHTe_Y/edit?usp=sharing)
    - [Github Repo](https://github.com/carboclan/liqui3d)
    - [DeFi Hackathon Recap](notes/DeFiHackathonRecap.md)
 
-#### 5. LSDai: Get high on Interest!
+#### 3. LSDai: Get high on Interest!
 - **Winning hack @ETHBerlinZwei 2019**
 - Core Contributor: @dmvt @hellwolf @kobuta23 @CarboClanC @leafcutterant
    - Introduction [en](research/LSDai.md)
    - Product Demo: www.LSDai.market
-   
-#### 6. ÐÐai: Interest delegating DAI with smart DeFi Recipes
-  - Core Contributors: @alexintosh
-    - Introduction: [en](https://devpost.com/software/ddai)
-    - Product Demo: https://ddai.dexwallet.io/
-    - [Github Repo](https://github.com/dexlab-io/DDAI)
 
-#### 7. StaFi Protocol: PoS Staking Network
-- Core Contributors: @Tore19 @stafiprotocol
-   - Introduction [en](https://docs.stafi.io/)
-   - [Github Repo](https://github.com/stafiprotocol/stafi-node)
-  
-#### 8. CoinCow: Fair Coin Mining, Fun Cow Milking! (A crypto social satire born out of a dream.)
- - Core Contributors: @CarboClanC @talrasha007 @Xi0ng
-    - Concept Video: [CoinCow in 60 Seconds](https://www.youtube.com/watch?v=x6eRwmhyLt4&feature=youtu.be)
-
-
+#### 4. $HIP:
+- Core Contributors: @renchuqiao @jenil04 @Carboclanc
+   - Intro Video: https://www.youtube.com/watch?v=G56CZ12M1WY
+   - Demo: https://hip-app-api.herokuapp.com/
+   - Repo: https://github.com/carboclan/hip 
 
 ### Ask (Experiments)
 
